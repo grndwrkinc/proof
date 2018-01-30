@@ -1,0 +1,195 @@
+.page-content .wp-smiley,
+.text .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+body.no-overflow {
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+
+.done {
+	cursor: default;
+	display: none;
+}
+
+.masonry-tile img {
+	margin-top: 6rem;
+}
+
+.tile-inner {
+	padding: 2rem 2rem 8rem 0;
+	position: relative;
+	border-bottom: 1px solid $darkgrey;
+	z-index: 2;
+
+	p {
+		font-family: $font__heading;
+		@include font-size(3.6);
+		@include line-height(4.2);
+	}
+
+	.source-instagram &,
+	.team-member & {
+		position: absolute;
+	}
+}
+
+.posts-container {
+	.tile-inner {
+		border-bottom: 0px solid $darkgrey;
+	}
+}
+
+.source-twitter p {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.grid-sizer, .masonry-tile {
+	width: 29.4%;
+}
+
+.gutter-sizer {
+	width: 5.88%;
+}
+
+.page-work {
+	.grid-sizer, .masonry-tile {
+		width: 32.3333333333%;
+	}
+}
+
+.thinking-cantrust {
+	.masonry-tile {
+		width: calc(100% - 20px);
+		margin-bottom: 0;
+		margin-left: 10px;
+		margin-right: 10px;
+		height: 388px;
+		margin-bottom: 20px;
+	}
+}
+
+
+//----------Archive, category and author page gallery----------//
+.archive-gallery {
+	// margin-top: 2rem;
+	position: relative;
+
+	.tiles-item {
+		@include outer-container;
+		padding: 4rem 2rem;
+
+		border-bottom: 1px solid $lightgrey;
+	}
+
+	&.no-posts .tiles-item {
+		border-bottom: none;
+	}
+
+	.alm-reveal:last-child .tiles-item:last-child {
+		border-bottom: none;
+	}
+}
+
+.post-meta {
+	@include span-columns(4);
+
+	h4 a {
+		color: $lightpurple;
+		&:hover {
+			color: $gold;
+		}
+	}
+
+	p {
+		@include font-size(1);
+		margin-bottom: 0;
+		font-family: $font__subheading;
+
+		a {
+			color: $lightpurple;
+			font-family: $font__heading;
+			&:hover {
+				color: $gold;
+			}
+		}
+	}
+
+	.author:before {
+		content: ' / ';
+	}
+}
+
+.post-sample p {
+	@include span-columns(8);
+	margin: 0;
+	@include font-size(1.1);
+	@include line-height(1.4);
+}
+
+.back-button {
+	font-family: $font__subheading;
+	text-transform: uppercase;
+	color: $lightpurple;
+	cursor: pointer;
+	padding: 0 1.25rem;
+
+	img {
+		width: 18px;
+		margin-right: 0.5rem;
+	}
+}
+
+.filler-span-one, .filler-span-two {
+	background-position: center center;
+
+	.tile-inner {
+		height: 100%;
+	}
+}
+
+.page-about {
+	.team-member.filler-span-two {
+		@include span-columns(8);
+		@include omega();
+
+		margin-bottom: 1.69%;
+	}
+}
+

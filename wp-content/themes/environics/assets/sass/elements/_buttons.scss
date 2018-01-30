@@ -1,0 +1,149 @@
+button, .alm-load-more-btn {
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 0.5rem 1rem;
+	font-family: $font__main;
+	@include font-size(1.4);
+	margin: 0;
+	text-shadow: none;
+}
+
+.barr, .alm-load-more-btn {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background-color: $extralightpurple;
+		height: 2rem;
+		left: 0;
+		bottom: -0.5rem;
+		right: 0;
+		z-index: -1;
+		@include transition(all 0.1s ease);
+	}
+
+	&:hover {
+
+		&:after {
+			height: 4rem;
+		}
+	}
+}
+
+.tile-content.barr {
+	&:after {
+		bottom: 0;
+	}
+}
+
+.read-more.barr {
+	&:after {
+		bottom: -1rem;
+	}
+}
+
+.divider button {
+	border: 1px solid $lightpurple;
+	font-family: $font__subheading;
+	color: $teal;
+	background-color: $white;
+	@include font-size(0.9);
+	@include transition(all 0.1s ease);
+
+	&:hover {
+		color: $lightpurple;
+	}
+
+	.single-thinking &, 
+	.single-jobs & {
+		color: $darkpurple;
+		border: 1px solid $gold;
+	}
+}
+
+.btn-gold, .divider .btn-gold {
+	border: 2px solid $gold;
+	color: $darkpurple;
+	background-color: $white;
+	// @include transition(all 0.15s ease);
+
+	&:hover {
+		background-color: $gold;
+		color: $white;
+	}
+}
+
+.alm-load-more-btn {
+	position: absolute;
+	bottom: 6rem;
+	left: 50%;
+	z-index: 3;
+	padding: 0;
+	transform: translateX(-50%);
+	border: none;
+	background: none;
+	opacity: 1;
+	@include transition(all 0.15s ease);
+}
+
+//Social Share buttons
+.social-share {
+	@include outer-container();
+	padding: 2rem 0 0;
+
+	ul {
+		@include display(flex);
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	li {
+		background: $extralightpurple;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		margin: 0 0.5rem;
+		@include display(flex);
+		@include justify-content(center);
+		@include align-items(center);
+		cursor: pointer;
+		padding-left: 1px;
+		@include font-size(1.2);
+	}
+}
+
+.thinking-cantrust .social-share {
+	margin-bottom: -2.5em;
+	padding: 4em 0 0;
+}
+//group of 4 buttons
+.four-buttons{
+	display: -webkit-box;  
+	display: -ms-flexbox;  
+	display: -webkit-flex; 
+	display: flex;  
+	display: flex;
+	flex-wrap: wrap;
+
+	a {
+		flex: auto!important;
+	}
+}
+
+
+
+
+.btn {
+	@extend .read-more;
+}
+
+
+
+
+
+
+
+
+
+
