@@ -733,29 +733,6 @@
 	}
 }
 
-.text {
-	.page-text {
-		@include span-columns(8);
-		@include omega();
-
-		h2, h3, h4, h5, h6 {
-			margin-top: 4rem;
-			color: $lightpurple;
-
-			&:first-child {
-				margin-top: 0;
-			}
-		}
-	}
-
-	h2 {
-		
-		&:empty {
-			display: none;
-		}
-	}
-}
-
 .single-thinking, .single-news {
 	.text .page-text {
 		@include shift(2);
@@ -895,14 +872,6 @@
 
 //Case Study Post, CanTrust Post
 .single-work, .thinking-cantrust {
-	.hero h1 {
-		@include span-columns(10);
-		@include shift(1);
-		@include font-size(3.75);
-		@include line-height(72/16);
-		// padding-top: calc(50vh - 154px);
-		text-align: center;
-	}
 
 	.quote {
 		background-color: $lightpurple;
@@ -935,63 +904,6 @@
 		.text, .source {
 			@include rem-size('margin-top', 1);
 			@include rem-size('margin-bottom', 1);
-		}
-	}
-
-	.publicity p a {
-		font-family: $font__main;
-		color: $darkgrey;
-		@include font-size(1.1);
-		letter-spacing: 1px;
-
-		&:hover {
-			color: $gold;
-		}
-	}
-
-	.awards {
-		@include span-columns(4);
-
-		.publicity {
-			@include span-columns(4 of 4);
-		}
-
-		.press-name {
-			font-family: $font__subheading;
-			text-transform: uppercase;
-			color: $lightpurple;
-		}
-	}
-
-	.press {
-		@include span-columns(8);
-
-		.publicity {
-			@include span-columns(4 of 8);
-
-			&:nth-of-type(2n) {
-				margin-right: 0;
-			}
-		}
-
-		.press-name {
-			font-family: $font__subheading;
-			text-transform: uppercase;
-			color: $lightpurple;
-		}
-	}
-
-	.press, .awards {
-		&.large {
-			@include span-columns(12);
-
-			.publicity {
-				@include span-columns(4 of 12);
-				
-				&:nth-of-type(3n) {
-					margin-right: 0;
-				}
-			}
 		}
 	}
 
@@ -2081,6 +1993,62 @@ a.purple-download-btn {
 	}
 }
 
+//SINGLE WORK
+
+.single-work {
+	.hero-container	{
+		display: block;
+
+		.span_11 {
+			margin-left: 17.64%;
+			transform: translateY(4rem);
+			z-index: 1;
+			position: relative;
+
+			h2 {
+				margin-bottom: 0;
+			}
+		}
+
+		.sub-hero {
+			margin-top: 0;
+		}
+	}
+
+	.text-container.span_11 {
+		background-color: $extralightpurple;
+		padding: 4rem 4rem 4rem 12rem;
+		margin-left: 29.4%;
+	}
+
+	.press-container {
+		margin-left: 5.88%;
+		padding-top: 8rem;
+
+		.items-container {
+			@include display(flex);
+			flex-wrap: wrap;
+		}
+
+		.span_5 {
+			margin: 0;
+			padding-right: 1rem;
+			padding-bottom: 4rem;
+
+			&:nth-child(3n + 3) {
+				padding-right: 0;
+			}
+		}
+
+		h5 {
+			@include font-size(2);
+		}
+	}
+
+	.text-container {
+		padding-top: 8rem;
+	}
+}
 
 
 

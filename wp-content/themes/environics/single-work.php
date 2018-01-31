@@ -9,31 +9,38 @@ get_header();
 	<div id="primary" class="content-area">
 <?php 
 	while ( have_posts() ) : the_post(); 
-		get_template_part( 'template-parts/content', 'singlehero' ); 
+
+	$classes = "";
+	$hero = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+		if(!strlen($hero)) $classes = " no-image";
+		$classes .= " text-" . strtolower(get_field('title_colour_picker'));
 ?>
-		<div class="post-overview">
-			<div class="container">
-				<p>
-					<span><?php the_field('client'); ?></span>
-					<span><?php 
-						$case_category = get_the_terms($post->ID, 'case_categories');
-						$out = array();
-						foreach ($case_category as $category) {
-							array_push($out, $category->name);
-					}
-					echo implode(', ', $out);
-					?></span>
-					<span><?php the_field('team')?></span>
-					<span><?php the_field('year')?></span>
-				</p>
+		<div class="hero-container">
+			<div class="span_11">
+				<h2 id="content"><?php the_title(); ?></h2>
 			</div>
+			<div class="sub-hero single-page<?php echo $classes; ?>" style="background-image:url(<?php echo $hero; ?>)"></div>
+			<?php get_template_part( 'template-parts/content', 'socialbuttons' ); ?>
+		</div>
+		<div class="post-overview">
+			<p>
+				<span><?php the_field('client'); ?></span>
+				<span><?php 
+					$case_category = get_the_terms($post->ID, 'case_categories');
+					$out = array();
+					foreach ($case_category as $category) {
+						array_push($out, $category->name);
+				}
+				echo implode(', ', $out);
+				?></span>
+				<span><?php the_field('team')?></span>
+				<span><?php the_field('year')?></span>
+			</p>
 		</div>
 
 		<!-- Lead paragraph -->
-		<div class="block bg-pattern-teal">
-			<div class="container lead">
-				<?php the_content(); ?>
-			</div>
+		<div class="text-container span_11">
+			<?php the_content(); ?>
 		</div>
 
 <?php 
@@ -46,11 +53,11 @@ get_header();
 			// layout: Text
 			if(get_row_layout() == "text_block"):
 ?>
-				<div class="block text">
+				<div class="text-container">
 					<div class="container">
 						<div class="page-text">
 						<?php if(get_sub_field('text_title')): ?>
-							<h2><?php the_sub_field("text_title"); ?></h2>
+							<h4><?php the_sub_field("text_title"); ?></h4>
 						<?php endif; ?>
 							<?php the_sub_field("text_content"); ?>
 						</div>
@@ -103,33 +110,29 @@ get_header();
 			// layout: Awards + Press
 			elseif(get_row_layout() == "awards_block"):
 ?>
-				<div class="block">
-					<div class="container">
-						<?php $has_press = get_sub_field('press_true'); ?>
-						<?php $has_awards = get_sub_field('awards_true'); ?>
-						<?php if($has_press == 'Yes') : ?>
-						<div class="press <?php if($has_awards !== 'Yes') : echo 'large' ?><?php endif; ?>">
-							<h2>Press</h2>
-							<?php if(have_rows('press')): while(have_rows('press')): the_row(); ?>
-							<div class="publicity">
-								<p class="press-name"><?php the_sub_field('press_name'); ?></p>
-								<p class="press-title"><a href="<?php the_sub_field('press_link'); ?>" target="_blank"><?php the_sub_field('press_text'); ?></a></p>
-							</div>
-							<?php endwhile; endif; ?>
+				<div class="press-container">
+					<?php $has_press = get_sub_field('press_true'); ?>
+					<?php $has_awards = get_sub_field('awards_true'); ?>
+					<?php if($has_press == 'Yes') : ?>
+					<h4>Press</h4>
+					<div class="items-container">
+						<?php if(have_rows('press')): while(have_rows('press')): the_row(); ?>
+						<div class="span_5">
+							<h5 class="barr"><?php the_sub_field('press_name'); ?></h5>
+							<p class="press-title"><a href="<?php the_sub_field('press_link'); ?>" target="_blank"><?php the_sub_field('press_text'); ?></a></p>
 						</div>
-						<?php endif; ?>	
-						<?php if($has_awards == 'Yes') : ?>
-						<div class="awards <?php if($has_press !== 'Yes') : echo 'large' ?><?php endif; ?>">
-							<h2>Awards</h2>
-							<?php if(have_rows('awards')): while(have_rows('awards')): the_row(); ?>
-							<div class="publicity">
-								<p class="press-name"><?php the_sub_field('award_name'); ?></p>
-								<p class="press-title"><a href="<?php the_sub_field('award_link'); ?>" target="_blank"><?php the_sub_field('award_text'); ?></a></p>
-							</div>
-							<?php endwhile; endif; ?>
-						</div>
-						<?php endif; ?>	
+					<?php endwhile; endif; ?>
 					</div>
+					<?php endif; ?>	
+					<?php if($has_awards == 'Yes') : ?>
+					<h4>Awards</h4>
+					<?php if(have_rows('awards')): while(have_rows('awards')): the_row(); ?>
+					<div class="span_5">
+						<h5 class="barr"><?php the_sub_field('award_name'); ?></h5>
+						<p class="press-title"><a href="<?php the_sub_field('award_link'); ?>" target="_blank"><?php the_sub_field('award_text'); ?></a></p>
+					</div>
+					<?php endwhile; endif; ?>
+					<?php endif; ?>	
 				</div>
 
 <?php 
