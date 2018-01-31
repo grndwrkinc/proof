@@ -3133,6 +3133,9 @@ a.purple-download-btn {
     font-size: 2rem; }
 .single-work .text-container {
   padding-top: 8rem; }
+.single-work .quote-container {
+  background-color: #F2EAF9;
+  padding: 6rem 4rem; }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -3155,7 +3158,7 @@ header {
 .site-branding {
   position: relative; }
   .site-branding img {
-    width: 130px; }
+    width: 260px; }
 
 .cantrust-logo {
   padding-bottom: 50px; }

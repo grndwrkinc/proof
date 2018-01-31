@@ -53,15 +53,11 @@ get_header();
 			// layout: Text
 			if(get_row_layout() == "text_block"):
 ?>
-				<div class="text-container">
-					<div class="container">
-						<div class="page-text">
-						<?php if(get_sub_field('text_title')): ?>
-							<h4><?php the_sub_field("text_title"); ?></h4>
-						<?php endif; ?>
-							<?php the_sub_field("text_content"); ?>
-						</div>
-					</div>
+				<div class="text-container span_10">
+				<?php if(get_sub_field('text_title')): ?>
+					<h4><?php the_sub_field("text_title"); ?></h4>
+				<?php endif; ?>
+					<?php the_sub_field("text_content"); ?>
 				</div>
 
 <?php 		// layout: Divider
@@ -99,11 +95,9 @@ get_header();
 			// layout: Quote 
 			elseif(get_row_layout() == "quote_block"): 
 ?>
-				<div class="block quote">
-					<div class="container">
-						<p class="text">"<?php the_sub_field("quote_text"); ?>"</p>
-						<p class="source">- <?php the_sub_field("quote_source"); ?></p>
-					</div>
+				<div class="quote-container">
+					<p class="text">"<?php the_sub_field("quote_text"); ?>"</p>
+					<p class="source">- <?php the_sub_field("quote_source"); ?></p>
 				</div>
 
 <?php 
