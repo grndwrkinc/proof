@@ -20,7 +20,7 @@ get_header();
 				<h2 id="content"><?php the_title(); ?></h2>
 			</div>
 			<div class="sub-hero single-page<?php echo $classes; ?>" style="background-image:url(<?php echo $hero; ?>)"></div>
-			<?php get_template_part( 'template-parts/content', 'socialbuttons' ); ?>
+			<?php //get_template_part( 'template-parts/content', 'socialbuttons' ); ?>
 		</div>
 		<div class="post-overview">
 			<p>
@@ -53,42 +53,33 @@ get_header();
 			// layout: Text
 			if(get_row_layout() == "text_block"):
 ?>
-				<div class="text-container span_10">
+			<?php $indent = get_sub_field('text_indent');
+			$indentclass = '';
+			if( $indent && in_array('yes', $indent) ): 
+				$indentclass = 'indent';
+			 endif; ?>
+				<div class="text-container span_10 <?php echo $indentclass; ?>">
 				<?php if(get_sub_field('text_title')): ?>
 					<h4><?php the_sub_field("text_title"); ?></h4>
 				<?php endif; ?>
 					<?php the_sub_field("text_content"); ?>
 				</div>
 
-<?php 		// layout: Divider
-			elseif(get_row_layout() == "divider_block"):
-				$selected = get_sub_field('page_divider');	
-				$divider = "";
-				if ($selected == 'Horizontal Line with Text') {
-					$divider .= "<button>" . get_sub_field("divider_text") . "</button>";
-				}
-				$divider .= "<hr />";
-?>
-				<div class="divider container">
-					<?php echo $divider; ?>
-				</div>
-
 <?php 		// layout: Video 
 			elseif(get_row_layout() == "video_block"):
 ?>
-				<div class="block bg-pattern-purple video-block">
+				<!-- <div class="block bg-pattern-purple video-block"> -->
+				<div class="video-container">
 					<?php get_template_part('template-parts/component', 'video'); ?>
-			</div>
+				</div>
 <?php 
 			// layout: Image
 			elseif(get_row_layout() == "image_block"): 
 ?>				
-				<div class="block bg-pattern-purple">
-					<div class="container images">
-						<?php while(the_repeater_field('images')): $image_block_img = get_sub_field("image"); ?>
-							<div class="image"><img src="<?php echo $image_block_img['url']; ?>" alt=""/></div>
-						<?php endwhile; ?>
-					</div>
+				<div class="img-container">
+					<?php while(the_repeater_field('images')): $image_block_img = get_sub_field("image"); ?>
+						<div class="image"><img src="<?php echo $image_block_img['url']; ?>" alt=""/></div>
+					<?php endwhile; ?>
 				</div>
 
 <?php 
@@ -96,8 +87,8 @@ get_header();
 			elseif(get_row_layout() == "quote_block"): 
 ?>
 				<div class="quote-container">
-					<p class="text">"<?php the_sub_field("quote_text"); ?>"</p>
-					<p class="source">- <?php the_sub_field("quote_source"); ?></p>
+					<p class="text span_11"><?php the_sub_field("quote_text"); ?></p>
+					<p class="source"><?php the_sub_field("quote_source"); ?></p>
 				</div>
 
 <?php 
@@ -169,7 +160,41 @@ endwhile; // End of the loop.
 ?>
 	</div><!-- #primary -->
 
-<?php include(locate_template('related-posts.php')); ?>
+	<div class="featured-container">
+		<div class="featured-wrapper">
+<?php while ( $related_posts->have_posts() ) : $related_posts->the_post();
+				global $post; 
+				$feat_image_array = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+				$feat_image = $feat_image_array[0];
+				if(strlen($feat_image)) {
+					$classes = "";
+				} else {
+					$classes = 'no-image';
+				};
+				$post_type = get_post_type();
+				$page_taxonomy = get_object_taxonomies( $post_type );
+				$taxonomy_name = $page_taxonomy[0];
+				$page_category = get_the_terms( $post->ID, $taxonomy_name ); 
+				$label = get_field('client');?>
+	
+			<div class="featured span_5">
+				<div class="featured-img">
+					<img src="<?php echo $feat_image; ?>" alt="">
+				</div>
+				<div class="featured-text">
+					<h5>Featured Work</h5>
+					<h4><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></h4>
+					<p class="item-text"><?php echo $subtitle; ?></p>
+					<p class="read-more barr"><a href="<?php echo get_permalink($post->ID); ?>">See Work</a></p>
+				</div>
+			</div>
+
+<?php endwhile; // End of the related posts loop.?>
+
+<?php wp_reset_postdata(); ?>
+
+		</div>
+	</div>
 
 <?php
 get_footer();

@@ -836,39 +836,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/ECI-website_pattern-color.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 78267,
-		"inputAbbreviatedPath": "\/images\/ECI-website_pattern-color.png",
-		"outputAbbreviatedPath": "\/images\/ECI-website_pattern-color.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/ECI-website_pattern-teal.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 77177,
-		"inputAbbreviatedPath": "\/images\/ECI-website_pattern-teal.png",
-		"outputAbbreviatedPath": "\/images\/ECI-website_pattern-teal.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/images\/ECI-website_pattern.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 75239,
-		"inputAbbreviatedPath": "\/images\/ECI-website_pattern.png",
-		"outputAbbreviatedPath": "\/images\/ECI-website_pattern.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/infographic.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

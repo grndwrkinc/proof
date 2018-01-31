@@ -86,7 +86,7 @@ environics.init = function() {
 		environics.loadWhatsHappeningToday();
 	}
 
-	if($('.video-block .modal').length) {
+	if($('.video-container .modal').length) {
 		environics.videoModal();
 	}
 
@@ -808,7 +808,7 @@ environics.videoModal = function () {
 	// Click play button to show video modal
 	$('.videoPlay').on('click', function(e){
 		e.preventDefault();
-		var videoBlock = $(this).parents('.video-block');
+		var videoBlock = $(this).parents('.video-container');
 		var videoWrapper = $(videoBlock).find('.video-wrapper');
 		$(videoWrapper).html($(videoWrapper).data('iframe'));
 		var modal = $(videoBlock).find('.modal');
@@ -820,7 +820,7 @@ environics.videoModal = function () {
 	});
 	var videoClose = function() {
 		$('.video-wrapper').find("iframe").remove();
-		$('.video-block .modal').fadeOut('fast');
+		$('.video-container .modal').fadeOut('fast');
 		document.ontouchmove = function(){ return true; };
 		$('body').removeClass('no-overflow');
 		environics.tabModal(1);
@@ -831,7 +831,7 @@ environics.videoModal = function () {
 		
 	});
 	// Click outside video to close modal
-	$('.video-block .modal').on('click', function(){
+	$('.video-container .modal').on('click', function(){
 		videoClose();
 	});
 	// Hit enter on close div to close modal

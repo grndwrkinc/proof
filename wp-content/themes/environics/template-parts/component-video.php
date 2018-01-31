@@ -2,11 +2,9 @@
 	(get_field("video_image")) ? $videoImage = get_field("video_image") : $videoImage = get_sub_field("video_image");
 	(get_field("video")) ? $videoSrc = get_field("video") : $videoSrc = get_sub_field("video");
 ?>
-<div class="container">
-	<div class="video-image">
-		<img src="<?php echo $videoImage; ?>" alt=""/>
-		<a href="#" class="videoPlay" aria-label="play button"><i class="fa fa-play" aria-hidden="true"></i></a>
-	</div>
+<div class="video-image">
+	<img src="<?php echo $videoImage; ?>" alt=""/>
+	<a href="#" class="videoPlay" aria-label="play button"><i class="fa fa-play" aria-hidden="true"></i></a>
 </div>
 
 <!-- Modal popup with video -->

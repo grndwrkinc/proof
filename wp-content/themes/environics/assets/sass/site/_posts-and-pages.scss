@@ -361,10 +361,6 @@
 		}
 	}
 
-	.video-block {
-		padding-top: 0;
-	}
-
 
 	// Capabilities Page: Stacked Layout
 	.stacked {
@@ -733,11 +729,6 @@
 	}
 }
 
-.single-thinking, .single-news {
-	.text .page-text {
-		@include shift(2);
-	}
-}
 
 .images {
 	@include display(flex);
@@ -750,7 +741,7 @@
 	}
 }
 
-.video-block, .infographic-block, .download-modal {
+.video-container, .infographic-block, .download-modal {
 	.modal {
 	    display: none;
 	    position: fixed;
@@ -1447,6 +1438,12 @@ a.purple-download-btn {
 		margin-bottom: 0;
 	}
 
+	.featured:last-child {
+		margin-right: 0;
+	}
+}
+
+.home .featured-wrapper {
 	.featured:first-child {
 		display: flex;
 		width: 100%;
@@ -1460,10 +1457,6 @@ a.purple-download-btn {
 			@extend .span_5;
 			margin-right: 0;
 		}
-	}
-
-	.featured:last-child {
-		margin-right: 0;
 	}
 }
 
@@ -2015,10 +2008,22 @@ a.purple-download-btn {
 		}
 	}
 
+	.content-area {
+		padding-bottom: 8rem;
+	}
+
 	.text-container.span_11 {
 		background-color: $extralightpurple;
 		padding: 4rem 4rem 4rem 12rem;
 		margin-left: 29.4%;
+	}
+
+	.text-container.span_10 {
+		margin-left: 5.88%;
+	}
+
+	.text-container.indent {
+		margin-left: 17.64%;
 	}
 
 	.press-container {
@@ -2047,12 +2052,75 @@ a.purple-download-btn {
 
 	.text-container {
 		padding-top: 8rem;
+
+		ul {
+			padding-left: 0;
+		}
+
+		li {
+			position: relative;
+
+			&:before {
+				content: '_';
+				position: absolute;
+				left: -12px;
+			}
+		}
 	}
 
 	.quote-container {
+		margin-top: 8rem;
 		background-color: $extralightpurple;
-		padding: 6rem 4rem;
+		padding: 6rem 8rem;
+
+		.text {
+			margin-top: 0;
+			position: relative;
+			@include font-size(3.6);
+			@include line-height(4.4);
+			font-family: $font__heading;
+		}
+
+		.text:before, .text:after {
+			content: '“';
+			position: absolute;
+			@include font-size(10);
+			top: 3rem;
+			left: -5rem;
+		}
+
+		.text:after {
+			content: '”';
+			left: auto;
+			right: -4rem;
+		}
+
+		.source {
+			text-transform: uppercase;
+		}
 	}
+
+	.img-container {
+		padding-top: 8rem;
+		@include display(flex);
+
+		.image {
+			margin-right: 5.88%;
+		}
+
+		.image:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.video-container {
+		padding-top: 8rem;
+	}
+
+	.featured-container {
+		padding-top: 8rem;
+	}
+
 }
 
 
