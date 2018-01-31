@@ -2709,7 +2709,14 @@ a.purple-download-btn {
 
 .home .hero {
   height: 80rem;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
+  .home .hero img {
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%); }
 .home .capabilities-container {
   border-bottom: none; }
 
@@ -2764,7 +2771,6 @@ a.purple-download-btn {
 .cantrust-img, .featured-img {
   position: relative; }
   .cantrust-img h3, .featured-img h3 {
-    padding: 2.8rem;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -2810,10 +2816,14 @@ a.purple-download-btn {
     position: relative;
     margin-bottom: 0;
     font-size: 24px;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    line-height: 34px;
+    line-height: 3.4rem; }
     .accordion-item h5:before {
       font-family: 'FontAwesome';
       content: '\f067';
+      font-size: 20px;
+      font-size: 2rem;
       position: absolute;
       width: 5rem;
       left: -5rem;
@@ -2996,8 +3006,8 @@ a.purple-download-btn {
     font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-size: 2.4rem;
-    line-height: 32px;
-    line-height: 3.2rem;
+    line-height: 34px;
+    line-height: 3.4rem;
     text-transform: uppercase;
     margin: 1rem 0; }
   .page-work-with-us .single-job.span_7 p, .page-work-with-us .single-job.span_7 h5 {
@@ -3031,7 +3041,9 @@ a.purple-download-btn {
     display: flex; }
   .single-jobs .hero-container h5 {
     font-size: 24px;
-    font-size: 2.4rem; }
+    font-size: 2.4rem;
+    line-height: 34px;
+    line-height: 3.4rem; }
   .single-jobs .hero-container p {
     text-transform: uppercase; }
 .single-jobs .page-text h3 {

@@ -1386,6 +1386,15 @@ a.purple-download-btn {
 	.hero {
 		height: 80rem;
 		width: 100%;
+		position: relative;
+
+		img {
+			width: 70%;
+			top: 50%;
+		    left: 50%;
+		    position: absolute;
+		    transform: translate(-50%, -50%);
+		}
 	}
 
 	.capabilities-container {
@@ -1478,7 +1487,6 @@ a.purple-download-btn {
 	position: relative;
 
 	h3 {
-		padding: 2.8rem;
 		width: 100%;
 		position: absolute;
 		top: 50%;
@@ -1539,10 +1547,12 @@ a.purple-download-btn {
 		position: relative;
 		margin-bottom: 0;
 		@include font-size(2.4);
+		@include line-height(3.4);
 
 		&:before {
 			font-family: 'FontAwesome';
 			content: '\f067';
+			@include font-size(2);
 			position: absolute;
 			width: 5rem;
 			left: -5rem;
@@ -1830,7 +1840,7 @@ a.purple-download-btn {
 			color: $darkgrey;
 			font-family: $font__main;
 			@include font-size(2.4);
-			@include line-height(3.2);
+			@include line-height(3.4);
 			text-transform: uppercase;
 			margin: 1rem 0;
 		}
@@ -1884,6 +1894,7 @@ a.purple-download-btn {
 
 		h5 {
 			@include font-size(2.4);
+			@include line-height(3.4);
 		}
 
 		p {

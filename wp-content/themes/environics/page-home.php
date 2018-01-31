@@ -110,7 +110,7 @@ get_header();
 	    		<p class="span_5"><?php the_field('post_subheader'); ?></p>
 	    	</div>
 	    	<div class="cantrust-img" style="background-image: url('<?php echo $featuredImg; ?>');">
-	    		<h3>Cantrust Report <?php echo get_the_date('Y', $post); ?></h3>
+	    		<h3><a class="barr" src="<?php echo get_permalink($post->ID); ?>">Cantrust Report <?php echo get_the_date('Y', $post); ?></a></h3>
 	    	</div>
 	    </div>
 	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
