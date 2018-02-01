@@ -1,136 +1,63 @@
 <div id="primary" class="content-area">
 <?php
 	while ( have_posts() ) : the_post();
-		get_template_part( 'template-parts/content', 'cantrusthero' );
-		get_template_part( 'template-parts/content', 'socialbuttons' );
-
+		get_template_part( 'template-parts/content', 'singlehero' );
 		?>
 
-		<div class="block">
-			<div class="video-block">
-				<?php get_template_part('template-parts/component', 'video') ?>
-			</div>
-			<div class="container lead">
-				<?php the_content(); ?>
-			</div>
+		<div class="text-container span_11">
+			<?php the_content(); ?>
 		</div>
 
-		<div class="bg-pattern-purple block">
-			
 <?php 
-			if(have_rows('infographic_images')):
-				//get a count of the number of info graphics provided
-				$count = 0; while ( have_rows('infographic_images') ) : the_row(); $count++; endwhile;
-
-				if($count == 1) :
-					while ( have_rows('infographic_images') ) : the_row();
-					$infographic = get_sub_field('image');
+		if(have_rows('section_repeater')):
+			while ( have_rows('section_repeater') ) : the_row(); 
+				//determine if this is an image or video repeater
+				$media = get_sub_field('media_type');
 ?>
-					<div class="container clearfix">
-						<div class="half-left">
-							<h2>Key Findings</h2>
-							<?php the_field('key_findings'); ?>
-							<a href="<?php echo $infographic['url']; ?>" class="cantrust-btn" download>Download infographic</a>
-							<a href="<?php echo $infographic['url']; ?>" class="embed-infographic">Embed infographic</a>
-							<div class="copy-box">
-								<div class="close" tabindex="0" role="button"></div>
-								<textarea class="embed-link"><iframe src="<?php echo $infographic['url']; ?>" width="512px" height="288px" frameborder="0"></iframe></textarea>
-								<button class="embed-success"><p class="copy-inside">copy</p><i class="fa fa-check" aria-hidden="true"></i></button>
-							</div>
-						</div>
-
-						<div class="half-right">
-							<div class="infographic-block">
-								<?php get_template_part('template-parts/component', 'infographic') ?>
-							</div>
-						</div>
-					</div>
-
-<?php
-					endwhile;
-				else :
-?>
-					<div class="container clearfix">
-						<h2>Key Findings</h2>
-					</div>
-					<div class="container clearfix">
-						<?php the_field('key_findings'); ?>
-						<br />
-					</div>
-					<div class="container clearfix two-column">
-<?php
-						$count = 1;
-						while ( have_rows('infographic_images') ) : the_row();
-
-							($count == 1) ? $position = 'half-left' : $position = 'half-right';
-							$infographic = get_sub_field('image');
-?>
-							<div class="<?php echo $position; ?>">
-								<div class="infographic-block">
-									<?php get_template_part('template-parts/component', 'infographic') ?>
-								</div>
-								<a href="<?php echo $infographic['url']; ?>" class="cantrust-btn" download>Download infographic</a>
-								<a href="<?php echo $infographic['url']; ?>" class="embed-infographic">Embed infographic</a>
-							</div>
-<?php
-							$count++;
-						endwhile;
-?>
-					</div>
-<?php
-
-					
-				endif;
-			endif;
-?>
-			
-		</div>
-
-		<div class="block container center report">
-			<h2>The <?php the_field('report_year'); ?> Report</h2>
-			<?php the_field('cantrust_index'); ?>
-		
-			<div class="container">
-				<?php $fullReport = get_field('full_report');
-					if( $fullReport ): ?>
-					<a href="<?php echo $fullReport['url']; ?>" class="cantrust-btn" download>Download the full report</a>
+		<div class="cantrust-container">
+			<h3 class="span_4"><?php the_sub_field('section_title'); ?></h3>
+			<?php if(get_sub_field('section_description')): ?>
+				<p class="span_6"><?php the_sub_field('section_description'); ?></p>
+			<?php endif; ?>
+			<div class="span_11">
+				<div class="media">
+				<?php if($media == 'Video'): ?>
+					<div class="video-wrapper" data-iframe='<?php the_sub_field('video_url'); ?>'></div>
 				<?php endif; ?>
-
-				<?php $clipSlides = get_field('clip_slides_url');
-					if( $clipSlides ): ?>
-					<a href="<?php echo $clipSlides; ?>" class="cantrust-btn" target="_blank">Clip Slides on LinkedIn</a>
+				<?php if($media == 'Slides'): ?>
+					<?php the_sub_field('slides_deck'); ?>
 				<?php endif; ?>
+				<?php if($media == 'Image'): ?>
+					<?php $image = get_sub_field('image'); ?>
+					<img src="<?php echo $image['url']; ?>" alt="">
+				<?php endif; ?>
+				</div>
+				<div class="links">
+<?php 
+			if(have_rows('related_links')):
+				while ( have_rows('related_links') ) : the_row(); 
+?>
+					<p><a class="barr" href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a></p>
+<?php endwhile;
+	endif; ?>	
+				</div>	
 			</div>
 		</div>
 
-		<div class="container block more-info">
+<?php endwhile;
+	endif; ?>
+
+		<div class="posts-container">	
 <?php
 			$relatedPosts = get_field('related_posts');
 
-			if( have_rows('findings_buttons') ):
+			if($relatedPosts) : foreach ($relatedPosts as $relatedPost) : 
+				$postType = get_post_type($relatedPost);
+				($postType == "news") ? $label = "Announcement" : $label = "Thinking";
 ?>
-			<div class="left-two-thirds">
-				<h2>Detailed Findings</h2>
-				<p>Want to get all the details from the study, or are you interested in one aspect in particular?</p>
-				<p>Download any of the whitepapers below to get the full picture.</p>
-				<div class="four-buttons">
-					<?php
-				    while ( have_rows('findings_buttons') ) : the_row();
-						?><a class="purple-download-btn" href="<?php the_sub_field('download_content'); ?>" target="blank"><?php the_sub_field('findings_title'); ?> <i class="fa fa-download" aria-hidden="true"></i></a> 
-						<?php 
-				    endwhile;
-					?>
-				</div>
-			</div>
-
-<?php
-				if($relatedPosts) : foreach ($relatedPosts as $relatedPost) :
-					$postType = get_post_type($relatedPost);
-					($postType == "news") ? $label = "Announcement" : $label = "Thinking";
-?>
-			<div class="right-one-third">
+			<div class="blog-item span_5 square">
 				<a href="<?php echo get_permalink($relatedPost->ID); ?>">
-					<div class="masonry-tile source-thinking animate" style="background-image:url(<?php echo get_the_post_thumbnail_url($relatedPost->ID); ?>)">
+					<div class="blog-item-img" style="background-image:url(<?php echo get_the_post_thumbnail_url($relatedPost->ID); ?>)">
 						<div class="tile-inner">
 							<h5><?php echo $label; ?></h5>
 							<p><?php echo get_the_title($relatedPost->ID); ?></p>
@@ -138,28 +65,11 @@
 					</div>
 				</a>
 			</div>
-<?php
-					endforeach;
-				endif;
-			else :
-				if($relatedPosts) : foreach ($relatedPosts as $relatedPost) : 
-					$postType = get_post_type($relatedPost);
-					($postType == "news") ? $label = "Announcement" : $label = "Thinking";
-?>
-			<a href="<?php echo get_permalink($relatedPost->ID); ?>">
-				<div class="masonry-tile source-thinking animate" style="background-image:url(<?php echo get_the_post_thumbnail_url($relatedPost->ID); ?>)">
-					<div class="tile-inner">
-						<h5><?php echo $label; ?></h5>
-						<p><?php echo get_the_title($relatedPost->ID); ?></p>
-					</div>
-				</div>
-			</a>
 			
 <?php
-				endforeach; endif;
-			endif;
+		endforeach; endif;
 ?>
-		</div>
+		</div>	
 	<?php
 
 	endwhile;

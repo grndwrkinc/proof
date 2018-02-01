@@ -1503,7 +1503,6 @@ a.purple-download-btn {
 	}
 
 	.sectors-container {
-		padding-bottom: 8rem;
 		border-bottom: 1px solid $darkgrey;
 
 		p {
@@ -1517,10 +1516,51 @@ a.purple-download-btn {
 	}
 }
 
-.sectors-container {
-	.dropdown-content {
-		display: none;
+.sectors-container, .perks-container {
+
+	.dropdown-gallery {
+		padding-left: 11.76%;
 	}
+
+	.dropdown {
+		.span_3, .span_4 {
+			margin-left: 5.88%;
+			margin-right: 0;
+			padding-right: 1.5rem;
+		}
+
+		.span_5 {
+
+			p {
+				margin-top: 0;
+			}
+
+			p:last-of-type {
+				border-bottom: 1px solid $darkgrey;
+				padding-bottom: 2rem;
+			}
+		}
+
+		h2 {
+			margin-bottom: 0;
+			transform: translateY(4rem);
+		}
+
+		img {
+			margin-bottom: 2rem;
+		}
+	}
+	
+	h4 {
+		text-transform: uppercase;
+		@include font-size(1.8);
+		@include line-height(2.4);
+	}
+}
+
+.dropdown-flex {
+	@include display(flex);
+
 }
 
 .hero-container, .dropdown-gallery {
@@ -1536,18 +1576,21 @@ a.purple-download-btn {
 	padding-bottom: 8rem;
 	border-bottom: 1px solid $darkgrey;
 
+	.dropdown-gallery {
+		padding-left: 5.88%;
+	}
+
 	.sub-hero {
 		margin-top: 0;
 	}
 }
 
 .dropdown-gallery {
-	margin-left: 11.76%;
-	padding-top: 8rem;
+	padding-bottom: 8rem;
 }
 
 .dropdown-item {
-	padding-bottom: 6rem;
+	padding-top: 6rem;
 	cursor: pointer;
 
 	&:focus {
@@ -1571,6 +1614,10 @@ a.purple-download-btn {
 			height: 2rem;
 		}
 	}
+
+	// &:nth-of-type(3n + 1){
+	// 	margin-left: 11.76%;
+	// }
 }
 
 .linkout {
@@ -1607,6 +1654,14 @@ a.purple-download-btn {
 	.csr-container .text-container {
 		.span_6 {
 			margin: 0 0 0 35.28%;
+		}
+	}
+
+	.csr-container .dropdown-gallery {
+		padding-left: 5.88%;
+
+		.span_6 {
+			margin-left: 35.28%;
 		}
 	}
 }
@@ -1656,6 +1711,10 @@ a.purple-download-btn {
 		margin-bottom: 2rem;
 		@include font-size(2);
 	}
+
+	.dropdown {
+		padding-left: 5.88%;
+	}
 }
 
 .dropdown-content {
@@ -1665,8 +1724,6 @@ a.purple-download-btn {
 .dropdown {
 	position: relative;
 	width: 100%;
-	padding-left: 5.88%;
-	padding-right: 29.4%;
 }
 
 
@@ -1841,10 +1898,11 @@ a.purple-download-btn {
 
 	.perks-container {
 		border-bottom: 1px solid $darkgrey;
-	}
 
-	.perks-container .dropdown-gallery {
-		margin-left: 5.88%;
+		.dropdown h2 {
+			transform: translateY(0);
+			margin: 4rem 0 2rem 23.52%;
+		}
 	}
 
 	.dropdown-item p:last-of-type {
@@ -2165,7 +2223,61 @@ a.purple-download-btn {
 
 }
 
+//CANTRUST
 
+.thinking-cantrust {
+
+	.hero-container {
+		position: relative;
+		z-index: 1;
+	}
+
+	.text-container.span_11 {
+		background-color: $extralightpurple;
+		padding: 4rem 12rem 4rem 6rem;
+		border-bottom: none;
+		margin-left: 29.4%;
+		transform: translateY(-4rem);
+	}
+
+	.cantrust-container	{
+		padding-top: 8rem;
+
+		h3 {
+			color: $darkgrey;
+		}
+
+		.media {
+			background-color: $extralightpurple;
+			padding: 2rem;
+		}
+
+		.span_11 {
+			margin-left: 29.4%;
+		}
+
+		.span_4 {
+			margin-left: 11.76%;
+		}
+
+		.span_6 {
+			margin-left: 17.64%;
+		}
+	}
+
+	.links {
+		text-align: center;
+		margin-top: 4rem;
+
+		p {
+			display: inline;
+			text-transform: uppercase;
+		}
+		a {
+			padding-right: 2rem;
+		}
+	}
+}
 
 
 

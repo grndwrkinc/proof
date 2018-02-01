@@ -12,12 +12,7 @@ get_header();
 	}
 
 	if(has_term('Report', 'thinking_categories', $post->ID) && $tagMatched) {
-		if(get_the_date('Y-m', $post) != "2017-04") {
-			get_template_part('template-parts/content', 'cantrust'); 
-		}
-		else {
-			get_template_part('template-parts/content', 'cantrust-2017'); 
-		}
+		get_template_part('template-parts/content', 'cantrust'); 
 	}
 	else {
 		get_template_part('template-parts/content', 'thinking');

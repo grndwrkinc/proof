@@ -31,11 +31,17 @@ get_header();
 			<div class="dropdown-item span_4">
 				<h5><?php the_sub_field('title'); ?></h5>
 				<div class="dropdown-content">
-					<h2><?php the_sub_field('title'); ?></h2>
-					<h4><?php echo $directorTitle; ?></h4>
-					<p><?php echo $directorPos; ?></p>
-					<img src="<?php echo $directorImg['url']; ?>">
-					<div><?php the_sub_field('director_statement'); ?></div>
+					<h2 class="span_7"><?php the_sub_field('title'); ?></h2>
+					<div class="dropdown-flex">
+						<div class="span_3">
+							<h4><?php echo $directorTitle; ?></h4>
+							<p><?php echo $directorPos; ?></p>
+						</div>
+						<div class="span_5">
+							<img src="<?php echo $directorImg['url']; ?>">
+							<div><?php the_sub_field('director_statement'); ?></div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<?php 

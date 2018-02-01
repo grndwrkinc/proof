@@ -2780,7 +2780,6 @@ a.purple-download-btn {
   padding-bottom: 6rem;
   border-bottom: 1px solid #524a3f; }
 .page-capabilities .sectors-container {
-  padding-bottom: 8rem;
   border-bottom: 1px solid #524a3f; }
   .page-capabilities .sectors-container p {
     margin-top: 0; }
@@ -2788,8 +2787,37 @@ a.purple-download-btn {
     margin-left: auto;
     padding-top: 6rem; }
 
-.sectors-container .dropdown-content {
-  display: none; }
+.sectors-container .dropdown-gallery, .perks-container .dropdown-gallery {
+  padding-left: 11.76%; }
+.sectors-container .dropdown .span_3, .sectors-container .dropdown .span_4, .perks-container .dropdown .span_3, .perks-container .dropdown .span_4 {
+  margin-left: 5.88%;
+  margin-right: 0;
+  padding-right: 1.5rem; }
+.sectors-container .dropdown .span_5 p, .sectors-container .dropdown .home .featured-wrapper .featured:first-child .featured-text p, .home .featured-wrapper .featured:first-child .sectors-container .dropdown .featured-text p, .perks-container .dropdown .span_5 p, .perks-container .dropdown .home .featured-wrapper .featured:first-child .featured-text p, .home .featured-wrapper .featured:first-child .perks-container .dropdown .featured-text p {
+  margin-top: 0; }
+.sectors-container .dropdown .span_5 p:last-of-type, .sectors-container .dropdown .home .featured-wrapper .featured:first-child .featured-text p:last-of-type, .home .featured-wrapper .featured:first-child .sectors-container .dropdown .featured-text p:last-of-type, .perks-container .dropdown .span_5 p:last-of-type, .perks-container .dropdown .home .featured-wrapper .featured:first-child .featured-text p:last-of-type, .home .featured-wrapper .featured:first-child .perks-container .dropdown .featured-text p:last-of-type {
+  border-bottom: 1px solid #524a3f;
+  padding-bottom: 2rem; }
+.sectors-container .dropdown h2, .perks-container .dropdown h2 {
+  margin-bottom: 0;
+  transform: translateY(4rem); }
+.sectors-container .dropdown img, .perks-container .dropdown img {
+  margin-bottom: 2rem; }
+.sectors-container h4, .perks-container h4 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px;
+  line-height: 2.4rem; }
+
+.dropdown-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .hero-container, .dropdown-gallery {
   display: -webkit-box;
@@ -2806,15 +2834,16 @@ a.purple-download-btn {
 .capabilities-container {
   padding-bottom: 8rem;
   border-bottom: 1px solid #524a3f; }
+  .capabilities-container .dropdown-gallery {
+    padding-left: 5.88%; }
   .capabilities-container .sub-hero {
     margin-top: 0; }
 
 .dropdown-gallery {
-  margin-left: 11.76%;
-  padding-top: 8rem; }
+  padding-bottom: 8rem; }
 
 .dropdown-item {
-  padding-bottom: 6rem;
+  padding-top: 6rem;
   cursor: pointer; }
   .dropdown-item:focus {
     outline: none; }
@@ -2854,6 +2883,10 @@ a.purple-download-btn {
   padding-top: 8rem; }
 .page-about .csr-container .text-container .span_6, .page-about .csr-container .text-container .frm_form_field, .page-about .csr-container .text-container .uploads {
   margin: 0 0 0 35.28%; }
+.page-about .csr-container .dropdown-gallery {
+  padding-left: 5.88%; }
+  .page-about .csr-container .dropdown-gallery .span_6, .page-about .csr-container .dropdown-gallery .frm_form_field, .page-about .csr-container .dropdown-gallery .uploads {
+    margin-left: 35.28%; }
 
 .ceo-container, .team-gallery {
   display: -webkit-box;
@@ -2891,15 +2924,15 @@ a.purple-download-btn {
   margin-bottom: 2rem;
   font-size: 20px;
   font-size: 2rem; }
+.team-container .dropdown {
+  padding-left: 5.88%; }
 
 .dropdown-content {
   display: none; }
 
 .dropdown {
   position: relative;
-  width: 100%;
-  padding-left: 5.88%;
-  padding-right: 29.4%; }
+  width: 100%; }
 
 .page-thinking .hero-container .span_8, .page-work .hero-container .span_8 {
   width: 100%; }
@@ -3001,8 +3034,9 @@ a.purple-download-btn {
     margin: 0; }
 .page-work-with-us .perks-container {
   border-bottom: 1px solid #524a3f; }
-.page-work-with-us .perks-container .dropdown-gallery {
-  margin-left: 5.88%; }
+  .page-work-with-us .perks-container .dropdown h2 {
+    transform: translateY(0);
+    margin: 4rem 0 2rem 23.52%; }
 .page-work-with-us .dropdown-item p:last-of-type {
   padding-bottom: 4rem;
   border-bottom: 1px solid #524a3f; }
@@ -3219,6 +3253,37 @@ a.purple-download-btn {
   padding-top: 8rem; }
 .single-work .featured-container {
   padding-top: 8rem; }
+
+.thinking-cantrust .hero-container {
+  position: relative;
+  z-index: 1; }
+.thinking-cantrust .text-container.span_11, .thinking-cantrust .home .featured-wrapper .featured:first-child .text-container.featured-img, .home .featured-wrapper .featured:first-child .thinking-cantrust .text-container.featured-img {
+  background-color: #F2EAF9;
+  padding: 4rem 12rem 4rem 6rem;
+  border-bottom: none;
+  margin-left: 29.4%;
+  transform: translateY(-4rem); }
+.thinking-cantrust .cantrust-container {
+  padding-top: 8rem; }
+  .thinking-cantrust .cantrust-container h3 {
+    color: #524a3f; }
+  .thinking-cantrust .cantrust-container .media {
+    background-color: #F2EAF9;
+    padding: 2rem; }
+  .thinking-cantrust .cantrust-container .span_11, .thinking-cantrust .cantrust-container .home .featured-wrapper .featured:first-child .featured-img, .home .featured-wrapper .featured:first-child .thinking-cantrust .cantrust-container .featured-img {
+    margin-left: 29.4%; }
+  .thinking-cantrust .cantrust-container .span_4 {
+    margin-left: 11.76%; }
+  .thinking-cantrust .cantrust-container .span_6, .thinking-cantrust .cantrust-container .frm_form_field, .thinking-cantrust .cantrust-container .uploads {
+    margin-left: 17.64%; }
+.thinking-cantrust .links {
+  text-align: center;
+  margin-top: 4rem; }
+  .thinking-cantrust .links p {
+    display: inline;
+    text-transform: uppercase; }
+  .thinking-cantrust .links a {
+    padding-right: 2rem; }
 
 /*--------------------------------------------------------------
 ## Comments

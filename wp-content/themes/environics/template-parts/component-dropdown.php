@@ -10,9 +10,15 @@
 		<div class="dropdown-item span_4">
 			<h5><?php the_sub_field('accordion_title'); ?></h5>
 			<div class="dropdown-content">
-				<h4><?php the_sub_field('accordion_title'); ?></h4>
-				<img src="<?php echo $accordion_image['url']; ?>" alt="<?php echo $accordion_image['alt']; ?>">
-				<div><?php the_sub_field('accordion_content'); ?></div>
+				<h2 class="span_7"><?php the_sub_field('accordion_title'); ?></h2>
+				<div class="dropdown-flex">
+					<div class="span_4">
+						<img src="<?php echo $accordion_image['url']; ?>" alt="<?php echo $accordion_image['alt']; ?>">
+					</div>
+					<div class="span_5">
+						<div><?php the_sub_field('accordion_content'); ?></div>
+					</div>
+				</div>
 			</div>
 		</div>
 <?php 
