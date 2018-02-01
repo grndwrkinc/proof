@@ -38,7 +38,7 @@ get_header();
 				<p><?php the_field('ceo_message'); ?></p>
 			</div>
 		</div>
-		<div class="team-gallery">
+		<div class="dropdown-gallery">
 <?php 
 		// Loop to find all team members
 		$loop_count = 0;
@@ -46,10 +46,10 @@ get_header();
 			
 			$main_photo = get_field('photo_professional');
 ?>
-			<div class="team-member span_5" tabindex="0" role="button" aria-label="A team member">
+			<div class="dropdown-item span_5" tabindex="0" role="button" aria-label="A team member">
 				<img src="<?php echo $main_photo['url']; ?>" alt="<?php echo $main_photo['alt']; ?>">
 				<h5><?php the_title(); ?></h5>
-				<p class="role"><?php the_field('team_member_role'); ?></p>
+				<p class="role barr"><?php the_field('team_member_role'); ?></p>
 
 				<article class="dropdown-content span_10">
 					<span class="close"></span>
@@ -77,14 +77,14 @@ get_header();
 		<div class="text-container">
 			<p class="span_6"><?php the_field('section_blurb'); ?></p>
 		</div>
-		<div class="accordion">
+		<div class="dropdown-gallery">
 			<?php
 				if( have_rows('section_accordion') ):
 			    	while ( have_rows('section_accordion') ) : the_row();
 			?>
-			<div class="accordion-item span_4">
+			<div class="dropdown-item span_4">
 				<h5><?php the_sub_field('accordion_title'); ?></h5>
-				<div class="hide">
+				<div class="dropdown-content">
 					<h4><?php the_sub_field('accordion_title'); ?></h4>
 					<p><?php the_sub_field('accordion_content'); ?></p>
 					<div class="purple-block"></div>

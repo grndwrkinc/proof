@@ -19,7 +19,7 @@ get_header();
 		<div class="span_10">
 			<?php the_field('sector_blurb'); ?>
 		</div>
-		<div class="accordion">
+		<div class="dropdown-gallery">
 			<?php
 				if( have_rows('sector_dropdowns') ):
 			    	while ( have_rows('sector_dropdowns') ) : the_row();
@@ -28,9 +28,10 @@ get_header();
 						$directorPos = get_field('team_member_role', $director->ID);
 						$directorImg = get_field('photo_professional', $director->ID);
 			?>
-			<div class="accordion-item span_4">
+			<div class="dropdown-item span_4">
 				<h5><?php the_sub_field('title'); ?></h5>
-				<div class="hide">
+				<div class="dropdown-content">
+					<h2><?php the_sub_field('title'); ?></h2>
 					<h4><?php echo $directorTitle; ?></h4>
 					<p><?php echo $directorPos; ?></p>
 					<img src="<?php echo $directorImg['url']; ?>">
@@ -63,18 +64,20 @@ get_header();
 			</p>
 		</div>
 		
-	<?php $terms = get_sub_field('capability_category');
-		if( $terms ): ?>
-		<div class="accordion">
+		<div class="dropdown-gallery">
+	<?php if( have_rows('capability_category') ):
+	    	while ( have_rows('capability_category') ) : the_row(); ?>
 
-		<?php foreach( $terms as $term ): ?>
-			<div class="accordion-item span_4">
-				<h5><?php echo $term->name; ?></h5>
+			<div class="dropdown-item span_4">
+				<h5><?php if( get_sub_field('title') ){ the_sub_field('title'); } ?></h5>
+				<div class="dropdown-content">	
+					<p><?php if( get_sub_field('description') ){ the_sub_field('description'); } ?></p>
+				</div>
 			</div>
-		<?php endforeach; ?>
+	<?php endwhile; //End of capability category loop
+		endif; ?>
 		</div>
-	<?php endif; ?>
-
+		<p class="linkout"><?php the_sub_field('external_link'); ?></p>
 	</div>
 	<?php 
 		endwhile; // End of capabilities repeater loop

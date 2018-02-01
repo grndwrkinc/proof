@@ -1517,17 +1517,23 @@ a.purple-download-btn {
 	}
 }
 
-.hero-container, .accordion {
+.sectors-container {
+	.dropdown-content {
+		display: none;
+	}
+}
+
+.hero-container, .dropdown-gallery {
 	@include display(flex);
 	flex-wrap: wrap;
 
-	.accordion-item:nth-child(3n){
+	.dropdown-item:nth-child(3n){
 		margin-right: 0;
 	}
 }
 
 .capabilities-container {
-	padding-bottom: 2rem;
+	padding-bottom: 8rem;
 	border-bottom: 1px solid $darkgrey;
 
 	.sub-hero {
@@ -1535,13 +1541,18 @@ a.purple-download-btn {
 	}
 }
 
-.accordion {
+.dropdown-gallery {
 	margin-left: 11.76%;
 	padding-top: 8rem;
 }
 
-.accordion-item {
+.dropdown-item {
 	padding-bottom: 6rem;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
 
 	h5 {
 		position: relative;
@@ -1559,6 +1570,15 @@ a.purple-download-btn {
 			background-color: $extralightpurple;
 			height: 2rem;
 		}
+	}
+}
+
+.linkout {
+	margin-left: 29.4%;
+	text-transform: uppercase;
+
+	a {
+		padding: 0 6rem 0 1rem;
 	}
 }
 
@@ -1601,9 +1621,14 @@ a.purple-download-btn {
 	padding-bottom: 8rem;
 }
 
-.team-gallery {
+.team-container {
 
-	.team-member {
+	.dropdown-gallery {
+		margin-left: 0;
+		padding-top: 0;
+	}
+
+	.dropdown-item {
 		margin-right: 0;
 		padding-right: 1.5rem;
 
@@ -1619,11 +1644,17 @@ a.purple-download-btn {
 	h5 {
 		margin-top: 2rem;
 		margin-bottom: 0;
+		@include font-size(2);
+
+		&:before {
+			display: none;
+		}
 	}
 
 	.role {
 		margin-top: 0;
 		margin-bottom: 2rem;
+		@include font-size(2);
 	}
 }
 
@@ -1812,11 +1843,11 @@ a.purple-download-btn {
 		border-bottom: 1px solid $darkgrey;
 	}
 
-	.perks-container .accordion {
+	.perks-container .dropdown-gallery {
 		margin-left: 5.88%;
 	}
 
-	.accordion-item p:last-of-type {
+	.dropdown-item p:last-of-type {
 		padding-bottom: 4rem;
 		border-bottom: 1px solid $darkgrey;
 	}

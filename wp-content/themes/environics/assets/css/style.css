@@ -2788,7 +2788,10 @@ a.purple-download-btn {
     margin-left: auto;
     padding-top: 6rem; }
 
-.hero-container, .accordion {
+.sectors-container .dropdown-content {
+  display: none; }
+
+.hero-container, .dropdown-gallery {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -2797,29 +2800,32 @@ a.purple-download-btn {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap; }
-  .hero-container .accordion-item:nth-child(3n), .accordion .accordion-item:nth-child(3n) {
+  .hero-container .dropdown-item:nth-child(3n), .dropdown-gallery .dropdown-item:nth-child(3n) {
     margin-right: 0; }
 
 .capabilities-container {
-  padding-bottom: 2rem;
+  padding-bottom: 8rem;
   border-bottom: 1px solid #524a3f; }
   .capabilities-container .sub-hero {
     margin-top: 0; }
 
-.accordion {
+.dropdown-gallery {
   margin-left: 11.76%;
   padding-top: 8rem; }
 
-.accordion-item {
-  padding-bottom: 6rem; }
-  .accordion-item h5 {
+.dropdown-item {
+  padding-bottom: 6rem;
+  cursor: pointer; }
+  .dropdown-item:focus {
+    outline: none; }
+  .dropdown-item h5 {
     position: relative;
     margin-bottom: 0;
     font-size: 24px;
     font-size: 2.4rem;
     line-height: 34px;
     line-height: 3.4rem; }
-    .accordion-item h5:before {
+    .dropdown-item h5:before {
       font-family: 'FontAwesome';
       content: '\f067';
       font-size: 20px;
@@ -2829,6 +2835,12 @@ a.purple-download-btn {
       left: -5rem;
       background-color: #F2EAF9;
       height: 2rem; }
+
+.linkout {
+  margin-left: 29.4%;
+  text-transform: uppercase; }
+  .linkout a {
+    padding: 0 6rem 0 1rem; }
 
 .page-about .text-container {
   padding-top: 4rem; }
@@ -2857,19 +2869,28 @@ a.purple-download-btn {
   padding-left: 5.88%;
   padding-bottom: 8rem; }
 
-.team-gallery .team-member {
+.team-container .dropdown-gallery {
+  margin-left: 0;
+  padding-top: 0; }
+.team-container .dropdown-item {
   margin-right: 0;
   padding-right: 1.5rem; }
-  .team-gallery .team-member:nth-of-type(3n) {
+  .team-container .dropdown-item:nth-of-type(3n) {
     padding-right: 0; }
-  .team-gallery .team-member:nth-of-type(3n + 1) {
+  .team-container .dropdown-item:nth-of-type(3n + 1) {
     margin-left: 5.88%; }
-.team-gallery h5 {
+.team-container h5 {
   margin-top: 2rem;
-  margin-bottom: 0; }
-.team-gallery .role {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-size: 2rem; }
+  .team-container h5:before {
+    display: none; }
+.team-container .role {
   margin-top: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  font-size: 20px;
+  font-size: 2rem; }
 
 .dropdown-content {
   display: none; }
@@ -2980,9 +3001,9 @@ a.purple-download-btn {
     margin: 0; }
 .page-work-with-us .perks-container {
   border-bottom: 1px solid #524a3f; }
-.page-work-with-us .perks-container .accordion {
+.page-work-with-us .perks-container .dropdown-gallery {
   margin-left: 5.88%; }
-.page-work-with-us .accordion-item p:last-of-type {
+.page-work-with-us .dropdown-item p:last-of-type {
   padding-bottom: 4rem;
   border-bottom: 1px solid #524a3f; }
 .page-work-with-us .span_6, .page-work-with-us .frm_form_field, .page-work-with-us .uploads, .page-work-with-us .span_8 {

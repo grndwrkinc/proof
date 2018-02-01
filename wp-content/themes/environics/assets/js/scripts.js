@@ -332,109 +332,108 @@ environics.fullStory = function () {
 environics.activateTeam = function(){
 	// var totalmembers = $('.team-member').length;
 
-	$('.team-member').on('click', function(event){
-		event.stopPropagation();
-		if($(this).hasClass('jobs-item')) {
-			return;
-		}
+	// $('.team-member').on('click', function(event){
+	// 	event.stopPropagation();
+	// 	if($(this).hasClass('jobs-item')) {
+	// 		return;
+	// 	}
 
-		//Find the position of the current element
-		var current = this;
-		var position = 0;
-		$('.team-member').each(function(){
-			if($(this).is(current)) {
-				position++;
-				return false;
-			} position++;
-		});
+	// 	//Find the position of the current element
+	// 	var current = this;
+	// 	var position = 0;
+	// 	$('.team-member').each(function(){
+	// 		if($(this).is(current)) {
+	// 			position++;
+	// 			return false;
+	// 		} position++;
+	// 	});
 
-		// Remove class active
-		if($(this).hasClass('active')) {
-			$(this).removeClass('active');
-			$('.dropdown').remove();
-		}
+	// 	// Remove class active
+	// 	if($(this).hasClass('active')) {
+	// 		$(this).removeClass('active');
+	// 		$('.dropdown').remove();
+	// 	}
 
-		// Set class to active
-		else {
-			$('.team-member').removeClass('active');
-			$(current).addClass('active');
+	// 	// Set class to active
+	// 	else {
+	// 		$('.team-member').removeClass('active');
+	// 		$(current).addClass('active');
 
-			var membersPerRow;
+	// 		var membersPerRow;
 
-			//Get the amount of tiles per row based on window width
-			//Gallery never spans to 1 per row, so keep at 3
-			// if($(window).width() > 480) {
-				membersPerRow = 3;
-			// } else {
-			// 	membersPerRow = 1;
-			// }
+	// 		//Get the amount of tiles per row based on window width
+	// 		//Gallery never spans to 1 per row, so keep at 3
+	// 		// if($(window).width() > 480) {
+	// 			membersPerRow = 3;
+	// 		// } else {
+	// 		// 	membersPerRow = 1;
+	// 		// }
 			
-			//Find placement of bio insert
-			var placement = Math.ceil(position / membersPerRow) * membersPerRow -1;
+	// 		//Find placement of bio insert
+	// 		var placement = Math.ceil(position / membersPerRow) * membersPerRow -1;
 
-			//If the jobs square is the next square
-			var nextsquare = $(this).next();
-			//If the jobs link is 2 columns wide, 
-			//minus one from placement so team member on last row has correct placement
-			if (nextsquare.hasClass('filler-span-two')){
-				placement = placement - 1;
-			}
+	// 		//If the jobs square is the next square
+	// 		var nextsquare = $(this).next();
+	// 		//If the jobs link is 2 columns wide, 
+	// 		//minus one from placement so team member on last row has correct placement
+	// 		if (nextsquare.hasClass('filler-span-two')){
+	// 			placement = placement - 1;
+	// 		}
 			
-			// Get the html inside the dropdown
-			var bio = '<article class="dropdown span_10" style="display: block">';
-			console.log(this)
-			bio += $(this).children('.dropdown-content').html();
-			bio += '</article>';
+	// 		// Get the html inside the dropdown
+	// 		var bio = '<article class="dropdown span_10" style="display: block">';
+	// 		bio += $(this).children('.dropdown-content').html();
+	// 		bio += '</article>';
 
-			// If a bio exists on the stage, remove it first, 
-			// then insert the new one...
-			if($('.dropdown').length) {
-				$('.dropdown').fadeOut("fast", function() {
-					$(this).remove();
-					$($('.team-member')[placement]).after(bio);
-					// Initiate close function
-					environics.closeDropdown();
-				});
-			}
+	// 		// If a bio exists on the stage, remove it first, 
+	// 		// then insert the new one...
+	// 		if($('.dropdown').length) {
+	// 			$('.dropdown').fadeOut("fast", function() {
+	// 				$(this).remove();
+	// 				$($('.team-member')[placement]).after(bio);
+	// 				// Initiate close function
+	// 				environics.closeDropdown();
+	// 			});
+	// 		}
 
-			// // ...otherwise just insert the bio
-			else {
-				$($('.team-member')[placement]).after(bio);
-				// Initiate close function
-				environics.closeDropdown();
-			}	
-		}
+	// 		// // ...otherwise just insert the bio
+	// 		else {
+	// 			$($('.team-member')[placement]).after(bio);
+	// 			// Initiate close function
+	// 			environics.closeDropdown();
+	// 		}	
+	// 	}
 
-			// Scroll window to member photo offset minus height of margin
+	// 		// Scroll window to member photo offset minus height of margin
 
-			var memberOffset = $(this).offset();
-			var memberMargin = parseInt($(this).children().css('marginBottom')) - 2;
-			var scrollPos = memberOffset.top - memberMargin;
+	// 		var memberOffset = $(this).offset();
+	// 		var memberMargin = parseInt($(this).children().css('marginBottom')) - 2;
+	// 		var scrollPos = memberOffset.top - memberMargin;
 
-			// If team member details is above member, add height of team member details to scrollPos
-			var teamDetailOffset = $('.dropdown').offset();
+	// 		// If team member details is above member, add height of team member details to scrollPos
+	// 		var teamDetailOffset = $('.dropdown').offset();
 
-			if (teamDetailOffset.top < memberOffset.top) {
-				scrollPos = memberOffset.top - $('.dropdown').outerHeight() - (memberMargin * 2);
-				$('body, html').animate({
-	                scrollTop: scrollPos
-	        	}, 800);
+	// 		if (teamDetailOffset.top < memberOffset.top) {
+	// 			scrollPos = memberOffset.top - $('.dropdown').outerHeight() - (memberMargin * 2);
+	// 			$('body, html').animate({
+	//                 scrollTop: scrollPos
+	//         	}, 800);
 			
-			// ...otherwise do not add height of team memeber details to scrollPos
-			} else {
-				// var scrollPos = memberOffset.top - 19.2;
-				$('body, html').animate({
-	                scrollTop: scrollPos
-	        	}, 800);
-			}
-	});
+	// 		// ...otherwise do not add height of team memeber details to scrollPos
+	// 		} else {
+	// 			// var scrollPos = memberOffset.top - 19.2;
+	// 			$('body, html').animate({
+	//                 scrollTop: scrollPos
+	//         	}, 800);
+	// 		}
+	// });
 
-	$('.team-member').keypress(function (e) {
-		 var key = e.which;
-		 if(key === 13) {
-		 	$(this).click();
-		 }
-	 });	
+	// $('.team-member').keypress(function (e) {
+	// 	 var key = e.which;
+	// 	 if(key === 13) {
+	// 	 	$(this).click();
+	// 	 }
+	//  });	
 };
 
 environics.activateDropdown = function(){
@@ -446,13 +445,18 @@ environics.activateDropdown = function(){
 		var placement;
 		var current = this;
 		var position = 0;
+		var total = 0;
 
-		//Find the position of the current element
-		$('.dropdown-item').each(function(){
+
+		//Find the position of the current element, and the total elements
+		$(this).parent().find('.dropdown-item').each(function(){
 			if($(this).is(current)) {
 				position++;
 				return false;
 			} position++;
+		});
+		$(this).parent().find('.dropdown-item').each(function(){
+			total++;
 		});
 
 		// If the selected item open, then close it
@@ -469,47 +473,41 @@ environics.activateDropdown = function(){
 			//Mobile
 			itemsPerRow = 1;
 
-			//Desktop - All items are on one row
-			if($(window).width() > 768) {
-				itemsPerRow = $('.dropdown-item').length;
+			//Tablet - 2 items per row
+			if($(window).width() > 480) {
+				itemsPerRow = 2;
 			} 
-			//Tablet
-			else {
-				// Default is 3 items/row down to 480px
-				if($(window).width() > 480) {
-					itemsPerRow = 3;
-				}
 
-				// 4 items/row down to 640px if there are only 4 items in the dropdown gallery
-				// Less than 640px, it's 1 item/row
-				if($('.dropdown-item').length === 4) {
-					itemsPerRow = 1;
-
-					if($(window).width() > 640) {
-						itemsPerRow = 4;
-					}
-				}
-			}
+			//Desktop - 3 items per row
+			if($(window).width() > 768) {
+				itemsPerRow = 3;
+			} 
 			
 			//Find placement of bio insert
 			placement = Math.ceil(position / itemsPerRow) * itemsPerRow -1;
-			if(itemsPerRow === 3) {
-				if(position > 3) {
-					placement = Math.ceil(position / itemsPerRow) * itemsPerRow -2;
-				}
-			}
+			
+			var _this = $(this);
 			
 			// Get the html inside the dropdown
 			var bio = '<article class="dropdown" style="display: block">';
 			bio += $(this).children('.dropdown-content').html();
 			bio += '</article>';
 
+			//Create a variable for the item to place bio after
+			var placeafter = $(this).parent().children('.dropdown-item').eq(placement);
+
 			// If a bio exists on the stage, remove it first, 
 			// then insert the new one...
 			if($('.dropdown').length) {
 				$('.dropdown').fadeOut("fast", function() {
 					$(this).remove();
-					$($('.dropdown-item')[placement]).after(bio);
+					//Check to account for last row that is not full
+					if(placeafter.length){
+						placeafter.after(bio);
+					} else {
+						_this.parent().children().eq(total - 1).after(bio);
+					}
+					
 					// Initiate close function
 					environics.closeDropdown();
 				});
@@ -517,7 +515,12 @@ environics.activateDropdown = function(){
 
 			// ...otherwise just insert the bio
 			else {
-				$($('.dropdown-item')[placement]).after(bio);
+				//Check to account for last row that is not full
+				if(placeafter.length){
+					placeafter.after(bio);
+				} else {
+					_this.parent().children().eq(total - 1).after(bio);
+				}
 				// Initiate close function
 				environics.closeDropdown();
 			}	
