@@ -187,17 +187,6 @@ global $menu;
 }
 add_action('admin_menu', 'remove_menus');
 
-//Add menu descriptions 
-
-function be_header_menu_desc( $item_output, $item, $depth, $args ) {
-	
-	if( 'primary' == $args->theme_location && ! $depth)
-		$item_output = '<p class="menu-description">' . $item->description . '</p><p class="menu-text">' . $item_output . '</p>';
-		
-	return $item_output;
-}
-add_filter( 'walker_nav_menu_start_el', 'be_header_menu_desc', 10, 4 );
-
 // Custom Shortcodes 
 
  // Add Shortcode

@@ -1018,9 +1018,6 @@
 	.tile-content {
 		opacity: 1;
 	}
-	.tile-inner {
-		padding: 3.5rem 3rem 6rem 1rem
-	}
 	.embed-btn a {
 		text-decoration: underline;
 		font-family: "Lora";
@@ -1799,7 +1796,7 @@ a.purple-download-btn {
 	border-bottom: 1px solid $darkgrey;
 }
 
-.alm-reveal {
+.alm-reveal, .posts-container {
 	@include display(flex);
 	flex-wrap: wrap;
 
@@ -1813,6 +1810,48 @@ a.purple-download-btn {
 
 	.blog-item-img {
 		height: 100%;
+	}
+
+	.blog-item-img {
+		position: relative;
+	}
+
+	.tile-inner {
+		padding: 2rem;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		h5, p, a {
+			color: white;
+		}
+
+		.tile-link {
+			text-transform: uppercase;
+			margin-right: 6rem;
+		}
+	}
+
+	.tile-link {
+		display: none;
+	}
+
+	.no-image {
+		.tile-link {
+			display: block;
+		}
+
+		.tile-inner {
+			padding: 0;
+
+			h5, p, a {
+				color: $darkgrey;
+			}
+		}
+
+		p.barr:after {
+			display: none;
+		}
 	}
 }
 
@@ -2275,6 +2314,15 @@ a.purple-download-btn {
 		}
 		a {
 			padding-right: 2rem;
+		}
+	}
+
+	.posts-container {
+		padding-top: 8rem;
+		border-bottom: none;
+
+		.blog-item {
+			margin-bottom: 0;
 		}
 	}
 }

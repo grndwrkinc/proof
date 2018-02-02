@@ -275,7 +275,6 @@ environics.showMenu = function () {
 			$('.nav-container').removeClass('show').addClass('hide');
 			$('.menu-item').removeClass('active').addClass('passive');
 			document.ontouchmove = function(){ return true; };
-			$('body').removeClass('no-overflow');
 			//restore links to normal tabbing order
 			environics.tabModal(1);
 			// $('.site-content a, .site-footer a, button, input, textarea').attr('tabindex', '1');
@@ -284,7 +283,6 @@ environics.showMenu = function () {
 			$('.hamburger').addClass('close');
 			$('.menu-item').addClass('active').removeClass('passive');
 			document.ontouchmove = function(e){ e.preventDefault(); };
-			$('body').addClass('no-overflow');
 			//remove links from tabbing index except for nav links
 			environics.tabModal(-1);
 			// $('.site-content a, .site-footer a, button, input, textarea').attr('tabindex', '-1');

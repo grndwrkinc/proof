@@ -112,15 +112,10 @@
 
 .nav-container {
 	opacity: 0;
-	// overflow-y: scroll;
-	clear: both;
-	position: fixed;
+	position: absolute;
 	top: 0;
-	left: 0;
-	height: 100%;
-	background: $darkpurple_nav;
-	float: left;
-	width: 100%;
+	right: 0;
+	background: white;
 	z-index: 1000;
 	@include transition(all 0.4s ease);
 
@@ -136,148 +131,53 @@
 	ul {
 		display: none;
 		list-style: none;
-		padding-left: 0;
-		@include rem-size("width", 30);
-		cursor: default;
-
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%,-50%);
+		padding: 0;
 
 		li {
 			width: 100%;
-			padding: 4vh 0;
-			text-align: center;
-			text-transform: uppercase;
+			font-family: $font__heading;
+			@include font-size(3.6);
+			margin-bottom: 3rem;
 			position: relative;
+			padding-right: 4rem;
 
-			.menu-description {
+			&:after {
+				content: '';
 				position: absolute;
-				width: 100%;
-				top: -1rem;
+				background-color: $extralightpurple;
+				height: 2rem;
+				left: 0;
+				bottom: 1rem;
+				right: 0;
+				z-index: -1;
+				@include transition(all 0.1s ease);
 			}
 
-			&.active {
-				.menu-description, .menu-text a {
-					opacity: 1;
-					@include transition(all 0.2s ease);
+			&:hover {
+				&:after {
+					height: 4rem;
 				}
-
-				&:nth-child(2) {
-					.menu-description { transition-delay: 40ms; }
-					.menu-text a {transition-delay: 60ms; }
-				}
-
-				&:nth-child(3) {
-					.menu-description { transition-delay: 80ms; }
-					.menu-text a {transition-delay: 100ms; }
-				}
-
-				&:nth-child(4) {
-					.menu-description { transition-delay: 120ms; }
-					.menu-text a {transition-delay: 140ms; }
-				}
-
-				&:nth-child(5) {
-					.menu-description { transition-delay: 160ms; }
-					.menu-text a {transition-delay: 180ms; }
-				}
-
-				&:nth-child(6) {
-					.menu-description { transition-delay: 200ms; }
-					.menu-text a {transition-delay: 220ms; }
-				}
-			}
-
-			&.passive {
-				.menu-description, .menu-text a {
-					opacity: 0;
-					@include transition(all 140ms ease);
-				}
-
-				&.passive:nth-child(1) {
-					.menu-text a {transition-delay: 240ms; }
-				}
-
-				&.passive:nth-child(2) {
-					.menu-description { transition-delay: 200ms; }
-					.menu-text a {transition-delay: 220ms; }
-				}
-
-				&.passive:nth-child(3) {
-					.menu-description { transition-delay: 160ms; }
-					.menu-text a {transition-delay: 180ms; }
-				}
-
-				&.passive:nth-child(4) {
-					.menu-description { transition-delay: 120ms; }
-					.menu-text a {transition-delay: 140ms; }
-				}
-
-				&.passive:nth-child(5) {
-					.menu-description { transition-delay: 80ms; }
-					.menu-text a {transition-delay: 100ms; }
-				}
-
-				&.passive:nth-child(6) {
-					.menu-description { transition-delay: 40ms; }
-					.menu-text a {transition-delay: 60ms; }
-				}
-			}
-		}
-
-
-		.menu-text, .menu-description {
-			letter-spacing: 3px;
-			margin: 0;
-		}
-
-		.menu-text {
-			@include font-size(3.5);
-			@include line-height(3.5);
-		}
-
-		.menu-description {
-			color: $lightpurple;
-			line-height: 2rem;
-		}
-
-		.menu-description:empty {
-			display: block !important;
-		}
-
-		&:hover {
-			.menu-text a {
-				color: $lightpurple;
-				@include transition(all 0.2s ease);
-				transition-delay: 0ms!important;
-			}
-		}
-
-		&:hover {
-			.menu-text:hover a {
-				color: $white;
 			}
 		}
 	}
+}
 
-	a {
-		display: block;
-		text-decoration: none;
+.menu-primary-container {
+
+	.social-icons {
+		@include display(flex);
+		@include justify-content(center);
+		width: 10%;
+		margin: 0 auto;
 	}
 
-	.description {
-		text-transform: uppercase;
-		color:$lightpurple;
-		@include font-size(1.1);
-		line-height: 1.1rem;
+	.fa {
+		@include font-size(1.5);
+		margin: 0 2rem 1rem 0;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	&.outer {
+		padding: 6rem;
 	}
 }
 

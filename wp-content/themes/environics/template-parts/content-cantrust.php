@@ -54,13 +54,17 @@
 			if($relatedPosts) : foreach ($relatedPosts as $relatedPost) : 
 				$postType = get_post_type($relatedPost);
 				($postType == "news") ? $label = "Announcement" : $label = "Thinking";
+				$imgSrc = get_the_post_thumbnail_url($relatedPost->ID);
+				if(!strlen($imgSrc)) $classes = " no-image";
+				if(strlen($imgSrc)) $classes = " ";
 ?>
 			<div class="blog-item span_5 square">
 				<a href="<?php echo get_permalink($relatedPost->ID); ?>">
-					<div class="blog-item-img" style="background-image:url(<?php echo get_the_post_thumbnail_url($relatedPost->ID); ?>)">
+					<div class="blog-item-img <?php echo $classes; ?>" style="background-image:url(<?php echo $imgSrc; ?>)">
 						<div class="tile-inner">
 							<h5><?php echo $label; ?></h5>
-							<p><?php echo get_the_title($relatedPost->ID); ?></p>
+							<p class="barr"><?php echo get_the_title($relatedPost->ID); ?></p>
+							<a href="<?php echo get_permalink($relatedPost->ID); ?>" class="tile-link barr">See More</a>
 						</div>
 					</div>
 				</a>
