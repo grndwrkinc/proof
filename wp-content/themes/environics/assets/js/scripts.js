@@ -40,11 +40,11 @@ $.fn.almComplete = function() { // Ajax Load More callback function
 		}
 	}
 
-	if($(window).width() > 639 && $('.page-thinking .square').length) {
+	if($(window).width() > 768 && $('.page-thinking .square').length) {
 		environics.makeSquare();
 	}
 
-	if($(window).width() > 639 && $('.page-work .square').length) {
+	if($(window).width() > 768 && $('.page-work .square').length) {
 		environics.makeSquare();
 	}
 };
@@ -103,7 +103,7 @@ environics.init = function() {
 	}
 
 	//Make square only if greater than 480px
-	if($(window).width() > 480 && !$('.page-work').length) {
+	if($(window).width() > 768 && !$('.page-work').length) {
 		if($('.square').length) {
 			environics.makeSquare();
 		}
@@ -113,13 +113,13 @@ environics.init = function() {
 		$('.square').css('height', 'auto');
 	}
 
-	if($('.grid').length && $(window).width() < 641 && $('.page-work').length) {
+	if($('.grid').length && $(window).width() < 768 && $('.page-work').length) {
 		$('.square').css('height', 'auto');
 	}
 
 	$(window).resize(function() {
 		//Make square only if greater than 480px
-		if($(window).width() > 480 && !$('.page-work').length) {
+		if($(window).width() > 768 && !$('.page-work').length) {
 			if($('.square').length) {
 				environics.makeSquare();
 			}
@@ -129,11 +129,11 @@ environics.init = function() {
 			$('.square').css('height', 'auto');
 		}
 
-		if($('.grid').length && $(window).width() >= 641 && $('.page-work').length) {
+		if($('.grid').length && $(window).width() >= 768 && $('.page-work').length) {
 			environics.makeSquare();
 		}
 
-		if($('.grid').length && $(window).width() < 641 && $('.page-work').length) {
+		if($('.grid').length && $(window).width() < 768 && $('.page-work').length) {
 			$('.square').css('height', 'auto');
 		}
 

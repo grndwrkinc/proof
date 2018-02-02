@@ -3324,6 +3324,47 @@ footer {
 /*--------------------------------------------------------------
 ## Media Queries
 --------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .span_5, .home .featured-wrapper .featured:first-child .featured-text, .span_11, .home .featured-wrapper .featured:first-child .featured-img, .span_6, .frm_form_field, .uploads {
+    width: 100%; }
+
+  .square {
+    height: 32rem; }
+
+  .site-content, header {
+    padding: 0 2rem 2rem; }
+
+  .home .text-container {
+    display: block;
+    padding: 4rem 0;
+    border-bottom: 1px solid #524a3f; }
+    .home .text-container .span_11, .home .text-container .featured-wrapper .featured:first-child .featured-img, .home .featured-wrapper .featured:first-child .text-container .featured-img {
+      column-count: 1; }
+  .home .capabilities-container {
+    padding: 4rem 0 0 0;
+    border-bottom: 1px solid #524a3f; }
+    .home .capabilities-container .span_11, .home .capabilities-container .featured-wrapper .featured:first-child .featured-img, .home .featured-wrapper .featured:first-child .capabilities-container .featured-img {
+      margin-bottom: 4rem; }
+    .home .capabilities-container .featured {
+      border-bottom: none; }
+  .home .capabilities-wrapper {
+    display: block; }
+  .home .featured-container {
+    padding-top: 4rem; }
+  .home .featured-wrapper .featured:first-child {
+    display: block; }
+  .home .cantrust-container {
+    padding: 4rem 0;
+    border-bottom: 1px solid #524a3f; }
+
+  .featured-wrapper {
+    display: block; }
+
+  .featured {
+    padding-bottom: 4rem; }
+
+  .cantrust-text {
+    display: block; } }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
