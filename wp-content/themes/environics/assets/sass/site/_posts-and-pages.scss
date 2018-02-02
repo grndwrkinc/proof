@@ -1397,6 +1397,16 @@ a.purple-download-btn {
 	.capabilities-container {
 		border-bottom: none;
 	}
+
+	.text-container {
+		.span_11 {
+			column-count: 2;
+
+			p {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
 .home, .page-capabilities {
@@ -1818,7 +1828,7 @@ a.purple-download-btn {
 
 	.tile-inner {
 		padding: 2rem;
-		position: absolute;
+		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
 

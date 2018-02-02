@@ -327,7 +327,7 @@ input,
 select,
 textarea {
   color: #524a3f;
-  font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
   letter-spacing: 0.3px;
@@ -346,7 +346,8 @@ h1 {
   font-size: 7rem;
   line-height: 80px;
   line-height: 8rem;
-  color: #ffffff; }
+  color: #ffffff;
+  letter-spacing: -1px; }
 
 h2 {
   font-size: 70px;
@@ -354,24 +355,27 @@ h2 {
   line-height: 80px;
   line-height: 8rem;
   margin-bottom: 2rem;
-  color: #524a3f; }
+  color: #524a3f;
+  letter-spacing: -1px; }
 
 h3 {
   font-size: 42px;
   font-size: 4.2rem;
   line-height: 40px;
   line-height: 4rem;
-  color: #ffffff; }
+  color: #ffffff;
+  letter-spacing: -1px; }
 
 h4 {
   font-size: 36px;
   font-size: 3.6rem;
   line-height: 44px;
   line-height: 4.4rem;
-  color: #524a3f; }
+  color: #524a3f;
+  letter-spacing: -1px; }
 
 h5, .read-more, .btn, .role {
-  font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 18px;
@@ -382,8 +386,8 @@ h5, .read-more, .btn, .role {
 p {
   font-size: 18px;
   font-size: 1.8rem;
-  line-height: 24px;
-  line-height: 2.4rem;
+  line-height: 30px;
+  line-height: 3rem;
   margin-bottom: 1rem;
   color: #524a3f; }
 
@@ -477,7 +481,7 @@ dd {
   margin: 0 1.5em 1.5em; }
 
 li {
-  font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   list-style-type: none; }
 
 img {
@@ -580,7 +584,7 @@ textarea {
 .media-body {
   width: 30.7%; }
   .media-body h4 {
-    font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif; }
+    font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif; }
 
 .comment-content, .comment-form-comment, .form-submit {
   width: 69.2%; }
@@ -855,7 +859,7 @@ button, .alm-load-more-btn {
   display: inline-block;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
-  font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 1.4rem;
   margin: 0;
@@ -1968,7 +1972,7 @@ a {
   padding-top: 0rem; }
   .page-about .csr-report a {
     color: #f2bd37;
-    font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif; }
+    font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif; }
 .page-about .jobs-item a, .page-about .jobs-item img {
   display: block; }
 .page-about .jobs-item:before {
@@ -2222,7 +2226,7 @@ a {
 
 .text a {
   color: #f2bd37;
-  font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   -webkit-transition: text-decoration, 0.2s ease;
   -moz-transition: text-decoration, 0.2s ease;
   -ms-transition: text-decoration, 0.2s ease;
@@ -2238,7 +2242,7 @@ a {
   margin: 2rem 0; }
   .text ol li, .text ul li {
     color: #524a3f;
-    font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+    font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
     margin-bottom: 0.5rem;
     font-size: 11px;
     font-size: 1.1rem;
@@ -2658,6 +2662,10 @@ a.purple-download-btn {
     transform: translate(-50%, -50%); }
 .home .capabilities-container {
   border-bottom: none; }
+.home .text-container .span_11, .home .text-container .featured-wrapper .featured:first-child .featured-img, .home .featured-wrapper .featured:first-child .text-container .featured-img {
+  column-count: 2; }
+  .home .text-container .span_11 p, .home .text-container .featured-wrapper .featured:first-child .featured-img p, .home .featured-wrapper .featured:first-child .text-container .featured-img p {
+    margin-top: 0; }
 
 .home .text-container, .home .capabilities-container,
 .home .featured-container, .home .cantrust-container, .page-capabilities .text-container, .page-capabilities .capabilities-container,
@@ -2933,7 +2941,7 @@ a.purple-download-btn {
     position: relative; }
   .alm-reveal .tile-inner, .posts-container .tile-inner {
     padding: 2rem;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%); }
     .alm-reveal .tile-inner h5, .alm-reveal .tile-inner p, .alm-reveal .tile-inner a, .posts-container .tile-inner h5, .posts-container .tile-inner p, .posts-container .tile-inner a {
@@ -3019,7 +3027,7 @@ a.purple-download-btn {
   border-bottom: 1px solid #524a3f; }
   .page-work-with-us .single-job.span_7 h4 {
     color: #524a3f;
-    font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+    font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
     font-size: 24px;
     font-size: 2.4rem;
     line-height: 34px;
@@ -3281,7 +3289,7 @@ header {
 ## Footer
 --------------------------------------------------------------*/
 footer {
-  font-family: "AvenirNextLTW02-Medium", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   position: relative;
   padding: 0 0 6rem 0; }
   footer p {
