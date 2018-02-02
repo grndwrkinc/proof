@@ -54,7 +54,7 @@ get_header();
 		
 				<div class="featured span_5">
 					<div class="featured-img square" style="background-image: url('<?php echo $image['url']; ?>');">
-						<h3><?php the_sub_field('capability_title'); ?></h3>
+						<h3 class="barr"><?php the_sub_field('capability_title'); ?></h3>
 					</div>
 					<div class="featured-text">
 						<p class="item-text"><?php the_sub_field('capability_description'); ?></p>

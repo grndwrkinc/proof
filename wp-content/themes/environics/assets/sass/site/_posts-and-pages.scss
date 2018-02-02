@@ -1242,12 +1242,6 @@ a.purple-download-btn {
 	}
 }
 
-.left-two-thirds {
-	@extend .press;
-}
-.right-one-third {
-	@extend .awards;
-}
 
 //More Info block
 .more-info {
@@ -1421,6 +1415,10 @@ a.purple-download-btn {
 
 	.capabilities-container {
 
+		.featured-img {
+			padding: 2rem;
+		}
+
 		p {
 			margin-bottom: 0;
 		}
@@ -1460,6 +1458,7 @@ a.purple-download-btn {
 }
 
 .home .featured-wrapper {
+
 	.featured:first-child {
 		display: flex;
 		width: 100%;
@@ -1494,7 +1493,7 @@ a.purple-download-btn {
 	position: relative;
 
 	h3 {
-		width: 100%;
+		margin-right: 2rem;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
