@@ -24,7 +24,7 @@ get_header();
 ?>
 				<div class="span_8">
 					<div class="sub-hero <?php echo $classes; ?> <?php //if ($count >= 2) {echo "double-featured"; } ?>" style="background-image:url(<?php echo $hero; ?>)">
-						<h1><?php echo $post_object->post_title; ?></h1>
+						<h1><a class="btn barr" href="<?php echo get_permalink($post_object->ID); ?>"><?php echo $post_object->post_title; ?></a></h1>
 					</div>
 					<p class="span_5"><?php echo $subtitle; ?></p>
 					<a class="btn barr" href="<?php echo get_permalink($post_object->ID); ?>">Read the full story</a>

@@ -689,6 +689,8 @@ a.purple-download-btn {
 .hero {
 	height: 44rem;
 	position: relative;
+	background-size: cover;
+	background-position: center;
 
 	h1 {
 		color: $white;
@@ -702,6 +704,7 @@ a.purple-download-btn {
 
 .sub-hero {
 	background-size: cover;
+	background-position: center;
 	height: 32rem;
 	position: relative;
 	padding-left: 5.88%;
@@ -766,6 +769,7 @@ a.purple-download-btn {
 
 		.featured-img {
 			padding: 2rem;
+			background-size: cover;
 		}
 
 		p {
@@ -873,6 +877,23 @@ a.purple-download-btn {
 			margin-left: auto;
 			padding-top: 6rem;
 		}
+
+		.span_5 {
+			position: relative;
+			margin-left: 29.4%;
+			margin-right: 0;
+		}
+
+		.span_7 {
+			margin-left: 47.04%;
+		}
+
+		.deets {
+			position: absolute;
+			left: -21rem;
+			top: 10rem;
+			width: 19rem;
+		}
 	}
 }
 
@@ -904,6 +925,8 @@ a.purple-download-btn {
 		h2 {
 			margin-bottom: 0;
 			transform: translateY(4rem);
+			position: relative;
+			z-index: 1;
 		}
 
 		img {
@@ -1060,6 +1083,7 @@ a.purple-download-btn {
 		margin-top: 2rem;
 		margin-bottom: 0;
 		@include font-size(2);
+		@include line-height(2.4);
 
 		&:before {
 			display: none;
@@ -1106,9 +1130,14 @@ a.purple-download-btn {
 
 	.hero-container.double-featured {
 
-		h1 {
+		h1, h1 .barr.btn {
 			@include font-size(4.2);
 			@include line-height(4.8);
+			font-family: $font__subheading;
+			text-transform: none;
+			color: white;
+			width: auto;
+    		margin-left: 0;
 		}
 
 		.span_8 {
@@ -1561,6 +1590,7 @@ a.purple-download-btn {
 
 		li {
 			position: relative;
+			text-indent: 1.5rem;
 
 			&:before {
 				content: '_';

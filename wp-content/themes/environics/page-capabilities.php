@@ -32,15 +32,13 @@ get_header();
 				<h5><?php the_sub_field('title'); ?></h5>
 				<div class="dropdown-content">
 					<h2 class="span_7"><?php the_sub_field('title'); ?></h2>
-					<div class="dropdown-flex">
-						<div class="span_3">
+					<div class="span_5">
+						<img src="<?php echo $directorImg['url']; ?>">
+						<div class="deets">
 							<h4><?php echo $directorTitle; ?></h4>
 							<p><?php echo $directorPos; ?></p>
 						</div>
-						<div class="span_5">
-							<img src="<?php echo $directorImg['url']; ?>">
-							<div><?php the_sub_field('director_statement'); ?></div>
-						</div>
+						<div><?php the_sub_field('director_statement'); ?></div>
 					</div>
 				</div>
 			</div>
