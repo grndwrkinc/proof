@@ -983,24 +983,46 @@ a.purple-download-btn {
 	h5 {
 		position: relative;
 		margin-bottom: 0;
+		padding-left: 1rem;
 		@include font-size(2.4);
 		@include line-height(3.4);
 
+		&:after, &:before {
+			transition: all 0.3s ease;
+		}
+
 		&:before {
-			font-family: 'FontAwesome';
-			content: '\f067';
-			@include font-size(2);
+			content: '+';
+			@include font-size(3);
+			position: absolute;
+			top: -1.6rem;
+		    left: -4rem;
+		    z-index: 1;
+		}
+
+		&:after {
+			content: '';
 			position: absolute;
 			width: 5rem;
 			left: -5rem;
 			background-color: $extralightpurple;
 			height: 2rem;
+			top: 0;
 		}
 	}
 
-	// &:nth-of-type(3n + 1){
-	// 	margin-left: 11.76%;
-	// }
+	&.active {
+		h5:before {
+			transform: rotate(45deg);
+			display: inline-block;
+			color: white;
+			top: -0.75rem;
+		}
+
+		h5:after {
+			background-color: $lightpurple;
+		}
+	}
 }
 
 .linkout {
@@ -1085,7 +1107,7 @@ a.purple-download-btn {
 		@include font-size(2);
 		@include line-height(2.4);
 
-		&:before {
+		&:before, &:after {
 			display: none;
 		}
 	}

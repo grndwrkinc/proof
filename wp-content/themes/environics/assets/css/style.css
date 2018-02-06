@@ -2321,20 +2321,36 @@ a.purple-download-btn {
   .dropdown-item h5 {
     position: relative;
     margin-bottom: 0;
+    padding-left: 1rem;
     font-size: 24px;
     font-size: 2.4rem;
     line-height: 34px;
     line-height: 3.4rem; }
+    .dropdown-item h5:after, .dropdown-item h5:before {
+      transition: all 0.3s ease; }
     .dropdown-item h5:before {
-      font-family: 'FontAwesome';
-      content: '\f067';
-      font-size: 20px;
-      font-size: 2rem;
+      content: '+';
+      font-size: 30px;
+      font-size: 3rem;
+      position: absolute;
+      top: -1.6rem;
+      left: -4rem;
+      z-index: 1; }
+    .dropdown-item h5:after {
+      content: '';
       position: absolute;
       width: 5rem;
       left: -5rem;
       background-color: #F2EAF9;
-      height: 2rem; }
+      height: 2rem;
+      top: 0; }
+  .dropdown-item.active h5:before {
+    transform: rotate(45deg);
+    display: inline-block;
+    color: white;
+    top: -0.75rem; }
+  .dropdown-item.active h5:after {
+    background-color: #582C83; }
 
 .linkout {
   margin-left: 29.4%;
@@ -2390,7 +2406,7 @@ a.purple-download-btn {
   font-size: 2rem;
   line-height: 24px;
   line-height: 2.4rem; }
-  .team-container h5:before {
+  .team-container h5:before, .team-container h5:after {
     display: none; }
 .team-container .role {
   margin-top: 0;
