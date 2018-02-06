@@ -28,6 +28,11 @@
 		margin-left: 5.88%;
 	}
 
+	.hamburger-container p {
+		@include line-height(3);
+		display: none;
+	}
+
 	.home {
 
 		.hero {
@@ -60,10 +65,10 @@
 			.featured {
 				border-bottom: none;
 			}
+		}
 
-			.featured-img {
-				height: 18rem !important;
-			}
+		.featured-img {
+			height: 18rem !important;
 		}
 
 		.capabilities-wrapper {
@@ -109,6 +114,14 @@
 
 	.featured {
 		padding-bottom: 4rem;
+		position: relative;
+
+		h4 {
+			position: absolute;
+			top: 8rem;
+			padding: 0 2rem;
+			color: white;
+		}
 	}
 
 	.cantrust-text {
@@ -167,10 +180,14 @@
 		.text-container {
 			padding-bottom: 4rem;
 			border-bottom: 1px solid $darkgrey;
+
+			.span_7 a {
+				display: inline-block;
+			}
 		}
 
 		.team-container {
-			padding-top: 6rem;
+			padding-top: 4rem;
 
 			h5 {
 				margin-top: 1rem;
@@ -195,11 +212,17 @@
 		}
 
 		.featured-image.span_5 {
-			width: 50%;
+			width: 55%;
+			margin-left: 1rem;
 		}
 
 		.span_6 {
 			margin-right: 0;
+			padding: 0 1rem;
+		}
+
+		.team-container .dropdown-item {
+			padding-right: 0.5rem;
 		}
 
 		.csr-container {
@@ -213,7 +236,7 @@
 
 			.dropdown-gallery {
 				border-bottom: none;
-				padding-left: 0;
+				padding-left: 3rem;
 
 				.span_6 {
 					margin-left: 0;

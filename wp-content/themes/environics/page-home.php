@@ -81,8 +81,7 @@ get_header();
 ?>
 	
 			<div class="featured span_5">
-				<div class="featured-img">
-					<img src="<?php echo $featuredImg; ?>" alt="">
+				<div class="featured-img square" style="background-image: url('<?php echo $featuredImg; ?>')">
 				</div>
 				<div class="featured-text">
 					<h5>Featured Work</h5>

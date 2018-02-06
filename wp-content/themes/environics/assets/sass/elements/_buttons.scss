@@ -10,11 +10,12 @@ button, .alm-load-more-btn {
 
 .barr, .alm-load-more-btn {
 	position: relative;
+	cursor: pointer;
 
 	&:after {
 		content: '';
 		position: absolute;
-		background-color: $extralightpurple;
+		background-color: $mediumpurple;
 		height: 2rem;
 		left: 0;
 		bottom: -0.5rem;
@@ -40,6 +41,20 @@ h1 .btn.barr {
 	text-transform: none;
 }
 
+.capabilities-wrapper h3.barr {
+	padding-left: 1rem;
+
+	&:after {
+		bottom: 0;
+	}
+
+	&:hover {
+		&:after {
+			height: 9rem;
+		}
+	}
+}
+
 .tile-content.barr {
 	&:after {
 		bottom: 0;
@@ -48,9 +63,45 @@ h1 .btn.barr {
 
 .read-more.barr {
 	padding-left: 0.5rem;
+	width: 50%;
 
 	&:after {
 		bottom: -1rem;
+	}
+}
+
+.team-container .barr {
+	padding-left: 0.5rem;
+	&:hover {
+		&:after {
+			height: 5rem;
+		}
+	}
+}
+
+.page-work .hero-container .span_8 h1 .btn.barr {
+	&:after {
+		bottom: 2rem;
+	}
+
+	&:hover {
+		&:after {
+			height: 2rem;
+		}
+	}
+}
+
+.cantrust-img .barr {
+	padding: 0 1rem;
+
+	&:after {
+		bottom: 3.5rem;
+	}
+
+	&:hover {
+		&:after {
+			height: 8rem;
+		}
 	}
 }
 
@@ -95,7 +146,12 @@ h1 .btn.barr {
 	border: none;
 	background: none;
 	opacity: 1;
+	padding: 0 3rem 0 0.5rem;
 	@include transition(all 0.15s ease);
+
+	&:after {
+		bottom: -0.8rem;
+	}
 }
 
 //Social Share buttons
@@ -142,15 +198,46 @@ h1 .btn.barr {
 	}
 }
 
-
-
-
 .btn {
 	@extend .read-more;
 }
 
 
+@media (max-width: 768px) { 
 
+	.capabilities-wrapper h3.barr {
+		padding-right: 2rem;
+	}
+
+	.read-more.barr:after {
+		bottom: -0.5rem;
+	}
+
+	.cantrust-img .barr {
+		&:after {
+			bottom: 1.5rem;
+		}
+
+		&:hover {
+			&:after {
+				height: 1.6rem;
+			}
+		}
+	}
+
+	.barr, .alm-load-more-btn, .capabilities-wrapper h3.barr {
+		&:after {
+			height: 1.6rem;
+		}
+
+		&:hover {
+			&:after {
+				height: 1.6rem;
+			}
+		}
+	}
+
+}
 
 
 

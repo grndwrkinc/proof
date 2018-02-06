@@ -693,27 +693,31 @@ a.purple-download-btn {
 		margin-bottom: 0;
 	}
 
-	.featured:last-child {
+	.featured:nth-child(3n + 3) {
 		margin-right: 0;
+	}
+
+	h5 {
+		margin: 2rem 0;
 	}
 }
 
 .home .featured-wrapper {
 
-	.featured:first-child {
-		display: flex;
-		width: 100%;
-		margin-right: 0;
+	// .featured:first-child {
+	// 	display: flex;
+	// 	width: 100%;
+	// 	margin-right: 0;
 
-		.featured-img {
-			@extend .span_11;
-		}
+	// 	.featured-img {
+	// 		@extend .span_11;
+	// 	}
 
-		.featured-text {
-			@extend .span_5;
-			margin-right: 0;
-		}
-	}
+	// 	.featured-text {
+	// 		@extend .span_5;
+	// 		margin-right: 0;
+	// 	}
+	// }
 }
 
 .cantrust-text {
@@ -732,6 +736,8 @@ a.purple-download-btn {
 
 .cantrust-img, .featured-img {
 	position: relative;
+	background-size: cover;
+    background-position: center;
 
 	h3 {
 		margin-right: 2rem;
@@ -938,6 +944,11 @@ a.purple-download-btn {
 			margin-left: auto;
 			margin-right: 0;
 		}
+
+		.span_7 a {
+			text-transform: uppercase;
+			padding: 0 2rem 0 0.5rem;
+		}
 	}
 
 	.team-container {
@@ -1050,6 +1061,7 @@ a.purple-download-btn {
 
 		h1 .btn.barr {
 			display: block;
+			width: auto;
 		}
 	}
 
