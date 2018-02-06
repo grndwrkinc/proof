@@ -2877,28 +2877,46 @@ footer {
     width: 40%;
     margin-left: 5.88%; }
 
+  .home .hero {
+    height: 44rem; }
   .home .text-container {
     display: block;
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     border-bottom: 1px solid #524a3f; }
+    .home .text-container h2.span_5, .home .text-container .featured-wrapper .featured:first-child h2.featured-text, .home .featured-wrapper .featured:first-child .text-container h2.featured-text {
+      margin-bottom: 2rem; }
     .home .text-container .span_11, .home .text-container .featured-wrapper .featured:first-child .featured-img, .home .featured-wrapper .featured:first-child .text-container .featured-img {
       column-count: 1; }
   .home .capabilities-container {
     padding: 4rem 0 0 0;
     border-bottom: 1px solid #524a3f; }
     .home .capabilities-container .span_11, .home .capabilities-container .featured-wrapper .featured:first-child .featured-img, .home .featured-wrapper .featured:first-child .capabilities-container .featured-img {
-      margin-bottom: 4rem; }
+      margin-bottom: 3rem;
+      padding: 1rem; }
     .home .capabilities-container .featured {
       border-bottom: none; }
+    .home .capabilities-container .featured-img {
+      height: 18rem !important; }
   .home .capabilities-wrapper {
     display: block; }
   .home .featured-container {
     padding-top: 4rem; }
+  .home .featured-text {
+    padding: 1rem; }
+    .home .featured-text h5 {
+      display: none; }
   .home .featured-wrapper .featured:first-child {
     display: block; }
   .home .cantrust-container {
     padding: 4rem 0;
     border-bottom: 1px solid #524a3f; }
+  .home .cantrust-text p, .home .cantrust-text h2 {
+    padding: 1rem; }
+  .home .cantrust-img h3 {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 40px;
+    line-height: 4rem; }
 
   .featured-wrapper {
     display: block; }
@@ -3259,7 +3277,19 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    width: 40%; } }
+    width: 40%; }
+
+  .nav-container ul li {
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 24px;
+    line-height: 2.4rem; }
+
+  .nav-container ul li:last-of-type {
+    margin-bottom: 0; }
+
+  .menu-primary-container .social-icons {
+    display: none; } }
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
