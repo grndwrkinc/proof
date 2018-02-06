@@ -1806,8 +1806,13 @@
 		}
 
 		h5:before {
-			left: 0;
-			top: -2rem;
+			top: -1.2rem;
+		}
+
+		&.active {
+			h5:before {
+				top: -0.3rem;
+			}
 		}
 	}
 
@@ -1977,6 +1982,15 @@
 
 		.sub-hero {
 			margin-top: 0;
+			height: auto;
+			padding: 4rem;
+
+			h3, h2 {
+				position: static;
+				top: auto;
+				transform: none;
+				margin-bottom: 0;
+			}
 		}
 
 		.text-container {
@@ -1997,7 +2011,7 @@
 			}
 
 			.dropdown-gallery {
-				padding-left: 0;
+				padding-left: 3rem;
 				border-bottom: none;
 
 				.span_5 {
@@ -2037,11 +2051,12 @@
 
 			.dropdown-gallery {
 				border-bottom: none;
+				padding-left: 3rem;
 			}
 
 			.linkout {
-				width: 60%;
-				margin-left: 20%;
+			    width: 85%;
+				margin-left: 15%;
 			}
 		}
 

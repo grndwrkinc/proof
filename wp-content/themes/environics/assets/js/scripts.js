@@ -269,7 +269,7 @@ environics.tabModal = function(index) {
 
 //Show and hide the menu
 environics.showMenu = function () {
-	$('.hamburger').on('click', function(){
+	$('.hamburger-container').on('click', function(){
 		if($(this).hasClass('close')){
 			$(this).removeClass('close');
 			$('.nav-container').removeClass('show').addClass('hide');
@@ -280,7 +280,7 @@ environics.showMenu = function () {
 			// $('.site-content a, .site-footer a, button, input, textarea').attr('tabindex', '1');
 		} else {
 			$('.nav-container').addClass('show').removeClass('hide');
-			$('.hamburger').addClass('close');
+			$('.hamburger-container').addClass('close');
 			$('.menu-item').addClass('active').removeClass('passive');
 			document.ontouchmove = function(e){ e.preventDefault(); };
 			//remove links from tabbing index except for nav links
@@ -289,7 +289,7 @@ environics.showMenu = function () {
 		}
 	});
 
-	$('.hamburger').keypress(function (e) {
+	$('.hamburger-container').keypress(function (e) {
 	 var key = e.which;
 	 if(key === 13) {
 	   if($(this).hasClass('close')){
@@ -302,7 +302,7 @@ environics.showMenu = function () {
 				environics.tabModal(1);
 	   		} else {
 	   			$('.nav-container').addClass('show').removeClass('hide');
-	   			$('.hamburger').addClass('close');
+	   			$('.hamburger-container').addClass('close');
 	   			$('.menu-item').addClass('active').removeClass('passive');
 	   			document.ontouchmove = function(e){ e.preventDefault(); };
 	   			$('body').addClass('no-overflow');
