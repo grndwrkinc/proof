@@ -115,7 +115,7 @@ get_header();
 	if($loop->have_posts()) : 
 ?>
 	<!-- Gallery of Posts -->
-	<div class="posts-container">
+	<div class="posts-container grid">
 <?php 
 				if (is_page('work')) {
 					echo do_shortcode('[ajax_load_more transition="fade" transition_speed="100" repeater="'.$repeater.'" post_type="'.$postType.'" posts_per_page="'.$postsPerPage.'" scroll="'.$scroll.'" destroy_after="'.$destroyAfter.'" button_label="'.$buttonLabel.'"  taxonomy="'.$taxonomy.'" taxonomy_terms="'.$taxonomyTerms.'" taxonomy_operator="'.$taxonomyOperator.'" taxonomy_relation="'.$taxonomyRelation.'"]');

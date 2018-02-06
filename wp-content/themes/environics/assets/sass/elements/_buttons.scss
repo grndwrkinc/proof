@@ -31,6 +31,15 @@ button, .alm-load-more-btn {
 	}
 }
 
+h1 .btn.barr {
+	display: block;
+	@include font-size(7);
+	@include line-height(8);
+	color: white;
+	font-family: $font__subheading;
+	text-transform: none;
+}
+
 .tile-content.barr {
 	&:after {
 		bottom: 0;
@@ -38,6 +47,8 @@ button, .alm-load-more-btn {
 }
 
 .read-more.barr {
+	padding-left: 0.5rem;
+
 	&:after {
 		bottom: -1rem;
 	}

@@ -8,11 +8,11 @@
 	$label = $sources[0]->name;
 
 	//Set a string of all the classes to apply to the tile
-	if(!strlen($imgSrc)) $classes .= " no-image";
+	if(!strlen($imgSrc)) $classes = " no-image";
 
 	//Set a string with an inline style declaration for tiles.
 	$inlineImg = "";
-	if(strlen($imgSrc)) $inlineImg .= " style=\"background-image:url('" . $imgSrc . "');\"";
+	if(strlen($imgSrc)) $inlineImg = " style=\"background-image:url('" . $imgSrc . "');\"";
 ?>	
 <div class="blog-item span_5 square">	
     <a href="<?php echo the_permalink(); ?>">

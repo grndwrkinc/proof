@@ -50,34 +50,6 @@
 	}
 }
 
-
-//----------Privacy Page----------//
-.page-privacy-policy {
-	.container p:first-child {
-		@include font-size(1.6);
-		@include line-height(2.1);
-	}
-
-	.text {
-		@include span-columns(12);
-		margin-top: 4%;
-	}
-}
-
-.single-entry.container {
-	@include outer-container;
-	padding-top: 2rem;
-	padding-bottom: 4rem;
-}
-
-.single-news .related-posts {
-	h3 {
-		@include font-size(1.8);
-		@include line-height(2.3);
-	}
-}
-
-
 .images {
 	@include display(flex);
 	@include justify-content(space-around);
@@ -85,7 +57,6 @@
 	
 	.image {
 		padding: 0 1rem;
-		// @include flex-basis(100%);
 	}
 }
 
@@ -124,89 +95,6 @@
 			}
 		}
 	}
-}
-
-.divider {
-	text-align: center;
-
-	hr {
-		background-color: $lightgrey;
-		margin: 0;
-		position: relative;
-		top: -18px;
-		z-index: -1;
-	}
-}
-
-.lead {
-	@extend .center;
-	@include rem-size('padding-left', 12);
-	@include rem-size('padding-right', 12);
-
-	p {
-		@include font-size(30/16);
-		@include line-height(36/16);
-	}
-}
-
-.lead-small {
-	p {
-		@include font-size(1.25);
-		@include line-height(1.875);
-	}
-
-	margin-bottom: 3rem;
-}
-
-.text {
-	a {
-		color: $gold;
-		font-family: $font__main;
-		@include transition(text-decoration, 0.2s ease);
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
-
-	ol {
-		list-style-type: decimal;
-
-		li {
-			list-style-type: decimal;
-		}
-	}
-
-	ol, ul {
-		margin: 2rem 0;
-
-		li {
-			color: $darkgrey;
-			font-family: $font__main;
-			margin-bottom: 0.5rem;
-			@include font-size(1.1);
-			@include line-height(2);
-		}
-	}
-
-	ul {
-		li {
-			position: relative;
-
-			&:before {
-				content: "";
-				width: 25px;
-				height: 2px;
-				top: 15px;
-				left: -50px;
-				position: absolute;
-				background-color: $teal;
-				// @include font-size(2);
-			}
-		}
-	}
-
-	
 }
 
 //Case Study Post, CanTrust Post
@@ -1132,6 +1020,17 @@ a.purple-download-btn {
 	width: 100%;
 }
 
+//WORK PAGE
+
+.page-work {
+	.hero-container .span_8 {
+
+		h1 {
+			padding: 0 11.76%;
+		}
+	}
+}
+
 
 //THINKING PAGE
 
@@ -1147,6 +1046,10 @@ a.purple-download-btn {
 
 		.span_5, .btn.barr {
 			display: none;
+		}
+
+		h1 .btn.barr {
+			display: block;
 		}
 	}
 
@@ -1208,6 +1111,10 @@ a.purple-download-btn {
 	position: relative;
 	padding-bottom: 8rem;
 	border-bottom: 1px solid $darkgrey;
+
+	&.grid {
+		height: auto !important;
+	}
 }
 
 .alm-reveal, .posts-container {
@@ -1739,6 +1646,15 @@ a.purple-download-btn {
 		.blog-item {
 			margin-bottom: 0;
 		}
+	}
+}
+
+//PRIVACY POLICY
+
+.page-privacy-policy {
+	h1 {
+		margin: 8rem 0;
+		color: $darkgrey;
 	}
 }
 
