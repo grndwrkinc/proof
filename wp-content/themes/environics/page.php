@@ -39,10 +39,11 @@ get_header();
 	   		if(!strlen($hero)) $classes = " no-image"; 
 	   		$classes .= " text-" . strtolower(get_field('title_colour_picker'));
 ?>
-			<div class="hero-container <?php echo $classes; ?>" style="background-image: url(<?php echo $hero; ?>)" >
+			<div class="hero <?php echo $classes; ?>" style="background-image: url(<?php echo $hero; ?>)" >
 				<h1><?php the_title(); ?></h1>
-				<h4><?php the_field('post_subheader'); ?></h4>
 			</div>
+			<div class="text-container span_7">
+				<?php the_field('post_subheader'); ?>
 <?php 
 		endwhile; 
 	endif; 

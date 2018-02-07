@@ -74,11 +74,11 @@
 	}
 
 	.video-wrapper, .infographic-wrapper {
-		position: relative;
-		top: 50%;
-  		transform: translateY(-50%);
-		left: 10%;
-		width: 80%;
+		// position: relative;
+		// top: 50%;
+  // 		transform: translateY(-50%);
+		// left: 10%;
+		// width: 80%;
 	}
 
 	.video-image {
@@ -1071,6 +1071,17 @@ a.purple-download-btn {
 			color: white;
 			width: auto;
     		margin-left: 0;
+    		padding: 0 1rem;
+
+    		&:after {
+    			bottom: 0.5rem;
+    		}
+
+    		&:hover {
+    			&:after {
+    				height: 6rem;
+    			}
+    		}
 		}
 
 		.span_8 {
@@ -1151,7 +1162,7 @@ a.purple-download-btn {
 		top: 50%;
 		transform: translateY(-50%);
 
-		h5, p, a {
+		h5, h4, p, a {
 			color: white;
 		}
 
@@ -1177,12 +1188,12 @@ a.purple-download-btn {
 		.tile-inner {
 			padding: 0;
 
-			h5, h3, p, a {
+			h5, h4, h3, p, a {
 				color: $darkgrey;
 			}
 		}
 
-		p.barr:after {
+		h4.barr:after {
 			display: none;
 		}
 	}
@@ -1190,7 +1201,7 @@ a.purple-download-btn {
 
 // SINGLE THINKING 
 
-.single-thinking {
+.single-thinking, .single-news {
 
 	.hero-container {
 		margin-left: 5.88%;
@@ -1237,6 +1248,21 @@ a.purple-download-btn {
 	.divider {
 		position: relative;
     	top: -2px;
+	}
+}
+
+// NEWS
+
+.page-news {
+	.text-container.span_7 {
+		background-color: $extralightpurple;
+		padding: 4rem 4rem 4rem 12rem;
+		margin-left: 47.04%;
+		transform: translateY(-6rem);
+
+		p {
+			margin: 0;
+		}
 	}
 }
 

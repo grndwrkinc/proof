@@ -145,16 +145,16 @@ footer {
 	}
 
 	h3 {
-		@include font-size(2.1);
-		@include line-height(2.4);
+		@include font-size(2.4);
+		@include line-height(2.8);
 	}
 
 	h4 {
-		@include font-size(2.1);
-		@include line-height(2.4);
+		@include font-size(2.4);
+		@include line-height(2.8);
 	}
 
-	p {
+	p, textarea, li, input {
 		@include font-size(1.6); 
 		@include line-height(2.4); 
 	}

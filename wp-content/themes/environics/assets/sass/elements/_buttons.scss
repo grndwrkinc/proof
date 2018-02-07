@@ -8,9 +8,12 @@ button, .alm-load-more-btn {
 	text-shadow: none;
 }
 
-.barr, .alm-load-more-btn {
+.barr, .alm-load-more-btn, .form-submit, 
+.comment-reply-link,
+.frm_submit {
 	position: relative;
 	cursor: pointer;
+	padding-left: 1rem;
 
 	&:after {
 		content: '';
@@ -29,6 +32,13 @@ button, .alm-load-more-btn {
 		&:after {
 			height: 4rem;
 		}
+	}
+}
+
+.form-submit, .comment-reply-link {
+	padding-left: 1rem;
+	&:after {
+		width: 12rem;
 	}
 }
 
@@ -103,6 +113,10 @@ h1 .btn.barr {
 			height: 8rem;
 		}
 	}
+}
+
+.tile-inner h4.barr:after {
+	bottom: 0.5rem;
 }
 
 .divider button {
@@ -221,6 +235,10 @@ h1 .btn.barr {
 		bottom: -0.5rem;
 	}
 
+	.tile-inner h4.barr:after {
+		bottom: 0;
+	}
+
 	.cantrust-img .barr {
 		&:after {
 			bottom: 1.5rem;
@@ -242,7 +260,8 @@ h1 .btn.barr {
 		@include line-height(4);
 	}
 
-	.barr, .alm-load-more-btn, .capabilities-wrapper h3.barr {
+	.barr, .alm-load-more-btn, .capabilities-wrapper h3.barr, 
+	.form-submit, .comment-reply-link {
 		&:after {
 			height: 1.6rem;
 		}

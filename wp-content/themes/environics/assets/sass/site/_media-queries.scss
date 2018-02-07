@@ -33,6 +33,18 @@
 		display: none;
 	}
 
+	.featured-text {
+		padding: 1rem;
+
+		h5 {
+			display: none;
+		}
+	}
+
+	.featured-img, .cantrust-img, .posts-container .blog-item-img {
+		height: 18rem !important;
+	}
+
 	.home {
 
 		.hero {
@@ -67,24 +79,12 @@
 			}
 		}
 
-		.featured-img {
-			height: 18rem !important;
-		}
-
 		.capabilities-wrapper {
 			display: block;
 		}
 
 		.featured-container {
 			padding-top: 4rem;
-		}
-
-		.featured-text {
-			padding: 1rem;
-
-			h5 {
-				display: none;
-			}
 		}
 
 		.featured-wrapper .featured:first-child {
@@ -222,7 +222,14 @@
 		}
 
 		.team-container .dropdown-item {
-			padding-right: 0.5rem;
+			padding: 0 0.5rem;
+
+			.role, h5 {
+				@include font-size(1.4);
+				@include line-height(1.8);
+				padding: 0;
+				margin-top: 0;
+			}
 		}
 
 		.csr-container {
@@ -252,18 +259,18 @@
 		height: 44rem;
 	}
 
-	.page-work {
+	.sub-nav li {
+		@include font-size(1.2);
+	}
+
+	.sub-nav-container {
+		padding: 2rem 0;
+	}
+
+	.page-work, .page-news {
 
 		.sub-nav {
 			width: auto !important;
-
-			li {
-				@include font-size(1.2);
-			}
-		}
-
-		.sub-nav-container {
-			padding: 2rem 0;
 		}
 
 		.featured-img {
@@ -275,10 +282,24 @@
 
 	.single-work {
 
+		.post-overview {
+			span {
+				padding: 0 1rem 0 0;
+			}
+			p {
+				@include font-size(1.2);
+			}
+		}
+
+		.featured-img {
+			height: 18rem !important;
+		}
+
 		.hero-container {
 			.span_11 {
 				margin-left: 0;
 				padding-left: 11.76%;
+				transform: translateY(2rem);
 			}
 		}
 
@@ -297,7 +318,7 @@
 
 		.press-container {
 			margin-left: 0;
-			padding-top: 4rem;
+			padding: 4rem 1rem 0 1rem;
 
 			.span_5 {
 				width: 60%;
@@ -315,6 +336,8 @@
 
 			.text {
 				position: static;
+				@include font-size(2.4);
+				@include line-height(2.8);
 			}
 
 			.text:before {
@@ -367,7 +390,7 @@
 
 		.text-container {
 			display: block;
-			padding: 4rem 0;
+			padding: 4rem 1rem;
 			border-bottom: none;
 		}
 
@@ -375,7 +398,7 @@
 			border-bottom: none;
 
 			.span_10 {
-				padding-top: 4rem;
+				padding: 4rem 1rem 0 1rem;
 			}
 
 			.dropdown {
@@ -417,6 +440,10 @@
 			padding: 4rem 0;
 			border-bottom: none;
 
+			.span_5 {
+				padding: 0 1rem;
+			}
+
 			p {
 				margin: 2rem 0;
 			}
@@ -457,6 +484,7 @@
 
 			p.span_5 {
 				margin: 2rem 0;
+				padding: 0 1rem;
 			}
 			
 			.span_8 {
@@ -488,6 +516,10 @@
 	}
 
 	//SINGLE THINKING
+
+	.post-overview p {
+		@include font-size(1.2);
+	}
 
 	.single-thinking {
 
@@ -628,6 +660,29 @@
 		}
 	}
 
+	//NEWS 
+
+	.page-news {
+		.text-container.span_7 {
+			margin-left: 2rem;
+			width: 80%;
+			padding: 2rem;
+		}
+
+		.blog-item {
+			height: auto !important;
+		}
+
+		.posts-container .blog-item-img.no-image {
+			height: auto !important;
+
+			.tile-inner {
+				position: static;
+				transform: none;
+			}
+		}
+	}
+
 
 	//WORK WITH US
 
@@ -657,6 +712,10 @@
 			.dropdown {
 				padding-bottom: 4rem;
 
+				.span_7 {
+					width: auto;
+				}
+
 				.span_4 {
 					margin-left: 0;
 					padding-left: 0;
@@ -666,6 +725,11 @@
 					width: 90%;
 				}
 			}
+		}
+
+		.single-job.span_7 h4 {
+			@include font-size(1.6);
+			@include line-height(2);
 		}
 
 		.jobs-container {
@@ -683,7 +747,7 @@
 		}
 
 		.socialfeed-container {
-			padding: 4rem 1rem;
+			padding: 4rem 1rem 0;
 		}
 
 		.masonry {

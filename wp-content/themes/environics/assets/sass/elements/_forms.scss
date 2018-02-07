@@ -2,10 +2,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border-color: $white;
+	border: 0px solid white;
 	@include font-size(1.8);
 	padding: 0;
 	@include transition(all 0.15s ease);
+	background-color: transparent;
 }
 
 input[type="text"],
@@ -30,7 +31,7 @@ textarea {
 	padding: 3px;
 
 	&:focus {
-		color: $white;
+		color: $darkgrey;
 	}
 }
 
@@ -94,10 +95,10 @@ textarea {
 .form-submit {
 	display: block;
 	margin-left: 30.7%;
+	float: left;
 
 	input {
 		margin-top: 6rem;
-		float: left;
 	}
 }
 
@@ -151,7 +152,7 @@ textarea {
 }
 
 .comment-form-author, .comment-form-email {
-	border-bottom: 1px solid $darkgrey;
+	border-bottom: 2px solid $extralightpurple;
 	position: relative;
 
 	@include span-columns(3);
@@ -186,20 +187,27 @@ textarea {
 
 .reply-link a {
 	text-transform: uppercase;
-	color: $gold;
 }
 
 li.comment {
 	position: relative;
 }
 
+#cancel-comment-reply-link {
+	font-family: $font__main;
+	font-weight: normal;
+	text-transform: uppercase;
+	@include font-size(1.4);
+	padding-left: 4rem;
+}
 
 .reply-link {
 	margin-top: 1rem;
 }
 
 h3.comment-reply-title {
-	display: none;
+	color: $darkgrey;
+	padding: 0 0 2rem 2rem;
 }
 
 .children {
@@ -266,6 +274,11 @@ fieldset {
 	padding: 0;
 }
 
+.frm_submit {
+	float: left;
+	padding-right: 2rem;
+}
+
 .frm_form_field, .uploads {
 	float: left;
     display: block;
@@ -309,7 +322,7 @@ fieldset {
 }
 
 .frm_description, .dz-filename span {
-	color: $white;
+	color: $darkgrey;
 	@include font-size(0.8);
 }
 
@@ -347,7 +360,7 @@ fieldset {
 
 .frm_message p {
 	text-transform: uppercase;
-	color: $white;
+	color: $darkgrey;
 	@include font-size(2);
 	font-family: $font__heading;
 	text-align: center;

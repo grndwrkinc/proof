@@ -6,12 +6,11 @@ get_header();
 	while ( have_posts() ) : the_post();
 		get_template_part( 'template-parts/content', 'singlehero' );
 ?>
-		<div class="post-overview news-page-details container <?php the_ID(); ?>">
+		<div class="post-overview thinking-page-details container <?php the_ID(); ?>">
 			<p><span><?php the_author_posts_link(); ?></span><span><?php echo the_date(); ?></span></p>
 		</div>
 
 <?php 
-		get_template_part( 'template-parts/content', 'socialbuttons' );
 		get_template_part( 'template-parts/content', get_post_format() );
 
 		//Turn on if you want the next post link to be displayed.

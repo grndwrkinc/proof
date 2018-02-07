@@ -63,7 +63,7 @@
 					<div class="blog-item-img <?php echo $classes; ?>" style="background-image:url(<?php echo $imgSrc; ?>)">
 						<div class="tile-inner">
 							<h5><?php echo $label; ?></h5>
-							<p class="barr"><?php echo get_the_title($relatedPost->ID); ?></p>
+							<h4 class="barr"><?php echo get_the_title($relatedPost->ID); ?></h4>
 							<a href="<?php echo get_permalink($relatedPost->ID); ?>" class="tile-link barr">See More</a>
 						</div>
 					</div>

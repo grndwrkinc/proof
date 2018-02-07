@@ -76,7 +76,7 @@ get_header();
 			// layout: Image
 			elseif(get_row_layout() == "image_block"): 
 ?>				
-				<div class="img-container">
+				<div class="img-container images">
 					<?php while(the_repeater_field('images')): $image_block_img = get_sub_field("image"); ?>
 						<div class="image"><img src="<?php echo $image_block_img['url']; ?>" alt=""/></div>
 					<?php endwhile; ?>
@@ -118,39 +118,6 @@ get_header();
 					</div>
 					<?php endwhile; endif; ?>
 					<?php endif; ?>	
-				</div>
-
-<?php 
-			// layout: Infographic
-			elseif(get_row_layout() == "infographic_block"): 
-				$infographic = get_sub_field('what_kind_of_infographic_is_this');
-?>
-				<div class="block infogfx">
-					<div class="container">
-<?php
-				if($infographic == 'Multi-image and text') :
-					if(have_rows('stats')): while(have_rows('stats')): the_row();
-						$infographic_icon = get_sub_field('stats_icon'); 
-?>
-						<div class="gfx">
-							<div class="gfx-icon">
-								<img src="<?php echo $infographic_icon['url']; ?>" alt="">
-							</div>
-							<p class="gfx-stat"><?php the_sub_field('stats_number'); ?></p>
-							<p><?php the_sub_field('stats_text'); ?></p>
-						</div>
-<?php 
-					endwhile; endif; 
-
-					if($infographic == 'Single Image') {
-						$infographic_image = get_sub_field('image');
-?>
-						<img src="<?php echo $infographic_image['url']; ?>" alt="">
-<?php 
-					}
-				endif;
-?>	
-					</div>
 				</div>			
 <?php 
 			endif; 
@@ -178,13 +145,12 @@ endwhile; // End of the loop.
 				$label = get_field('client');?>
 	
 			<div class="featured span_5">
-				<div class="featured-img">
-					<img src="<?php echo $feat_image; ?>" alt="">
+				<div class="featured-img square" style="background-image: url('<?php echo $feat_image; ?>')">
 				</div>
 				<div class="featured-text">
 					<h5>Featured Work</h5>
 					<h4><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></h4>
-					<p class="item-text"><?php echo $subtitle; ?></p>
+					<p class="item-text"><?php the_field('post_subheader'); ?></p>
 					<p class="read-more barr"><a href="<?php echo get_permalink($post->ID); ?>">See Work</a></p>
 				</div>
 			</div>

@@ -8,6 +8,7 @@
 	$label = $sources[0]->name;
 
 	//Set a string of all the classes to apply to the tile
+	$classes = '';
 	if(!strlen($imgSrc)) $classes = " no-image";
 
 	//Set a string with an inline style declaration for tiles.

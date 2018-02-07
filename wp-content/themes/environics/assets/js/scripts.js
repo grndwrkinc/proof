@@ -109,10 +109,6 @@ environics.init = function() {
 		}
 	}
 
-	if($(window).width() <= 480 && !$('.page-work').length) {
-		$('.square').css('height', 'auto');
-	}
-
 	if($('.grid').length && $(window).width() < 768 && $('.page-work').length) {
 		$('.square').css('height', 'auto');
 	}
@@ -171,7 +167,7 @@ environics.init = function() {
 	}
 
 	if($('iframe').length) {
-		environics.fluidVids();
+		// environics.fluidVids();
 	}
 
 	if($('.social-share').length){
@@ -469,15 +465,14 @@ environics.activateDropdown = function(){
 			$(current).addClass('active');
 
 			//Mobile
-			itemsPerRow = 1;
-
-			//Tablet - 2 items per row
-			if($(window).width() > 480) {
-				itemsPerRow = 2;
-			} 
+			itemsPerRow = 2;
 
 			//Desktop - 3 items per row
 			if($(window).width() > 768) {
+				itemsPerRow = 3;
+			} 
+
+			if($(this).parents('.team-container').length) {
 				itemsPerRow = 3;
 			} 
 			
@@ -807,6 +802,8 @@ environics.socialShare = function() {
 // Show and hide the video modal
 environics.videoModal = function () {
 
+	var videoWrapper = $('.video-wrapper');
+	$(videoWrapper).html($(videoWrapper).data('iframe'));
 	environics.fluidVids();
 
 	// Click play button to show video modal
