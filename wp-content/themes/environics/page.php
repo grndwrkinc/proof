@@ -88,7 +88,7 @@ get_header();
 
 	<div class="sub-nav-container">
 		<!-- Sub-nav with all of the custom taxonomy terms -->
-		<ul class="sub-nav"><li class="all active"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerms; ?>"<?php endif; ?> <?php if (is_page('work')) : ?>data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>>All</a></li><?php 
+		<ul class="sub-nav"><li class="all active"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerms; ?>"<?php endif; ?> <?php if (is_page('work')) : ?>data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>>All</a><span class="divider">|</span></li><?php 
 				if ( ! empty( $termsArray ) && ! is_wp_error( $termsArray ) ){
 				    foreach ( $termsArray as $term ) {
 	
@@ -103,7 +103,7 @@ get_header();
 							if($term->slug != "new-work") {
 								$name .= "s";
 							}
-				    	} ?><li class="<?php echo $term->slug; ?>"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerm; ?>"<?php endif; if (is_page('work')) : ?> data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>><?php echo $name; ?></a></li><?php
+				    	} ?><li class="<?php echo $term->slug; ?>"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerm; ?>"<?php endif; if (is_page('work')) : ?> data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>><?php echo $name; ?></a><span class="divider">|</span></li><?php
 				    }
 				}
 		?></ul>

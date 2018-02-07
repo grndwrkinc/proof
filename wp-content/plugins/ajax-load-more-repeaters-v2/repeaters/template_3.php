@@ -30,11 +30,10 @@
 
 	//Set a string with an inline style declaration for tiles with images.
 	$inlineImg = "";
-	if(strlen($imgSrc)) $inlineImg .= " style=\"background-image:url('" . $imgSrc . "');\"";
+	if(strlen($imgSrc)) $inlineImg = " style=\"background-image:url('" . $imgSrc . "');\"";
 ?>
 	<div class="featured span_5">
-		<div class="featured-img">
-			<img src="<?php echo $imgSrc; ?>" alt="">
+		<div class="featured-img square" <?php echo $inlineImg; ?>>
 		</div>
 		<div class="featured-text">
 			<h5>Featured Work</h5>

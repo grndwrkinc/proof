@@ -247,14 +247,27 @@
 
 	//WORK PAGE
 
+	.page-thinking .hero-container .span_8 .sub-hero, 
+	.page-work .hero-container .span_8 .sub-hero {
+		height: 44rem;
+	}
+
 	.page-work {
 
 		.sub-nav {
 			width: auto !important;
 
-			li:first-child, li {
-				padding-left: 1rem;
+			li {
+				@include font-size(1.2);
 			}
+		}
+
+		.sub-nav-container {
+			padding: 2rem 0;
+		}
+
+		.featured-img {
+			height: 18rem !important;
 		}
 	}
 

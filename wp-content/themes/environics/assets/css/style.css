@@ -994,6 +994,11 @@ h1 .btn.barr {
     background-color: #f2bd37;
     color: #ffffff; }
 
+.press-container h5.barr {
+  padding-left: 1rem; }
+  .press-container h5.barr:after {
+    bottom: -1rem; }
+
 .alm-load-more-btn {
   position: absolute;
   bottom: 6rem;
@@ -1092,6 +1097,15 @@ h1 .btn.barr {
     bottom: 1.5rem; }
   .cantrust-img .barr:hover:after {
     height: 1.6rem; }
+
+  .page-work .hero-container .span_8 h1 .btn.barr:after {
+    bottom: 1rem; }
+
+  h1 .btn.barr {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 40px;
+    line-height: 4rem; }
 
   .barr:after, .alm-load-more-btn:after, .capabilities-wrapper h3.barr:after {
     height: 1.6rem; }
@@ -1525,8 +1539,6 @@ a {
     text-transform: uppercase;
     position: relative;
     display: inline-block;
-    padding-left: 2rem;
-    margin: 0 5px;
     letter-spacing: 1px;
     font-size: 14px;
     font-size: 1.4rem;
@@ -1536,9 +1548,13 @@ a {
     -o-transition: all 0.1s ease;
     transition: all 0.1s ease; }
     .sub-nav li:hover a, .sub-nav li.active a {
-      color: #f2bd37; }
+      color: #582C83; }
     .sub-nav li:first-child {
       padding-left: 0; }
+    .sub-nav li a {
+      padding-right: 1rem; }
+  .sub-nav .divider {
+    padding-right: 1rem; }
 
 /* Small menu. */
 .menu-toggle,
@@ -2377,9 +2393,7 @@ a.purple-download-btn {
   padding-top: 0; }
 .team-container .dropdown-item {
   margin-right: 0;
-  padding-right: 1.5rem; }
-  .team-container .dropdown-item:nth-of-type(3n) {
-    padding-right: 0; }
+  padding: 0 1rem; }
   .team-container .dropdown-item:nth-of-type(3n + 1) {
     margin-left: 5.88%; }
 .team-container h5 {
@@ -2397,7 +2411,7 @@ a.purple-download-btn {
   font-size: 20px;
   font-size: 2rem; }
 .team-container .dropdown {
-  padding-left: 5.88%; }
+  padding: 0 5.88%; }
 
 .dropdown-content {
   display: none; }
@@ -2487,6 +2501,8 @@ a.purple-download-btn {
     .alm-reveal .tile-inner .tile-link, .posts-container .tile-inner .tile-link {
       text-transform: uppercase;
       margin-right: 6rem; }
+  .alm-reveal h5, .posts-container h5 {
+    margin: 2rem 0; }
   .alm-reveal .tile-link, .posts-container .tile-link {
     display: none; }
   .alm-reveal .no-image .tile-link, .posts-container .no-image .tile-link {
@@ -2513,7 +2529,7 @@ a.purple-download-btn {
   border-bottom: 1px solid #524a3f; }
 
 .post-overview {
-  padding: 6rem 0;
+  padding: 4rem 0;
   margin-left: 5.88%; }
   .post-overview p {
     text-transform: uppercase; }
@@ -3016,10 +3032,19 @@ footer {
     .page-about .csr-container .dropdown-gallery .span_6, .page-about .csr-container .dropdown-gallery .frm_form_field, .page-about .csr-container .dropdown-gallery .uploads {
       margin-left: 0; }
 
+  .page-thinking .hero-container .span_8 .sub-hero,
+  .page-work .hero-container .span_8 .sub-hero {
+    height: 44rem; }
+
   .page-work .sub-nav {
     width: auto !important; }
-    .page-work .sub-nav li:first-child, .page-work .sub-nav li {
-      padding-left: 1rem; }
+    .page-work .sub-nav li {
+      font-size: 12px;
+      font-size: 1.2rem; }
+  .page-work .sub-nav-container {
+    padding: 2rem 0; }
+  .page-work .featured-img {
+    height: 18rem !important; }
 
   .single-work .hero-container .span_11 {
     margin-left: 0;

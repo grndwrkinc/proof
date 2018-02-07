@@ -86,7 +86,7 @@ environics.init = function() {
 		environics.loadWhatsHappeningToday();
 	}
 
-	if($('.video-container .modal').length) {
+	if($('.video-container').length) {
 		environics.videoModal();
 	}
 
@@ -806,6 +806,9 @@ environics.socialShare = function() {
 
 // Show and hide the video modal
 environics.videoModal = function () {
+
+	environics.fluidVids();
+
 	// Click play button to show video modal
 	$('.videoPlay').on('click', function(e){
 		e.preventDefault();

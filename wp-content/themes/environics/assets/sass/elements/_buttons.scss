@@ -136,6 +136,14 @@ h1 .btn.barr {
 	}
 }
 
+.press-container h5.barr {
+	padding-left: 1rem;
+	
+	&:after {
+		bottom: -1rem;
+	}
+}
+
 .alm-load-more-btn {
 	position: absolute;
 	bottom: 6rem;
@@ -223,6 +231,15 @@ h1 .btn.barr {
 				height: 1.6rem;
 			}
 		}
+	}
+
+	.page-work .hero-container .span_8 h1 .btn.barr:after {
+		bottom: 1rem;
+	}
+
+	h1 .btn.barr {
+		@include font-size(3.5);
+		@include line-height(4);
 	}
 
 	.barr, .alm-load-more-btn, .capabilities-wrapper h3.barr {
