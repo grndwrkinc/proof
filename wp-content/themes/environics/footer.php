@@ -14,6 +14,7 @@
 
 	<footer class="site-footer">
 		<div class="footer-container">
+			<div class="footer-links"><?php wp_nav_menu( array( 'menu' => 'Footer Menu', ) ); ?></div>
 			<p class="copyright">©<?php echo date('Y');?> Proof</p>
 			<div class="social-icons">
 				<a href="<?php the_field('twitter_account', 'option'); ?>" target="_blank" alt="Twitter link" aria-label="Link to Environics Twitter account"><i class="fa fa-twitter" aria-hidden="true"></i></a>

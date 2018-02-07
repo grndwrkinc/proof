@@ -782,7 +782,7 @@ environics.caseSlideIn = function() {
 };
 
 environics.flickity = function() {
-	$('.images').flickity({
+	$('.img-container.images').flickity({
 		cellAlign: 'left',
 		watchCSS: true
 	});
