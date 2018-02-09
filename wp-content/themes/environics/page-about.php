@@ -64,8 +64,27 @@ get_header();
 		wp_reset_postdata();
 ?>
 
+<?php 
+		$loop_modulo = $loop_count % 3; 
+			if ($loop_modulo == 2) {
+				$filler_class = 'filler-span-one square';
+			} else if ($loop_modulo == 1) {
+				$filler_class = 'filler-span-two';
+			} else if ($loop_modulo == 0) {
+				$filler_class = 'filler-span-none';
+			}; 
+?>
+						
+			<div class="dropdown-item filler-span <?php echo $filler_class; ?>" style="background-image: url(/wp-content/themes/environics/assets/images/wwu_square.jpg)">
+				<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'Work With Us' ) ) ); ?>">
+					<div class="tile-inner">
+						<h3 class="barr">Work with us!</h3>
+					</div>
+				</a>
+			</div>
+
 		</div><!-- // .team-gallery  -->
-	</div><!-- // .team-container  -->
+	</div><!-- // .team-wrapper  -->
 
 
 	<!-- Corporate Social Responsibility -->

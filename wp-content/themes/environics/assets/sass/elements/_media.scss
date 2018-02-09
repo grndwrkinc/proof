@@ -166,20 +166,62 @@ body.no-overflow {
 	}
 }
 
-.filler-span-one, .filler-span-two {
-	background-position: center center;
+.filler-span {
+	position: relative;
+	background-position: center;
 
 	.tile-inner {
-		height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 0;
+		border-bottom: none;
+	}
+
+	.barr {
+		padding-right: 5rem;
+		padding-left: 1rem;
+
+		&:after {
+			bottom: 0.3rem;
+		}
 	}
 }
 
-.page-about {
-	.team-member.filler-span-two {
-		@include span-columns(8);
-		@include omega();
-
-		margin-bottom: 1.69%;
-	}
+.filler-span-two {
+	width: calc(58.8% - 1rem);
+	margin-left: 1rem;
 }
+
+.filler-span-one {
+	width: calc(29.4% - 1rem);
+	margin-left: 1rem;
+
+	.tile-inner {
+		width: 90%;
+	} 
+}
+
+.filler-span-none {
+	display: none;
+}
+
+
+@media (max-width: 768px) {
+
+	.filler-span-two {
+		width: calc(66.6% - 0.5rem);
+		margin-left: 0.5rem;
+	}
+
+	.filler-span-one {
+		width: calc(33.3% - 0.5rem);
+		margin-left: 0.5rem;
+	}
+
+}
+
+
+
 

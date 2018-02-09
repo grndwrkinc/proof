@@ -1018,7 +1018,7 @@ environics.commentError = function () {
 //Add a bottom margin to team member gallery filler squares for Firefox 
 
 environics.resizeFiller = function() {
-	var teamHeight = $('.filler-span').prev().height();
+	var teamHeight = $('.filler-span').prev().find('img').height();
 	$('.filler-span').css('height', teamHeight);
 };
 
