@@ -28,51 +28,28 @@
 		<div class="site-branding">
 			<?php $site_logo = get_field('site_logo', 'option'); ?>
 			<a class="nav-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $site_logo['url']; ?>" alt="<?php echo $site_logo['alt']; ?>"/></a>
-		<?php if ( !is_front_page() ) : ?>
-			<?php if (have_posts()) : ?>
-				<?php while (have_posts()) : the_post(); ?>
-					<?php global $post;
-					if(is_page()) {
-						// If the page is a landing page, return the page slug
-						if($post->post_name == 'about') {
-							$nav_title = 'Who We Are';
-						} elseif ($post->post_name == 'work') {
-							$nav_title = 'Our Work';
-						} elseif ($post->post_name == 'capabilities') {
-							$nav_title = 'Strengths'; 
-						} elseif ($post->post_name == 'work-with-us') {
-							$nav_title = 'Work With Us'; 
-						} elseif ($post->post_name == 'contact') {
-							$nav_title = 'Contact Us'; 
-						} elseif ($post->post_name == 'privacy-policy') {
-							$nav_title = 'Privacy Policy'; 
-						} else {
-							$nav_title = $post->post_name; 
-						}
-					} elseif (is_single()) {
-						// If the page is a single page, return the parent page slug
-						if (get_post_type() == 'work') {
-							$nav_title = '';
-						} elseif (get_post_type() == 'jobs') {
-							$nav_title = 'Work with us';
-						} else {
-							$nav_title = get_post_type(); 
-						}
-					} else { 
-						$nav_title = 'thinking';
-					} ?>
-				<div class="page-title"><?php echo $nav_title; ?></div>
-				<?php endwhile; ?>
-			<?php endif; ?>
-		<?php endif; ?>
-			<div class="hamburger" tabindex="0" role="button" aria-label="Site menu">
-				<div class="patty"></div>
+			<div class="hamburger-container" tabindex="0" role="button" aria-label="Site menu">
+				<p>M</p><p class="exit">E</p>
+				<div class="hamburger">
+					<div class="patty"></div>
+				</div>
+				<p>N</p><p class="exit">I</p>
+				<p>U</p><p class="exit">T</p>
 			</div>
 		</div><!-- .site-branding -->
 		
 		<nav id="site-navigation" class="main-navigation nav-container hide" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'environics' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'Primary', 'container_class' => 'menu-primary-container'  ) ); ?>
+			<div class="menu-primary-container outer">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu' => 'Primary' ) ); ?>
+				<div class="social-icons">
+					<a href="<?php the_field('twitter_account', 'option'); ?>" target="_blank" alt="Twitter link" aria-label="Link to Environics Twitter account"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="<?php the_field('facebook_account', 'option'); ?>" target="_blank" alt="Facebook link" aria-label="Link to Environics Facebook account"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="<?php the_field('instagram_account', 'option'); ?>" target="_blank" alt="Instagram link" aria-label="Link to Environics Instagram account"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href="<?php the_field('youtube_account', 'option'); ?>" target="_blank" alt="Youtube link" aria-label="Link to Environics Youtube account"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+					<a href="<?php the_field('linkedin_account', 'option'); ?>" target="_blank" alt="LinkedIn link" aria-label="Link to Environics LinkedIn account"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+				</div>
+			</div>
 		</nav>
 
 	</header><!-- #masthead -->

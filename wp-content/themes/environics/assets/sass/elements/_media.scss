@@ -97,15 +97,14 @@ body.no-overflow {
 
 
 //----------Archive, category and author page gallery----------//
-.archive-gallery {
-	// margin-top: 2rem;
+.archive-container {
+	margin-left: 5.88%;
 	position: relative;
+	padding-bottom: 6rem;
 
 	.tiles-item {
-		@include outer-container;
-		padding: 4rem 2rem;
-
-		border-bottom: 1px solid $lightgrey;
+		padding-bottom: 6rem;
+		@include display(flex);
 	}
 
 	&.no-posts .tiles-item {
@@ -118,52 +117,36 @@ body.no-overflow {
 }
 
 .post-meta {
-	@include span-columns(4);
-
-	h4 a {
-		color: $lightpurple;
-		&:hover {
-			color: $gold;
-		}
-	}
+	padding-right: 2rem;
+	margin-right: 0;
 
 	p {
-		@include font-size(1);
-		margin-bottom: 0;
-		font-family: $font__subheading;
-
-		a {
-			color: $lightpurple;
-			font-family: $font__heading;
-			&:hover {
-				color: $gold;
-			}
-		}
+		margin-top: 0;
 	}
 
-	.author:before {
+	.date:after {
 		content: ' / ';
+	}
+
+	.barr {
+		padding: 0 2rem 0 0.5rem;
+
+		&:after {
+			bottom: -0.7rem;
+		}
 	}
 }
 
 .post-sample p {
-	@include span-columns(8);
 	margin: 0;
-	@include font-size(1.1);
-	@include line-height(1.4);
+	padding-bottom: 4rem;
+	border-bottom: 1px solid $darkgrey;
 }
 
 .back-button {
-	font-family: $font__subheading;
 	text-transform: uppercase;
 	color: $lightpurple;
 	cursor: pointer;
-	padding: 0 1.25rem;
-
-	img {
-		width: 18px;
-		margin-right: 0.5rem;
-	}
 }
 
 .filler-span {

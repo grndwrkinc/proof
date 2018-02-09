@@ -12,58 +12,55 @@ query_posts( $args );
 
 ?>
 	<div id="primary" class="content-area page-author">
-		<div class="bg-solid-darkpurple">
-			<div class="featured-team container">
+		<div class="hero-container">
 <?php
-			// Retrieve the post's author ID
-			$user_id = $curauth->ID;
-			// Get the full size image URL using the author ID
-			$imgURL = get_cupp_meta($user_id, 'full');
-			$classes = 'no-image';
-			if(strlen($imgURL)) :
-				$classes = '';
+		// Retrieve the post's author ID
+		$user_id = $curauth->ID;
+		// Get the full size image URL using the author ID
+		$imgURL = get_cupp_meta($user_id, 'full');
+		$classes = 'no-image';
+		if(strlen($imgURL)) :
+			$classes = '';
 ?>
-				<div class="featured-image"><img src="<?php echo $imgURL; ?>" alt=""></div>
+			<div class="sub-hero span_8 single-page<?php echo $classes; ?>" style="background-image:url(<?php echo $imgURL; ?>)"></div>
 <?php						
-			endif;
+		endif;
 ?>
-					
-				<div class="featured-info <?php echo $classes; ?>">
-					<div class="featured-info-wrap">
-						<h2><?php echo $curauth->display_name; ?></h2>
-<?php 		
-			if ( get_the_author_meta('description', $author_ID)) : 
-?>
-						<p><?php the_author_meta( 'description', $author_ID ); ?></p>
-<?php 		
-			endif; 
-?>
-					</div>
-				</div>
+			<div class="span_8">
+				<h2><?php echo $curauth->display_name; ?></h2>
 			</div>
 		</div>
-		
+<?php 		
+		if ( get_the_author_meta('description', $author_ID)) : 
+?>
+		<div class="text-container span_11">
+			<p><?php the_author_meta( 'description', $author_ID ); ?></p>
+		</div>
+<?php 		
+		endif; 
+?>
+
 <?php 
 		if ( have_posts() ) :
 ?>
-		<div class="block archive-gallery container gradient">
-			<a href="javascript:window.history.back();" class="back-button"><img src="/wp-content/themes/environics/assets/images/banner-arrow-left.svg">Back to article</a>
-			<!-- Gallery of Posts -->
-			<div class="tiles-container">
+		<div class="post-overview">
+			<a href="javascript:window.history.back();" class="back-button">Back to article</a>
+		</div>
+		<!-- Gallery of Posts -->
+		<div class="archive-container">
 <?php 
 			echo do_shortcode('[ajax_load_more repeater="template_5" preloaded="true" post_type="thinking, news" author="' . $author_ID . '" scroll="false" posts_per_page="4" destroy_after="99" button_label="See More"]');
 ?>
-			</div>
 		</div>
 <?php
 		else:
 ?>
-		<div class="block archive-gallery container no-posts">
-			<a href="javascript:window.history.back();" class="back-button"><img src="/wp-content/themes/environics/assets/images/banner-arrow-left.svg">Back to article</a>
-			<div class="tiles-container">
-				<div class="tiles-item">
-					<p><?php echo $curauth->display_name; ?> has not written any articles yet.</p>
-				</div>
+		<div class="post-overview">
+			<a href="javascript:window.history.back();" class="back-button">Back to article</a>
+		</div>
+		<div class="archive-container">
+			<div class="tiles-item">
+				<p><?php echo $curauth->display_name; ?> has not written any articles yet.</p>
 			</div>
 		</div>
 

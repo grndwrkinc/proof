@@ -3,53 +3,6 @@
 
 //OLD STYLES, STILL GETTING RID OF THEM
 
-
-
-//----------Author Page----------//
-.page-author {
-	.featured-team {
-		@extend .featured-team;
-		position: relative;
-
-		.featured-info-wrap {
-			padding-right: 1.25rem;
-		}
-
-		.featured-info {
-			padding: 4%;
-
-			p {
-				@include font-size(1.3);
-			}
-		}
-
-		.featured-info.no-image {
-			width: 100%;
-			
-			.featured-info-wrap {
-				position: relative;
-				transform: translateY(0);
-				padding-right: 0;
-				padding-bottom: 4rem;
-			}
-		}
-	}
-
-	.author-container {
-		height: $full-height;
-		background: $darkpurple;
-
-		.author-image {
-			@include span-columns(5);
-		}
-
-		.author-text {
-			@include span-columns(7);
-			@include omega;
-		}
-	}
-}
-
 .images {
 	@include display(flex);
 	@include justify-content(space-around);
@@ -93,85 +46,6 @@
 			&:hover {
 				cursor: pointer; 
 			}
-		}
-	}
-}
-
-//Case Study Post, CanTrust Post
-.single-work, .thinking-cantrust {
-
-	.quote {
-		background-color: $lightpurple;
-
-		.container {
-			@include span-columns(8);
-			@include omega();
-			float: none;
-			margin: 0 auto!important;
-			text-align: center;
-			text-transform: uppercase;
-			font-family: $font__heading;
-			letter-spacing: 1px;
-		}
-
-		.teal {
-			color: $teal;
-		}
-
-		.text {
-			color: $white;
-			@include font-size(2.2);
-			@include line-height(2.5);
-		}
-
-		.source {
-			color: $white_transparent;
-		}
-
-		.text, .source {
-			@include rem-size('margin-top', 1);
-			@include rem-size('margin-bottom', 1);
-		}
-	}
-
-	.infogfx {
-		background: $darkpurple;
-		color: $white;
-		text-transform: uppercase;
-		text-align: center;
-		font-family: $font__subheading;
-
-		.gfx {
-			flex-basis: 0;
-			flex-grow: 1;
-		}
-
-		p {
-			margin: 0;
-		}
-
-		.container {
-			@include display(flex);
-			@include justify-content(space-around);
-		}
-
-		.infographic-number {
-			color: $teal;
-		}
-
-		.gfx-icon {
-			@include display(flex);
-			@include justify-content(center);
-		    height: 215px;
-		    border-radius: 50%;
-		    width: 215px;
-		    background: $lightpurple;
-		    margin: 0 auto 2rem auto;
-		    img {
-		    	@include align-self(center);
-		    	max-height: 120px;
-				max-width: 140px;
-		    }
 		}
 	}
 }
@@ -614,7 +488,7 @@ a.purple-download-btn {
 
 .home {
 	.hero {
-		height: 80rem;
+		height: 60rem;
 		width: 100%;
 		position: relative;
 
@@ -1201,7 +1075,7 @@ a.purple-download-btn {
 
 // SINGLE THINKING 
 
-.single-thinking, .single-news {
+.single-thinking, .single-news, .page-author {
 
 	.hero-container {
 		margin-left: 5.88%;
@@ -1248,6 +1122,40 @@ a.purple-download-btn {
 	.divider {
 		position: relative;
     	top: -2px;
+	}
+}
+
+// AUTHOR PAGE
+
+.page-author {
+	h2 {
+		width: 70%;
+	}
+
+	.sub-hero {
+		background-position: top;
+	}
+
+	.hero-container {
+		z-index: 1;
+		position: relative;
+	}
+
+	.text-container.span_11, .text-container.span_7 {
+		margin-left: 29.4%;
+		padding: 6rem 12rem 6rem 6rem;
+		background-color: $extralightpurple;
+		transform: translateY(-3rem);
+		border-bottom: none;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.text-container.span_7 {
+		margin-left: 47.04%;
+		padding: 6rem 6rem 6rem 12rem;
 	}
 }
 
@@ -1472,7 +1380,7 @@ a.purple-download-btn {
 
 .acf-map {
     width: 100%;
-    height: 64rem;
+    height: 60rem;
     margin: 0;
 }
 
