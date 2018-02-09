@@ -2255,7 +2255,14 @@ a.purple-download-btn {
     padding: 0 6rem 0 1rem; }
 
 .page-about .text-container {
-  padding-top: 4rem; }
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
   .page-about .text-container:last-of-type {
     padding-bottom: 8rem;
     border-bottom: 1px solid #524a3f; }
@@ -2265,8 +2272,14 @@ a.purple-download-btn {
   .page-about .text-container .span_7 a {
     text-transform: uppercase;
     padding: 0 2rem 0 0.5rem; }
-.page-about .team-container {
-  padding-top: 8rem; }
+  .page-about .text-container.span_8 {
+    padding-top: 0;
+    background-color: #F2EAF9;
+    padding: 6rem;
+    margin-left: 47.04%;
+    transform: translateY(-6rem); }
+    .page-about .text-container.span_8 p {
+      margin: 0; }
 .page-about .csr-container .text-container .span_6, .page-about .csr-container .text-container .frm_form_field, .page-about .csr-container .text-container .uploads {
   margin: 0 0 0 35.28%; }
 .page-about .csr-container .dropdown-gallery {
@@ -2274,7 +2287,7 @@ a.purple-download-btn {
   .page-about .csr-container .dropdown-gallery .span_6, .page-about .csr-container .dropdown-gallery .frm_form_field, .page-about .csr-container .dropdown-gallery .uploads {
     margin-left: 35.28%; }
 
-.ceo-container, .team-gallery {
+.team-gallery {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -2284,10 +2297,8 @@ a.purple-download-btn {
   display: flex;
   flex-wrap: wrap; }
 
-.ceo-container {
-  padding-left: 5.88%;
+.team-container .text-container {
   padding-bottom: 8rem; }
-
 .team-container .dropdown-gallery {
   margin-left: 0;
   padding-top: 0; }
@@ -2311,7 +2322,17 @@ a.purple-download-btn {
   font-size: 20px;
   font-size: 2rem; }
 .team-container .dropdown {
-  padding: 0 5.88%; }
+  padding: 4rem 0;
+  margin: 0; }
+  .team-container .dropdown p:first-of-type {
+    margin-top: 0; }
+.team-container .social-share ul {
+  justify-content: center; }
+.team-container .social-share {
+  margin-left: 5.88%; }
+.team-container .bio {
+  margin-right: 5.88%;
+  padding: 0 1rem; }
 
 .dropdown-content {
   display: none; }
@@ -2957,7 +2978,13 @@ footer {
     .page-about .team-container h5 {
       margin-top: 1rem; }
     .page-about .team-container .dropdown {
-      padding-left: 0; }
+      padding: 1rem 0 2rem;
+      display: block !important; }
+    .page-about .team-container .social-share {
+      margin: 0 auto;
+      padding: 0 0 2rem 0; }
+    .page-about .team-container .bio {
+      margin-right: 0; }
   .page-about .ceo-container {
     padding-left: 0;
     padding-bottom: 0;

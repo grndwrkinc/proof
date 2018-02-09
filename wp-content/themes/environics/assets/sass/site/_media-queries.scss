@@ -194,7 +194,17 @@
 			}
 
 			.dropdown {
-				padding-left: 0;
+				padding: 1rem 0 2rem;
+				display: block !important;
+			}
+
+			.social-share {
+				margin: 0 auto;
+				padding: 0 0 2rem 0;
+			}
+
+			.bio {
+				margin-right: 0;
 			}
 		}
 

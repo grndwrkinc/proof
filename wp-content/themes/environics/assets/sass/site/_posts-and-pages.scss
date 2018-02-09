@@ -808,6 +808,7 @@ a.purple-download-btn {
 
 	.text-container {
 		padding-top: 4rem;
+		@include display(flex);
 
 		&:last-of-type {
 			padding-bottom: 8rem;
@@ -823,10 +824,18 @@ a.purple-download-btn {
 			text-transform: uppercase;
 			padding: 0 2rem 0 0.5rem;
 		}
-	}
 
-	.team-container {
-		padding-top: 8rem;
+		&.span_8 {
+			padding-top: 0;
+			background-color: $extralightpurple;
+			padding: 6rem;
+			margin-left: 47.04%;
+			transform: translateY(-6rem);
+
+			p {
+				margin: 0;
+			}
+		}
 	}
 
 	.csr-container .text-container {
@@ -844,17 +853,16 @@ a.purple-download-btn {
 	}
 }
 
-.ceo-container, .team-gallery {
+.team-gallery {
 	@include display(flex);
 	flex-wrap: wrap;
 }
 
-.ceo-container {
-	padding-left: 5.88%;
-	padding-bottom: 8rem;
-}
-
 .team-container {
+
+	.text-container {
+		padding-bottom: 8rem;
+	}
 
 	.dropdown-gallery {
 		margin-left: 0;
@@ -888,7 +896,25 @@ a.purple-download-btn {
 	}
 
 	.dropdown {
-		padding: 0 5.88%;
+		padding: 4rem 0;
+		margin: 0;
+
+		p:first-of-type {
+			margin-top: 0;
+		}
+	}
+
+	.social-share ul {
+		justify-content: center;
+	}
+
+	.social-share {
+		margin-left: 5.88%;
+	}
+
+	.bio {
+		margin-right: 5.88%;
+		padding: 0 1rem;
 	}
 }
 
