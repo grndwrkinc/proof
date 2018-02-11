@@ -1,5 +1,5 @@
 html {
-	font-size: 62.5%; //10px base
+	font-size: 56.25%; //9px base
 }
 
 body,
@@ -24,14 +24,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	@include font-size(7);
-	@include line-height(8);
+	@include line-height(7);
 	color: $white;
 	letter-spacing: -1px;
 }
 
 h2 {
 	@include font-size(7);
-	@include line-height(8);
+	@include line-height(7);
 	margin-bottom: 2rem;
 	color: $darkgrey;
 	letter-spacing: -1px;

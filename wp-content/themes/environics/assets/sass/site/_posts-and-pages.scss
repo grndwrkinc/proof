@@ -437,7 +437,7 @@ a.purple-download-btn {
 
 
 //Section padding is as follows:
-//padding-top always 80px/8rem
+//padding-top always 90px/9rem/$section-padding-top
 //padding-bottom of a flex-item 60px/6rem
 //padding-bottom of a container 60px/6rem OR 0rem if it contains flex-items with bottom padding
 
@@ -509,6 +509,7 @@ a.purple-download-btn {
 	.text-container {
 		.span_11 {
 			column-count: 2;
+			margin-right: 0; //RA
 
 			p {
 				margin-top: 0;
@@ -520,8 +521,14 @@ a.purple-download-btn {
 .home, .page-capabilities {
 	.text-container, .capabilities-container, 
 	.featured-container, .cantrust-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 	}
+
+	// RA begin
+	.text-container {
+		padding-top: 6rem; 
+	}
+	//RA end
 
 	.text-container, .capabilities-wrapper {
 		display: flex;
@@ -724,7 +731,7 @@ a.purple-download-btn {
 }
 
 .capabilities-container {
-	padding-bottom: 8rem;
+	padding-bottom: $section-padding-top; //RA
 	border-bottom: 1px solid $darkgrey;
 
 	.dropdown-gallery {
@@ -737,7 +744,7 @@ a.purple-download-btn {
 }
 
 .dropdown-gallery {
-	padding-bottom: 8rem;
+	padding-bottom: $section-padding-top; //RA
 }
 
 .dropdown-item {
@@ -811,7 +818,7 @@ a.purple-download-btn {
 		@include display(flex);
 
 		&:last-of-type {
-			padding-bottom: 8rem;
+			padding-bottom: $section-padding-top; //RA
 			border-bottom: 1px solid $darkgrey;
 		}
 
@@ -861,7 +868,7 @@ a.purple-download-btn {
 .team-container {
 
 	.text-container {
-		padding-bottom: 8rem;
+		padding-bottom: $section-padding-top; //RA
 	}
 
 	.dropdown-gallery {
@@ -998,7 +1005,7 @@ a.purple-download-btn {
 		}
 
 		.span_8 {
-			padding-bottom: 8rem;
+			padding-bottom: $section-padding-top; //RA
 			border-bottom: 1px solid $darkgrey;
 		}
 
@@ -1028,7 +1035,7 @@ a.purple-download-btn {
 
 .posts-container {
 	position: relative;
-	padding-bottom: 8rem;
+	padding-bottom: $section-padding-top; //RA
 	border-bottom: 1px solid $darkgrey;
 
 	&.grid {
@@ -1059,8 +1066,9 @@ a.purple-download-btn {
 	.tile-inner {
 		padding: 2rem;
 		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
+		// RA: They wanted this on top
+		// top: 50%;
+		// transform: translateY(-50%); 
 
 		h5, h4, p, a {
 			color: white;
@@ -1081,17 +1089,19 @@ a.purple-download-btn {
 	}
 
 	.no-image {
+		background-color: $darkgrey; //RA
 		.tile-link {
 			display: block;
 		}
 
-		.tile-inner {
-			padding: 0;
+		//RA: They asked for grey boxes, they got grey boxes
+		// .tile-inner {
+		// 	padding: 0;
 
-			h5, h4, h3, p, a {
-				color: $darkgrey;
-			}
-		}
+		// 	h5, h4, h3, p, a {
+		// 		color: $darkgrey;
+		// 	}
+		// }
 
 		h4.barr:after {
 			display: none;
@@ -1120,7 +1130,7 @@ a.purple-download-btn {
 	}
 
 	.text-container {
-		padding-bottom: 8rem;
+		padding-bottom: $section-padding-top; //RA
 		border-bottom: 1px solid $darkgrey;
 	}
 
@@ -1214,7 +1224,26 @@ a.purple-download-btn {
 	}
 
 	.jobs-container, .socialfeed-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
+	}
+
+	.no-image {
+		background: none;
+		.tile-link {
+			display: block;
+		}
+
+		.tile-inner {
+			padding: 0;
+
+			h5, h4, h3, p, a {
+				color: $darkgrey;
+			}
+		}
+
+		h4.barr:after {
+			display: none;
+		}
 	}
 
 	.text-container.span_7 {
@@ -1272,7 +1301,7 @@ a.purple-download-btn {
 	}
 
 	.grid {
-		margin-bottom: 8rem;
+		margin-bottom: $section-padding-top; //RA
 	}
 
 	.alm-load-more-btn {
@@ -1289,7 +1318,7 @@ a.purple-download-btn {
 	}
 
 	.hero-container {
-		padding: 8rem 0;
+		padding: $section-padding-top 0; //RA
 
 		.span_8 {
 			margin-right: auto;
@@ -1304,7 +1333,7 @@ a.purple-download-btn {
 		}
 
 		.span_10 {
-			padding: 4rem 8rem 3rem;
+			padding: 4rem $section-padding-top 3rem; //RA
 			background-color: $extralightpurple;
 		}
 
@@ -1327,7 +1356,7 @@ a.purple-download-btn {
 
 		h3 {
 			color: $darkgrey;
-			margin: 8rem 0 6rem 23%;
+			margin: $section-padding-top 0 6rem 23%; //RA
 		}
 
 		p {
@@ -1339,7 +1368,7 @@ a.purple-download-btn {
 			padding-left: 0;
 
 			&:last-of-type {
-				padding-bottom: 8rem;
+				padding-bottom: $section-padding-top; //RA
 				border-bottom: 1px solid $darkgrey;
 			}
 		}
@@ -1377,7 +1406,7 @@ a.purple-download-btn {
 	}
 
 	.locations-container {
-		padding: 8rem 0;
+		padding: $section-padding-top 0; //RA
 		border-bottom: 1px solid $darkgrey;
 
 		h2 {
@@ -1394,7 +1423,7 @@ a.purple-download-btn {
 	}
 
 	.single-location {
-		margin-bottom: 8rem;
+		margin-bottom: $section-padding-top; //RA
 		@include display(flex);
 		flex-wrap: wrap;
 	}
@@ -1441,7 +1470,7 @@ a.purple-download-btn {
 	}
 
 	.content-area {
-		padding-bottom: 8rem;
+		padding-bottom: $section-padding-top; //RA
 	}
 
 	.text-container.span_11 {
@@ -1460,7 +1489,7 @@ a.purple-download-btn {
 
 	.press-container {
 		margin-left: 5.88%;
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 
 		.items-container {
 			@include display(flex);
@@ -1483,7 +1512,7 @@ a.purple-download-btn {
 	}
 
 	.text-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 
 		ul {
 			padding-left: 0;
@@ -1502,7 +1531,7 @@ a.purple-download-btn {
 	}
 
 	.quote-container {
-		margin-top: 8rem;
+		margin-top: $section-padding-top; //RA
 		background-color: $extralightpurple;
 		padding: 6rem 8rem;
 
@@ -1534,7 +1563,7 @@ a.purple-download-btn {
 	}
 
 	.img-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 		@include display(flex);
 
 		.image {
@@ -1547,11 +1576,11 @@ a.purple-download-btn {
 	}
 
 	.video-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 	}
 
 	.featured-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 	}
 
 }
@@ -1574,7 +1603,7 @@ a.purple-download-btn {
 	}
 
 	.cantrust-container	{
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 
 		h3 {
 			color: $darkgrey;
@@ -1612,7 +1641,7 @@ a.purple-download-btn {
 	}
 
 	.posts-container {
-		padding-top: 8rem;
+		padding-top: $section-padding-top; //RA
 		border-bottom: none;
 
 		.blog-item {
@@ -1625,7 +1654,7 @@ a.purple-download-btn {
 
 .page-privacy-policy {
 	h1 {
-		margin: 8rem 0;
+		margin: $section-padding-top 0; //RA
 		color: $darkgrey;
 	}
 }

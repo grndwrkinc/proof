@@ -6,6 +6,7 @@
 	position: absolute;
 	top: calc(50% - 18px);
 	right: 0;
+	margin-right: -1.5rem;
 	@include display(flex);
 
 	p {
