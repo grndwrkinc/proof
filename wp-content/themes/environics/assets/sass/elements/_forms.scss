@@ -326,11 +326,17 @@ fieldset {
 	@include font-size(0.8);
 }
 
+.frm_error_style {
+	@include font-size(1.4);
+	color: #d92a51;
+	transform: translateY(6rem);
+}
+
 .frm_error {
 	position: absolute;
-	top: 55px;
-	@include font-size(0.8);
-	color: $gold;
+	top: 45px;
+	@include font-size(1.4);
+	color: #d92a51;
 }
 
 .dz-max-files-reached ~ .frm_error {
@@ -343,11 +349,6 @@ fieldset {
 
 .uploads .frm_error {
 	top: 40px;
-}
-
-.frm_error_style, .dz-error-message span {
-	color: $gold;
-	@include font-size(0.8);
 }
 
 .frm_form_field {
