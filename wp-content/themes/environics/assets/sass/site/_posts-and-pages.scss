@@ -829,6 +829,7 @@
 
 		h2 {
 			transform: translateX(-3rem);
+			padding-left: 1rem;
 		}
 	}
 
@@ -847,6 +848,10 @@
 
 	.content-area {
 		@include border-bottom;
+	}
+
+	.sub-hero.no-image {
+		display: none;
 	}
 }
 
