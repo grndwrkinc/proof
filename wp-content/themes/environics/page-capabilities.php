@@ -57,8 +57,11 @@ get_header();
 				$directorPos = get_field('team_member_role', $director->ID);
 				$directorImg = get_field('photo_professional', $director->ID);
 	?>
-	<div class="capabilities-container">
-		<?php $image = get_sub_field('capability_image'); ?>
+	<?php $image = get_sub_field('capability_image');
+		  $hash = preg_replace("/[^a-zA-Z]+/", "", get_sub_field('capability_title'));
+		  $hash = strtolower($hash);
+	 ?>
+	<div id="<?php echo $hash; ?>" class="capabilities-container">
 		<div class="hero-container">
 			<div class="sub-hero span_10" style="background-image: url('<?php echo $image['url']; ?>');">
 				<h3><?php the_sub_field('capability_title'); ?></h3>
