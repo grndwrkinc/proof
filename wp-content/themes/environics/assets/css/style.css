@@ -750,33 +750,35 @@ textarea {
   width: 30.7%; }
   /* line 78, ../sass/elements/_forms.scss */
   .media-body h4 {
-    font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif; }
+    font-family: "Avenir Next LT W02 Demi", Avenir, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    margin-bottom: 0; }
 
-/* line 83, ../sass/elements/_forms.scss */
+/* line 85, ../sass/elements/_forms.scss */
 .comment-content, .comment-form-comment, .form-submit {
   width: 69.2%; }
 
-/* line 87, ../sass/elements/_forms.scss */
+/* line 89, ../sass/elements/_forms.scss */
 .comments-container, .comment-respond {
   padding: 8rem 0; }
 
-/* line 91, ../sass/elements/_forms.scss */
+/* line 93, ../sass/elements/_forms.scss */
 .comments-container {
   border-bottom: 1px solid #979087; }
 
-/* line 95, ../sass/elements/_forms.scss */
+/* line 97, ../sass/elements/_forms.scss */
 .form-submit {
   display: block;
   margin-left: 30.7%;
   float: left; }
-  /* line 100, ../sass/elements/_forms.scss */
+  /* line 102, ../sass/elements/_forms.scss */
   .form-submit input {
     margin-top: 6rem; }
 
-/* line 105, ../sass/elements/_forms.scss */
+/* line 107, ../sass/elements/_forms.scss */
 .comments-area {
   padding: 3rem 0 0; }
-  /* line 108, ../sass/elements/_forms.scss */
+  /* line 110, ../sass/elements/_forms.scss */
   .comments-area a {
     color: #f2bd37;
     -webkit-transition: text-decoration, 0.2s ease;
@@ -784,15 +786,15 @@ textarea {
     -ms-transition: text-decoration, 0.2s ease;
     -o-transition: text-decoration, 0.2s ease;
     transition: text-decoration, 0.2s ease; }
-    /* line 112, ../sass/elements/_forms.scss */
+    /* line 114, ../sass/elements/_forms.scss */
     .comments-area a:hover {
       text-decoration: underline; }
 
-/* line 120, ../sass/elements/_forms.scss */
+/* line 122, ../sass/elements/_forms.scss */
 .comment-respond input, .application-form input, .report-form input {
   text-transform: uppercase; }
 
-/* line 125, ../sass/elements/_forms.scss */
+/* line 127, ../sass/elements/_forms.scss */
 .comment-container, .application-form {
   content: "";
   display: table;
@@ -801,23 +803,23 @@ textarea {
   margin-left: auto;
   margin-right: auto; }
 
-/* line 135, ../sass/elements/_forms.scss */
+/* line 137, ../sass/elements/_forms.scss */
 .comment-container .submit, .application-form .submit, .report-form .submit {
   text-transform: uppercase; }
-/* line 139, ../sass/elements/_forms.scss */
+/* line 141, ../sass/elements/_forms.scss */
 .comment-container textarea, .application-form textarea, .report-form textarea {
   padding: 1rem;
   border: 1px solid #524a3f;
   border-radius: 0; }
-/* line 145, ../sass/elements/_forms.scss */
+/* line 147, ../sass/elements/_forms.scss */
 .comment-container .comment-form-comment, .application-form .comment-form-comment, .report-form .comment-form-comment {
   float: right; }
 
-/* line 150, ../sass/elements/_forms.scss */
+/* line 152, ../sass/elements/_forms.scss */
 .report-form {
   max-width: none !important; }
 
-/* line 154, ../sass/elements/_forms.scss */
+/* line 156, ../sass/elements/_forms.scss */
 .comment-form-author, .comment-form-email {
   border-bottom: 2px solid #F2EAF9;
   position: relative;
@@ -828,20 +830,20 @@ textarea {
   /* line 89, ../../../../../../../../../../../Applications/CodeKit 2.app/Contents/Resources/engines/neat/grid/_span-columns.scss */
   .comment-form-author:last-child, .comment-form-email:last-child {
     margin-right: 0; }
-  /* line 159, ../sass/elements/_forms.scss */
+  /* line 161, ../sass/elements/_forms.scss */
   .comment-form-author input, .comment-form-email input {
     border: none;
     width: 100%; }
 
-/* line 165, ../sass/elements/_forms.scss */
+/* line 167, ../sass/elements/_forms.scss */
 .depth-1 {
   padding-bottom: 2rem;
   border-bottom: 1px solid #E1E1E1; }
 
-/* line 170, ../sass/elements/_forms.scss */
+/* line 172, ../sass/elements/_forms.scss */
 .comment-list {
   padding: 0; }
-  /* line 172, ../sass/elements/_forms.scss */
+  /* line 174, ../sass/elements/_forms.scss */
   .comment-list li {
     content: "";
     display: table;
@@ -851,24 +853,24 @@ textarea {
     margin-right: auto;
     width: 100%;
     margin-bottom: 2rem; }
-  /* line 178, ../sass/elements/_forms.scss */
+  /* line 180, ../sass/elements/_forms.scss */
   .comment-list .comment:last-child {
     border-bottom: none;
     padding-bottom: 0; }
 
-/* line 184, ../sass/elements/_forms.scss */
+/* line 186, ../sass/elements/_forms.scss */
 .comment-awaiting-moderation {
   display: none; }
 
-/* line 188, ../sass/elements/_forms.scss */
+/* line 190, ../sass/elements/_forms.scss */
 .reply-link a {
   text-transform: uppercase; }
 
-/* line 192, ../sass/elements/_forms.scss */
+/* line 194, ../sass/elements/_forms.scss */
 li.comment {
   position: relative; }
 
-/* line 196, ../sass/elements/_forms.scss */
+/* line 198, ../sass/elements/_forms.scss */
 #cancel-comment-reply-link {
   font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -877,24 +879,24 @@ li.comment {
   font-size: 1.4rem;
   padding-left: 4rem; }
 
-/* line 204, ../sass/elements/_forms.scss */
+/* line 206, ../sass/elements/_forms.scss */
 .reply-link {
   margin-top: 1rem; }
 
-/* line 208, ../sass/elements/_forms.scss */
+/* line 210, ../sass/elements/_forms.scss */
 h3.comment-reply-title {
   color: #524a3f;
   padding: 0 0 2rem 2rem; }
 
-/* line 215, ../sass/elements/_forms.scss */
+/* line 217, ../sass/elements/_forms.scss */
 .children li {
   padding-top: 1rem; }
 
-/* line 220, ../sass/elements/_forms.scss */
+/* line 222, ../sass/elements/_forms.scss */
 .comment-form-comment {
   position: relative; }
 
-/* line 224, ../sass/elements/_forms.scss */
+/* line 226, ../sass/elements/_forms.scss */
 p.comment-noval {
   left: 0;
   position: absolute;
@@ -903,49 +905,49 @@ p.comment-noval {
   color: #f2bd37;
   margin: 0; }
 
-/* line 233, ../sass/elements/_forms.scss */
+/* line 235, ../sass/elements/_forms.scss */
 .comment-form-author p.comment-noval, .comment-form-email p.comment-noval {
   top: 32px; }
 
-/* line 239, ../sass/elements/_forms.scss */
+/* line 241, ../sass/elements/_forms.scss */
 .comment-form-comment p.comment-noval {
   bottom: -20px; }
 
-/* line 246, ../sass/elements/_forms.scss */
+/* line 248, ../sass/elements/_forms.scss */
 .form-container {
   padding: 8rem 5.88%;
   border-bottom: 1px solid #979087; }
-  /* line 251, ../sass/elements/_forms.scss */
+  /* line 253, ../sass/elements/_forms.scss */
   .form-container h3 {
     color: #524a3f;
     margin-bottom: 4rem; }
-    /* line 255, ../sass/elements/_forms.scss */
+    /* line 257, ../sass/elements/_forms.scss */
     .form-container h3 span {
       display: none; }
 
-/* line 263, ../sass/elements/_forms.scss */
+/* line 265, ../sass/elements/_forms.scss */
 .application-form .submit, .report-form .submit {
   width: 100%;
   text-align: left;
   margin-top: 6rem; }
 
-/* line 271, ../sass/elements/_forms.scss */
+/* line 273, ../sass/elements/_forms.scss */
 fieldset {
   border: none;
   margin: 0;
   padding: 0; }
 
-/* line 277, ../sass/elements/_forms.scss */
+/* line 279, ../sass/elements/_forms.scss */
 .frm_submit {
   float: left;
   padding-right: 2rem; }
 
-/* line 282, ../sass/elements/_forms.scss */
+/* line 284, ../sass/elements/_forms.scss */
 .frm_form_field, .uploads {
   float: left;
   display: block;
   margin-right: 5.88%; }
-  /* line 288, ../sass/elements/_forms.scss */
+  /* line 290, ../sass/elements/_forms.scss */
   .frm_form_field input, .uploads input {
     margin: 1rem 0 2rem;
     border: none;
@@ -954,38 +956,38 @@ fieldset {
     width: 100%;
     color: #524a3f; }
 
-/* line 298, ../sass/elements/_forms.scss */
+/* line 300, ../sass/elements/_forms.scss */
 .uploads {
   width: 17.64%;
   margin-right: 1rem;
   margin-top: 2rem; }
 
-/* line 304, ../sass/elements/_forms.scss */
+/* line 306, ../sass/elements/_forms.scss */
 .frm_upload_text, .frm_small_text {
   display: none; }
 
-/* line 308, ../sass/elements/_forms.scss */
+/* line 310, ../sass/elements/_forms.scss */
 .dz-message {
   padding: 3px;
   display: block;
   border-bottom: 2px solid #ffffff; }
 
-/* line 314, ../sass/elements/_forms.scss */
+/* line 316, ../sass/elements/_forms.scss */
 .dz-filename {
   margin-top: 1.5rem; }
-  /* line 317, ../sass/elements/_forms.scss */
+  /* line 319, ../sass/elements/_forms.scss */
   .dz-filename span {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis; }
 
-/* line 324, ../sass/elements/_forms.scss */
+/* line 326, ../sass/elements/_forms.scss */
 .frm_description, .dz-filename span {
   color: #524a3f;
   font-size: 8px;
   font-size: 0.8rem; }
 
-/* line 329, ../sass/elements/_forms.scss */
+/* line 331, ../sass/elements/_forms.scss */
 .frm_error {
   position: absolute;
   top: 55px;
@@ -993,33 +995,33 @@ fieldset {
   font-size: 0.8rem;
   color: #f2bd37; }
 
-/* line 336, ../sass/elements/_forms.scss */
+/* line 338, ../sass/elements/_forms.scss */
 .dz-max-files-reached ~ .frm_error {
   display: none; }
 
-/* line 340, ../sass/elements/_forms.scss */
+/* line 342, ../sass/elements/_forms.scss */
 .frm_compact_text {
   opacity: 0; }
 
-/* line 344, ../sass/elements/_forms.scss */
+/* line 346, ../sass/elements/_forms.scss */
 .uploads .frm_error {
   top: 40px; }
 
-/* line 348, ../sass/elements/_forms.scss */
+/* line 350, ../sass/elements/_forms.scss */
 .frm_error_style, .dz-error-message span {
   color: #f2bd37;
   font-size: 8px;
   font-size: 0.8rem; }
 
-/* line 353, ../sass/elements/_forms.scss */
+/* line 355, ../sass/elements/_forms.scss */
 .frm_form_field {
   position: relative; }
 
-/* line 357, ../sass/elements/_forms.scss */
+/* line 359, ../sass/elements/_forms.scss */
 .frm_message + .frm_form_fields, .frm_description {
   display: none; }
 
-/* line 361, ../sass/elements/_forms.scss */
+/* line 363, ../sass/elements/_forms.scss */
 .frm_message p {
   text-transform: uppercase;
   color: #524a3f;
@@ -1031,15 +1033,15 @@ fieldset {
   width: 70%;
   margin-left: 15%; }
 
-/* line 372, ../sass/elements/_forms.scss */
+/* line 374, ../sass/elements/_forms.scss */
 .dz-error-mark, .dz-success-mark, .dz-progress, .dz-image, .dz-details .dz-size, .hidden-field {
   display: none; }
 
-/* line 376, ../sass/elements/_forms.scss */
+/* line 378, ../sass/elements/_forms.scss */
 .frm_dropzone, .needsclick, .dz-clickable {
   z-index: 999; }
 
-/* line 382, ../sass/elements/_forms.scss */
+/* line 384, ../sass/elements/_forms.scss */
 .upload-resume label, .upload-cv label {
   padding: 8px 12px;
   border: 2px solid #F2EAF9;
@@ -1048,11 +1050,11 @@ fieldset {
   text-align: center;
   cursor: pointer;
   text-transform: uppercase; }
-/* line 392, ../sass/elements/_forms.scss */
+/* line 394, ../sass/elements/_forms.scss */
 .upload-resume label.focused, .upload-cv label.focused {
   background-color: #ffffff;
   color: #582C83; }
-/* line 397, ../sass/elements/_forms.scss */
+/* line 399, ../sass/elements/_forms.scss */
 .upload-resume input, .upload-cv input {
   width: 0.1px;
   height: 0.1px;
@@ -1060,41 +1062,41 @@ fieldset {
   overflow: hidden;
   position: absolute;
   z-index: -1; }
-/* line 406, ../sass/elements/_forms.scss */
+/* line 408, ../sass/elements/_forms.scss */
 .upload-resume .dz-message, .upload-cv .dz-message {
   display: none; }
 
-/* line 411, ../sass/elements/_forms.scss */
+/* line 413, ../sass/elements/_forms.scss */
 .dz-remove {
   text-transform: lowercase;
   font-size: 8px;
   font-size: 0.8rem;
   font-family: "adobe-caslon-pro", serif;
   color: #f2bd37; }
-  /* line 417, ../sass/elements/_forms.scss */
+  /* line 419, ../sass/elements/_forms.scss */
   .dz-remove:hover {
     text-decoration: underline; }
-  /* line 421, ../sass/elements/_forms.scss */
+  /* line 423, ../sass/elements/_forms.scss */
   .dz-remove:before {
     content: "x "; }
 
-/* line 427, ../sass/elements/_forms.scss */
+/* line 429, ../sass/elements/_forms.scss */
 .download-modal .report-form.modal {
   background-color: #582C83; }
 
-/* line 434, ../sass/elements/_forms.scss */
+/* line 436, ../sass/elements/_forms.scss */
 .report-form .frm_forms {
   width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-/* line 439, ../sass/elements/_forms.scss */
+/* line 441, ../sass/elements/_forms.scss */
 .report-form .frm_description, .report-form .frm_form_title {
   display: block;
   text-align: left; }
 
-/* line 445, ../sass/elements/_forms.scss */
+/* line 447, ../sass/elements/_forms.scss */
 input:valid,
 input:invalid,
 input:-moz-placeholder {
