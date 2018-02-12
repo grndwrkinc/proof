@@ -927,6 +927,10 @@ a.purple-download-btn {
 	width: 100%;
 }
 
+.dropdown-inner {
+	@include display(flex);
+}
+
 //WORK PAGE
 
 .page-work {
@@ -1129,6 +1133,12 @@ a.purple-download-btn {
 	}
 }
 
+.single-news {
+	.text-container {
+		border-bottom: none;
+	}
+}
+
 .post-overview {
 	padding: 4rem 0;
 	margin-left: 5.88%;
@@ -1226,6 +1236,11 @@ a.purple-download-btn {
 		p {
 			margin: 0;
 		}
+	}
+
+	.tile-inner p {
+		@include font-size(2.4);
+		@include line-height(3.6);
 	}
 
 	.perks-container {

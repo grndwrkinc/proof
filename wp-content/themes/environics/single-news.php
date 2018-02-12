@@ -21,12 +21,7 @@ get_header();
 			comments_template();
 		endif;
 	endwhile; // End of the loop.
-
-	$current = array( $post->ID );
-	$args = array( 'post_type' => 'news', 'posts_per_page' => 3, 'post__not_in' => $current);
-	$related_posts = new WP_Query( $args );
 		
-	include(locate_template('related-posts.php'));
 ?>
 	</div><!-- #primary -->
 <?php

@@ -179,15 +179,25 @@
 
 		.text-container {
 			padding-bottom: 4rem;
-			border-bottom: 1px solid $darkgrey;
 
 			.span_7 a {
 				display: inline-block;
 			}
 		}
 
+		.text-container.span_8 {
+			margin-left: 2rem;
+    		width: 80%;
+    		padding: 2rem;
+    		border-bottom: none;
+		}
+
 		.team-container {
-			padding-top: 4rem;
+
+			.text-container {
+				display: block;
+				padding: 0 1rem 4rem 1rem;
+			}
 
 			h5 {
 				margin-top: 1rem;
@@ -195,7 +205,10 @@
 
 			.dropdown {
 				padding: 1rem 0 2rem;
-				display: block !important;
+			}
+
+			.dropdown-inner {
+				display: block;
 			}
 
 			.social-share {

@@ -2341,6 +2341,15 @@ a.purple-download-btn {
   position: relative;
   width: 100%; }
 
+.dropdown-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
 .page-work .hero-container .span_8 h1 {
   padding: 0 11.76%; }
 
@@ -2454,6 +2463,9 @@ a.purple-download-btn {
 .single-thinking .content-area, .single-news .content-area, .page-author .content-area {
   border-bottom: 1px solid #524a3f; }
 
+.single-news .text-container {
+  border-bottom: none; }
+
 .post-overview {
   padding: 4rem 0;
   margin-left: 5.88%; }
@@ -2508,6 +2520,11 @@ a.purple-download-btn {
   transform: translateY(-6rem); }
   .page-work-with-us .text-container.span_7 p {
     margin: 0; }
+.page-work-with-us .tile-inner p {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 36px;
+  line-height: 3.6rem; }
 .page-work-with-us .perks-container {
   border-bottom: 1px solid #524a3f; }
   .page-work-with-us .perks-container .dropdown h2 {
@@ -2969,22 +2986,28 @@ footer {
     margin-left: 0; }
 
   .page-about .text-container {
-    padding-bottom: 4rem;
-    border-bottom: 1px solid #524a3f; }
+    padding-bottom: 4rem; }
     .page-about .text-container .span_7 a {
       display: inline-block; }
-  .page-about .team-container {
-    padding-top: 4rem; }
-    .page-about .team-container h5 {
-      margin-top: 1rem; }
-    .page-about .team-container .dropdown {
-      padding: 1rem 0 2rem;
-      display: block !important; }
-    .page-about .team-container .social-share {
-      margin: 0 auto;
-      padding: 0 0 2rem 0; }
-    .page-about .team-container .bio {
-      margin-right: 0; }
+  .page-about .text-container.span_8 {
+    margin-left: 2rem;
+    width: 80%;
+    padding: 2rem;
+    border-bottom: none; }
+  .page-about .team-container .text-container {
+    display: block;
+    padding: 0 1rem 4rem 1rem; }
+  .page-about .team-container h5 {
+    margin-top: 1rem; }
+  .page-about .team-container .dropdown {
+    padding: 1rem 0 2rem; }
+  .page-about .team-container .dropdown-inner {
+    display: block; }
+  .page-about .team-container .social-share {
+    margin: 0 auto;
+    padding: 0 0 2rem 0; }
+  .page-about .team-container .bio {
+    margin-right: 0; }
   .page-about .ceo-container {
     padding-left: 0;
     padding-bottom: 0;

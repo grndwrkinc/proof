@@ -482,7 +482,7 @@ environics.activateDropdown = function(){
 			var _this = $(this);
 			
 			// Get the html inside the dropdown
-			var bio = '<article class="dropdown" style="display: flex">';
+			var bio = '<article class="dropdown" style="display: block">';
 			bio += $(this).children('.dropdown-content').html();
 			bio += '</article>';
 
