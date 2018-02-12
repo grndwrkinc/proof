@@ -226,6 +226,10 @@
 		}
 	}
 
+	.featured-text {
+		margin-top: 2rem;
+	}
+
 	.capabilities-container {
 		border-bottom: none;
 		padding-bottom: 0;
@@ -234,7 +238,7 @@
 	.text-container {
 		.span_11 {
 			column-count: 2;
-			margin-right: 0; //RA
+			margin-right: 0;
 
 			p {
 				margin-top: 0;
@@ -632,6 +636,10 @@
 			height: 3.5rem;
 			top: -0.75rem;
 		}
+	}
+
+	.dropdown-item.active h5:after {
+		background-color: $mediumpurple;
 	}
 
 	.role {

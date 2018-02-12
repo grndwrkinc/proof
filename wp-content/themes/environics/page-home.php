@@ -53,12 +53,17 @@ get_header();
 	    		$image = get_sub_field('capability_image'); ?>
 		
 				<div class="featured span_5">
-					<div class="featured-img square" style="background-image: url('<?php echo $image['url']; ?>');">
-						<h3 class="barr"><?php the_sub_field('capability_title'); ?></h3>
-					</div>
-					<div class="featured-text">
-						<p class="item-text"><?php the_sub_field('capability_description'); ?></p>
-					</div>
+					<?php $hash = preg_replace("/[^a-zA-Z]+/", "", get_sub_field('capability_title'));
+						  $hash = strtolower($hash);
+					 ?>
+					<a href="capabilities#<?php echo $hash; ?>">
+						<div class="featured-img square" style="background-image: url('<?php echo $image['url']; ?>');">
+							<h3 class="barr"><?php the_sub_field('capability_title'); ?></h3>
+						</div>
+						<div class="featured-text">
+							<p class="item-text"><?php the_sub_field('capability_description'); ?></p>
+						</div>
+					</a>
 				</div>
 		
 	<?php 
@@ -84,7 +89,6 @@ get_header();
 				<div class="featured-img square" style="background-image: url('<?php echo $featuredImg; ?>')">
 				</div>
 				<div class="featured-text">
-					<h5>Featured Work</h5>
 					<h4><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo $post_object->post_title; ?></a></h4>
 					<p class="item-text"><?php echo $subtitle; ?></p>
 					<p class="read-more barr"><a href="<?php echo get_permalink($post_object->ID); ?>">See Work</a></p>
