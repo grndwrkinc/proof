@@ -35,6 +35,11 @@ button, .alm-load-more-btn {
 	}
 }
 
+.cantrust-container .barr:after,
+.comment-reply-link:after {
+	bottom: -1rem;
+}
+
 .form-submit, .comment-reply-link {
 	padding-left: 1rem;
 	&:after {
