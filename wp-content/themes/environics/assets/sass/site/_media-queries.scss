@@ -205,6 +205,18 @@
 
 			h5 {
 				margin-top: 1rem;
+
+				&:after {
+					height: 1rem;
+					top: 0.75rem;
+				}
+			}
+
+			.active h5 {
+				&:after {
+					height: 2.5rem;
+					top: -0.5rem;
+				}
 			}
 
 			.dropdown {
@@ -254,7 +266,7 @@
 			.role, h5 {
 				@include font-size(1.4);
 				@include line-height(1.8);
-				padding: 0;
+				padding: 0 0 0 0.5rem;
 				margin-top: 0;
 			}
 		}
@@ -936,7 +948,17 @@
 
 
 @media (max-width: 480px) {
-	
+	.page-about {
+		.team-container {
+			.active h5 {
+				color: $darkgrey;
+
+				&:after {
+					background: none;
+				}
+			}
+		}
+	}
 }
 
 

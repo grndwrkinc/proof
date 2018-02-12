@@ -593,38 +593,58 @@
 	}
 
 	h5 {
-		margin-top: 2rem;
-		margin-bottom: 0;
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
 		@include font-size(2);
 		@include line-height(2.4);
+		width: calc(100% - 2rem);
 
 		&:before {
 			display: none;
+			content: '';
 		}
 
 		&:after {
 			content: '';
 			position: absolute;
 			background-color: $mediumpurple;
-			height: 2rem;
+			height: 1.75rem;
+			top: 1rem;
 			left: 0;
-			bottom: -0.5rem;
 			right: 0;
 			z-index: -1;
 			@include transition(all 0.1s ease);
 			width: 100%;
+		}
+
+		&:hover {
+			&:after {
+				height: 3.5rem;
+				top: -0.75rem;
+			}
+		}
+	}
+
+	.active h5 {
+		color: white;
+
+		&:after {
+			height: 3.5rem;
+			top: -0.75rem;
 		}
 	}
 
 	.role {
 		font-family: $font__main;
 		margin-top: 0;
-		margin-bottom: 2rem;
-		@include font-size(2);
+		margin-bottom: 4.5rem;
+		padding-left: 1rem;
+		@include font-size(1.667);
+		@include line-height(2);
 	}
 
 	.dropdown {
-		padding: 4rem 0;
+		padding: 0 0 9rem 0;
 		margin: 0;
 
 		p:first-of-type {
