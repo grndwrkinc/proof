@@ -506,7 +506,7 @@
 			}
 
 			.span_8 .barr {
-				display: none;
+				margin-bottom: 4rem;
 			}
 
 			p.span_5 {
@@ -910,6 +910,10 @@
 		    right: 0;
 		    width: 40%;
 		}
+	}
+
+	.uploads .frm_error {
+		top: 48px;
 	}
 
 
