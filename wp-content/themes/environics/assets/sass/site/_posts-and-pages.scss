@@ -635,11 +635,8 @@
 		&:after {
 			height: 3.5rem;
 			top: -0.75rem;
+			background-color: $darkpurple;
 		}
-	}
-
-	.dropdown-item.active h5:after {
-		background-color: $mediumpurple;
 	}
 
 	.role {
