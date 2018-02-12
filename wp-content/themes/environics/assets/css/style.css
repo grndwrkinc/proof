@@ -2168,8 +2168,23 @@ a {
   font-size: 2rem;
   line-height: 24px;
   line-height: 2.4rem; }
-  .team-container h5:before, .team-container h5:after {
+  .team-container h5:before {
     display: none; }
+  .team-container h5:after {
+    content: '';
+    position: absolute;
+    background-color: #d5b8eb;
+    height: 2rem;
+    left: 0;
+    bottom: -0.5rem;
+    right: 0;
+    z-index: -1;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    width: 100%; }
 .team-container .role {
   font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   margin-top: 0;
@@ -3257,6 +3272,9 @@ footer {
     top: 0;
     right: 0;
     width: 40%; }
+
+  .uploads .frm_error {
+    top: 48px; }
 
   .nav-container ul li {
     font-size: 20px;

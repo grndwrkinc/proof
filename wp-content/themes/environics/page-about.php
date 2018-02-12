@@ -43,7 +43,7 @@ get_header();
 			<div class="dropdown-item span_5" tabindex="0" role="button" aria-label="A team member">
 				<img src="<?php echo $main_photo['url']; ?>" alt="<?php echo $main_photo['alt']; ?>">
 				<h5><?php the_title(); ?></h5>
-				<p class="role barr"><?php the_field('team_member_role'); ?></p>
+				<p class="role"><?php the_field('team_member_role'); ?></p>
 
 				<article class="dropdown-content">
 					<div class="dropdown-inner">
