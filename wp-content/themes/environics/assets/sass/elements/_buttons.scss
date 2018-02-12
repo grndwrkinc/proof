@@ -53,6 +53,7 @@ h1 .btn.barr {
 	@include line-height(8);
 	color: white;
 	font-family: $font__subheading;
+	font-weight: bold;
 	text-transform: none;
 }
 

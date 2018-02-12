@@ -52,7 +52,8 @@ h4 {
 }
 
 h5, .read-more, .role {
-	font-family: $font__main;
+	font-family: $font__bold;
+	font-weight: normal;
 	@include font-size(1.4);
 	@include line-height(1.8);
 	color: $darkgrey;
@@ -79,6 +80,11 @@ p:empty {
 a {
 	text-decoration: none;
 	cursor: pointer;
+}
+
+b, strong {
+	font-family: $font__bold;
+	font-weight: normal;
 }
 
 dfn, cite, em, i {
