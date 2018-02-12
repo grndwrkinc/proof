@@ -46,7 +46,8 @@ get_header();
 				<p class="role barr"><?php the_field('team_member_role'); ?></p>
 
 				<article class="dropdown-content">
-					<div class="social-share span_5">
+					<div class="dropdown-inner">
+						<div class="social-share span_5">
 <?php 
 						// Check if each social media link exists. If yes, add list item w href and icon.
 						$linkedin = get_field('linkedin_link');
@@ -55,28 +56,29 @@ get_header();
 						$instagram = get_field('instagram_link');
 						$spotify = get_field('spotify_link');
 ?>
-						<ul> 
+							<ul> 
 <?php 				
 						if( !empty($linkedin) ) { ?>
-							<li><a href="<?php echo $linkedin; ?>" target="_blank" alt="Linkedin Link" aria-label="Link to Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 	<?php 				
+								<li><a href="<?php echo $linkedin; ?>" target="_blank" alt="Linkedin Link" aria-label="Link to Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li> 	<?php 				
 						}
 						if( !empty($twitter) ) { ?>
-							<li><a href="<?php echo $twitter; ?>" target="_blank" alt="Twitter link" aria-label="Link to twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 	<?php 				
+								<li><a href="<?php echo $twitter; ?>" target="_blank" alt="Twitter link" aria-label="Link to twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> 	<?php 				
 						}
 						if( !empty($medium) ) { ?>
-							<li><a href="<?php echo $medium; ?>" target="_blank" alt="Medium link" aria-label="Link to Medium"><i class="fa  fa-medium" aria-hidden="true"></i></a></li> 		<?php 				
+								<li><a href="<?php echo $medium; ?>" target="_blank" alt="Medium link" aria-label="Link to Medium"><i class="fa  fa-medium" aria-hidden="true"></i></a></li> 		<?php 				
 						}
 						if( !empty($instagram) ) { ?>
-							<li><a href="<?php echo $instagram; ?>" target="_blank" alt="Instagram link" aria-label="Link to Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li><?php 				
+								<li><a href="<?php echo $instagram; ?>" target="_blank" alt="Instagram link" aria-label="Link to Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li><?php 				
 						}
 						if( !empty($spotify) ) { ?>
-							<li><a href="<?php echo $spotify; ?>" target="_blank" alt="Spotify link" aria-label="Link to Spotify"><i class="fa fa-spotify" aria-hidden="true"></i></a></li> 	<?php 				
+								<li><a href="<?php echo $spotify; ?>" target="_blank" alt="Spotify link" aria-label="Link to Spotify"><i class="fa fa-spotify" aria-hidden="true"></i></a></li> 	<?php 				
 						}
 ?>	
-						</ul>						
-					</div>
-					<div class="bio span_10">
-						<?php the_content(); ?>
+							</ul>						
+						</div>
+						<div class="bio span_10">
+							<?php the_content(); ?>
+						</div>
 					</div>
 				</article>
 			</div><!-- // .team-member  -->
