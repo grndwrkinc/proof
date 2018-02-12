@@ -277,7 +277,7 @@
 		}
 
 		.featured {
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 		}
 
 		.featured:last-child {
@@ -293,7 +293,7 @@
 .featured-wrapper {
 	@include display(flex);
 	flex-wrap: wrap;
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 
 	p {
 		margin-bottom: 0;
@@ -345,11 +345,11 @@
 .page-capabilities {
 	.text-container {
 		padding-bottom: 6rem;
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 	}
 
 	.sectors-container {
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 
 		p {
 			margin-top: 0;
@@ -399,7 +399,7 @@
 			}
 
 			p:last-of-type {
-				border-bottom: 1px solid $darkgrey;
+				@include border-bottom;
 				padding-bottom: 2rem;
 			}
 		}
@@ -439,7 +439,7 @@
 
 .capabilities-container {
 	padding-bottom: $section-padding-top; //RA
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 
 	.dropdown-gallery {
 		padding-left: 5.88%;
@@ -526,7 +526,7 @@
 
 		&:last-of-type {
 			padding-bottom: $section-padding-top; //RA
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 		}
 
 		.span_6 {
@@ -716,7 +716,7 @@
 
 		.span_8 {
 			padding-bottom: $section-padding-top; //RA
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 		}
 
 		.span_8:nth-child(2){
@@ -746,7 +746,7 @@
 .posts-container {
 	position: relative;
 	padding-bottom: $section-padding-top; //RA
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 
 	&.grid {
 		height: auto !important;
@@ -841,11 +841,11 @@
 
 	.text-container {
 		padding-bottom: $section-padding-top; //RA
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 	}
 
 	.content-area {
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 	}
 }
 
@@ -979,7 +979,7 @@
 	}
 
 	.perks-container {
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 
 		.dropdown h2 {
 			transform: translateY(0);
@@ -989,7 +989,7 @@
 
 	.dropdown-item p:last-of-type {
 		padding-bottom: 4rem;
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 	}
 
 	.span_6, .span_8 {
@@ -1005,7 +1005,7 @@
 		display: block;
 		margin-left: 5.88%;
 		padding: 6rem 5.88% 4rem 0;
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 
 		h4 {
 			color: $darkgrey;
@@ -1090,7 +1090,7 @@
 
 			&:last-of-type {
 				padding-bottom: $section-padding-top; //RA
-				border-bottom: 1px solid $darkgrey;
+				@include border-bottom;
 			}
 		}
 
@@ -1128,7 +1128,7 @@
 
 	.locations-container {
 		padding: $section-padding-top 0; //RA
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 
 		h2 {
 			color: $darkgrey;
@@ -1140,7 +1140,7 @@
 	}
 
 	.location-text {
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 	}
 
 	.single-location {

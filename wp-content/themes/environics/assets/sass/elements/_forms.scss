@@ -89,7 +89,7 @@ textarea {
 }
 
 .comments-container {
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 }
 
 .form-submit {
@@ -246,7 +246,7 @@ p.comment-noval {
 .form-container {
 
 	padding: 8rem 5.88%;
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 
 	h3 {
 		color: $darkgrey;

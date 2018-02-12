@@ -238,6 +238,12 @@
 		a {
 			padding-right: 1rem;
 		}
+
+		&:last-child {
+			.divider {
+				display: none;
+			}
+		}
 	}
 
 	.divider {

@@ -54,7 +54,7 @@
 		.text-container {
 			display: block;
 			padding: 4rem 1rem;
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 
 			h2.span_5 {
 				margin-bottom: 2rem;
@@ -67,7 +67,7 @@
 
 		.capabilities-container {
 			padding: 4rem 0 0 0;
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 
 			.span_11 {
 				margin-bottom: 3rem;
@@ -93,7 +93,7 @@
 
 		.cantrust-container {
 			padding: 4rem 0;
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 		}
 
 		.cantrust-text {
@@ -136,7 +136,7 @@
 
 	.dropdown-gallery {
 		padding-bottom: 4rem;
-		border-bottom: 1px solid $darkgrey;
+		@include border-bottom;
 
 		.span_5 {
 			width: 33.3%;
@@ -384,7 +384,7 @@
 
 		.content-area {
 			padding-bottom: 4rem;
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 		}
 
 		.featured-container {
@@ -629,7 +629,7 @@
 			padding: 2rem 0;
 			margin: 0;
 			background-color: white;
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 		}
 
 		.social-share {
@@ -639,7 +639,7 @@
 
 		.cantrust-container {
 			padding: 4rem 0;
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 
 			.span_4, .span_11, .span_6 {
 				margin-left: 0;
@@ -894,7 +894,7 @@
 		}
 
 		.address p {
-			border-bottom: 1px solid $darkgrey;
+			@include border-bottom;
 			padding-bottom: 2rem;
 		}
 

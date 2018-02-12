@@ -51,6 +51,10 @@ body.no-overflow {
 	margin-top: 6rem;
 }
 
+.ajax-load-more-wrap {
+	width: 100%;
+}
+
 .alm-reveal .no-image.masonry-tile .tile-inner {
 	position: static;
 	transform: none;
@@ -61,7 +65,7 @@ body.no-overflow {
 .tile-inner {
 	padding: 2rem 2rem 8rem 0;
 	position: relative;
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 	z-index: 2;
 
 	p {
@@ -140,7 +144,7 @@ body.no-overflow {
 .post-sample p {
 	margin: 0;
 	padding-bottom: 4rem;
-	border-bottom: 1px solid $darkgrey;
+	@include border-bottom;
 }
 
 .back-button {
