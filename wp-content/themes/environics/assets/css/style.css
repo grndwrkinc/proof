@@ -2180,7 +2180,7 @@ a {
   line-height: 24px;
   line-height: 2.4rem; }
   .team-container h5:before {
-    display: none; }
+    display: none !important; }
   .team-container h5:after {
     content: '';
     position: absolute;
@@ -2196,6 +2196,8 @@ a {
     -o-transition: all 0.1s ease;
     transition: all 0.1s ease;
     width: 100%; }
+.team-container .dropdown-item.active h5:after {
+  background-color: #d5b8eb; }
 .team-container .role {
   font-family: "AvenirNextLTW02-Regular", Avenir, Helvetica, Arial, sans-serif;
   margin-top: 0;

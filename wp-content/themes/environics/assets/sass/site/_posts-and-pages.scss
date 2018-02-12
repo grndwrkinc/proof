@@ -603,7 +603,7 @@
 		@include line-height(2.4);
 
 		&:before {
-			display: none;
+			display: none !important;
 		}
 
 		&:after {
@@ -618,6 +618,10 @@
 			@include transition(all 0.1s ease);
 			width: 100%;
 		}
+	}
+
+	.dropdown-item.active h5:after {
+		background-color: $mediumpurple;
 	}
 
 	.role {
