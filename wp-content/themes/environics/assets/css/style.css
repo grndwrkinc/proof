@@ -1339,6 +1339,15 @@ h1 .btn.barr {
   padding: 4em 0 0; }
 
 /* line 216, ../sass/elements/_buttons.scss */
+.team-container .social-share {
+  padding: 0; }
+  /* line 219, ../sass/elements/_buttons.scss */
+  .team-container .social-share li {
+    width: 36px;
+    height: 36px;
+    font-size: 1.8rem; }
+
+/* line 228, ../sass/elements/_buttons.scss */
 .four-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1346,46 +1355,46 @@ h1 .btn.barr {
   display: flex;
   display: flex;
   flex-wrap: wrap; }
-  /* line 224, ../sass/elements/_buttons.scss */
+  /* line 236, ../sass/elements/_buttons.scss */
   .four-buttons a {
     flex: auto !important; }
 
 @media (max-width: 768px) {
-  /* line 236, ../sass/elements/_buttons.scss */
+  /* line 248, ../sass/elements/_buttons.scss */
   .capabilities-wrapper h3.barr {
     padding-right: 2rem; }
 
-  /* line 240, ../sass/elements/_buttons.scss */
+  /* line 252, ../sass/elements/_buttons.scss */
   .read-more.barr:after, .barr.btn:after {
     bottom: -0.5rem; }
 
-  /* line 244, ../sass/elements/_buttons.scss */
+  /* line 256, ../sass/elements/_buttons.scss */
   .tile-inner h4.barr:after {
     bottom: 0; }
 
-  /* line 249, ../sass/elements/_buttons.scss */
+  /* line 261, ../sass/elements/_buttons.scss */
   .cantrust-img .barr:after {
     bottom: 1.5rem; }
-  /* line 254, ../sass/elements/_buttons.scss */
+  /* line 266, ../sass/elements/_buttons.scss */
   .cantrust-img .barr:hover:after {
     height: 1.6rem; }
 
-  /* line 260, ../sass/elements/_buttons.scss */
+  /* line 272, ../sass/elements/_buttons.scss */
   .page-work .hero-container .span_8 h1 .btn.barr:after {
     bottom: 1rem; }
 
-  /* line 264, ../sass/elements/_buttons.scss */
+  /* line 276, ../sass/elements/_buttons.scss */
   h1 .btn.barr {
     font-size: 35px;
     font-size: 3.5rem;
     line-height: 40px;
     line-height: 4rem; }
 
-  /* line 271, ../sass/elements/_buttons.scss */
+  /* line 283, ../sass/elements/_buttons.scss */
   .barr:after, .alm-load-more-btn:after, .capabilities-wrapper h3.barr:after,
   .form-submit:after, .comment-reply-link:after {
     height: 1.6rem; }
-  /* line 276, ../sass/elements/_buttons.scss */
+  /* line 288, ../sass/elements/_buttons.scss */
   .barr:hover:after, .alm-load-more-btn:hover:after, .capabilities-wrapper h3.barr:hover:after,
   .form-submit:hover:after, .comment-reply-link:hover:after {
     height: 1.6rem; } }
