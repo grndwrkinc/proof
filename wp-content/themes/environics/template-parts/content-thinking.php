@@ -14,30 +14,25 @@
 
 		if ($category == 'Report' || $category == 'Whitepaper'): 
 ?>
-		<div class="divider container">
+		<div class="download-container">
 <?php
 		$report_type = get_field('report_selector');
 			if ($report_type == 'Download'):
 			$report = get_field('download_file'); 
 ?>
-			<a id="getReport" href="<?php echo $report; ?>" target="_blank">
-				<button class="download btn-gold">Download</button>
-			</a>
-			<hr />
+			
 
-			<div class="download-modal">
-				<div class="report-form modal">
-					<div class="close" tabindex="0" role="button">
-					</div>
+			<!-- <div class="download-modal"> -->
+				<div class="report-form">
 					<?php echo do_shortcode('[frm-set-get report_url="' . $report . '"][formidable id=11 title=true description=true]'); ?>
 				</div>
-			</div>
+			<!-- </div> -->
 <?php 
 			elseif ($report_type == 'Link'):
 		
 ?>
 			<a href="<?php the_field('link_url'); ?>" target="_blank">
-				<button class="download btn-gold"><?php the_field('link_text'); ?></button>
+				<button class="download"><?php the_field('link_text'); ?></button>
 			</a>
 			<hr />
 <?php 

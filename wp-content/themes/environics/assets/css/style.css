@@ -495,7 +495,6 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: #5fd5c6;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -905,18 +904,12 @@ fieldset {
   .dz-remove:before {
     content: "x "; }
 
-.download-modal .report-form.modal {
-  background-color: #582C83; }
-
-.report-form .frm_forms {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-.report-form .frm_description, .report-form .frm_form_title {
-  display: block;
-  text-align: left; }
+.download-container {
+  margin-left: 5.88%;
+  padding: 8rem 0 6rem 0; }
+  .download-container h3 {
+    color: #524a3f;
+    margin-bottom: 2rem; }
 
 input:valid,
 input:invalid,
@@ -1017,12 +1010,9 @@ h1 .btn.barr {
   bottom: 0.5rem; }
 
 .divider button {
-  border: 1px solid #582C83;
-  font-family: "adobe-caslon-pro", serif;
-  color: #5fd5c6;
+  border: 1px solid #F2EAF9;
+  color: #524a3f;
   background-color: #ffffff;
-  font-size: 9px;
-  font-size: 0.9rem;
   -webkit-transition: all 0.1s ease;
   -moz-transition: all 0.1s ease;
   -ms-transition: all 0.1s ease;
@@ -1030,9 +1020,6 @@ h1 .btn.barr {
   transition: all 0.1s ease; }
   .divider button:hover {
     color: #582C83; }
-  .single-thinking .divider button, .single-jobs .divider button {
-    color: #3C1053;
-    border: 1px solid #f2bd37; }
 
 .btn-gold, .divider .btn-gold {
   border: 2px solid #f2bd37;
@@ -3158,6 +3145,8 @@ footer {
   .page-thinking .hero-container.double-featured .span_8, .page-thinking .hero-container.double-featured .span_5, .page-thinking .hero-container.double-featured .span_8:nth-child(2) {
     width: 100%;
     margin: 0; }
+  .page-thinking .hero-container.double-featured a {
+    width: 50%; }
   .page-thinking .hero-container.double-featured .span_8 .barr {
     margin-bottom: 4rem; }
   .page-thinking .hero-container.double-featured p.span_5 {
@@ -3180,6 +3169,10 @@ footer {
   .post-overview p {
     font-size: 12px;
     font-size: 1.2rem; }
+
+  .download-container {
+    padding: 4rem 2rem;
+    margin-left: 0; }
 
   .single-thinking .hero-container {
     margin: 0; }

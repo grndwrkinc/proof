@@ -5,9 +5,11 @@ get_header();
 <?php 
 	$tags = get_the_terms($post->ID, 'tags');
 	$tagMatched = false;
-	foreach ($tags as $tag) {
-		if(strcmp(strtolower($tag->name),"cantrust") == 0) {
-			$tagMatched = true;
+	if($tags != false) {
+		foreach ($tags as $tag) {
+			if(strcmp(strtolower($tag->name),"cantrust") == 0) {
+				$tagMatched = true;
+			}
 		}
 	}
 

@@ -126,21 +126,13 @@ h1 .btn.barr {
 }
 
 .divider button {
-	border: 1px solid $lightpurple;
-	font-family: $font__subheading;
-	color: $teal;
+	border: 1px solid $extralightpurple;
+	color: $darkgrey;
 	background-color: $white;
-	@include font-size(0.9);
 	@include transition(all 0.1s ease);
 
 	&:hover {
 		color: $lightpurple;
-	}
-
-	.single-thinking &, 
-	.single-jobs & {
-		color: $darkpurple;
-		border: 1px solid $gold;
 	}
 }
 

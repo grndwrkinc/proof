@@ -431,22 +431,13 @@ fieldset {
 	}
 }
 
-.download-modal {
-	.report-form.modal {
-		background-color: $lightpurple;
-	}
-}
+.download-container {
+	margin-left: 5.88%;
+	padding: 8rem 0 6rem 0;
 
-.report-form {
-
-	.frm_forms {
-		width: 80%;
-		@include transform-center;
-	}
-
-	.frm_description, .frm_form_title {
-		display: block;
-		text-align: left;
+	h3 {
+		color: $darkgrey;
+		margin-bottom: 2rem;
 	}
 }
 

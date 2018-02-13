@@ -44,6 +44,10 @@ $.fn.almComplete = function() { // Ajax Load More callback function
 		environics.makeSquare();
 	}
 
+	if($(window).width() > 768 && $('.page-news .square').length) {
+		environics.makeSquare();
+	}
+
 	if($(window).width() > 768 && $('.page-work .square').length) {
 		environics.makeSquare();
 	}
