@@ -390,6 +390,11 @@ fieldset {
 		text-align: center;
 		cursor: pointer;
 		text-transform: uppercase;
+		@include transition(all 0.3s ease);
+
+		&:hover {
+			background-color: $extralightpurple;
+		}
 	}
 
 	label.focused {

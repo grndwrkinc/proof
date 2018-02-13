@@ -546,7 +546,7 @@
 		&.span_8 {
 			padding-top: 0;
 			background-color: $extralightpurple;
-			padding: 6rem;
+			padding: 4rem 6rem;
 			margin-left: 47.04%;
 			transform: translateY(-6rem);
 
@@ -921,6 +921,12 @@
 	}
 }
 
+.page-text {
+	h4, h5 {
+		margin-top: 3rem;
+	}
+}
+
 // AUTHOR PAGE
 
 .page-author {
@@ -975,8 +981,7 @@
 .page-work-with-us {
 
 	.hero h1 {
-		text-align: left;
-		padding-left: 23.52%;
+		text-align: center;
 	}
 
 	h2 {
@@ -1008,7 +1013,7 @@
 
 	.text-container.span_7 {
 		background-color: $extralightpurple;
-		padding: 4rem 4rem 4rem 12rem;
+		padding: 4rem 6rem;
 		margin-left: 47.04%;
 		transform: translateY(-6rem);
 
@@ -1156,13 +1161,12 @@
 .page-contact {
 
 	.hero h1 {
-		text-align: left;
-		padding-left: 11.76%;
+		text-align: center;
 	}
 
 	.text-container.span_7 {
 		background-color: $extralightpurple;
-		padding: 4rem 4rem 4rem 12rem;
+		padding: 4rem 6rem;
 		margin-left: 47.04%;
 		transform: translateY(-6rem);
 
@@ -1236,12 +1240,13 @@
 	}
 
 	.content-area {
-		padding-bottom: $section-padding-top; //RA
+		padding-bottom: $section-padding-top;
+		border-bottom: 1px solid $grey;
 	}
 
 	.text-container.span_11 {
 		background-color: $extralightpurple;
-		padding: 4rem 4rem 4rem 12rem;
+		padding: 4rem 6rem;
 		margin-left: 29.4%;
 	}
 
@@ -1362,7 +1367,7 @@
 
 	.text-container.span_11 {
 		background-color: $extralightpurple;
-		padding: 4rem 12rem 4rem 6rem;
+		padding: 4rem 6rem;
 		border-bottom: none;
 		margin-left: 29.4%;
 		transform: translateY(-4rem);
