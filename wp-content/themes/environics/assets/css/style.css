@@ -2028,12 +2028,23 @@ a {
 .cantrust-img, .featured-img {
   position: relative;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .cantrust-img h3, .featured-img h3 {
     margin-right: 2rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%); }
+
+.featured .img-container {
+  overflow: hidden; }
+
+.featured-img:hover {
+  transform: scale(1.1); }
 
 .cantrust-img h3 {
   width: 100%;
@@ -2358,16 +2369,26 @@ a {
   display: flex;
   flex-wrap: wrap; }
   .alm-reveal .blog-item, .posts-container .blog-item {
-    margin-bottom: 6rem; }
+    margin-bottom: 6rem;
+    overflow: hidden;
+    position: relative; }
   .alm-reveal .blog-item:nth-child(3n + 3), .posts-container .blog-item:nth-child(3n + 3) {
     margin-right: 0; }
   .alm-reveal .blog-item-img, .posts-container .blog-item-img {
     height: 100%; }
   .alm-reveal .blog-item-img, .posts-container .blog-item-img {
-    position: relative; }
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .alm-reveal .blog-item:hover .blog-item-img, .posts-container .blog-item:hover .blog-item-img {
+    transform: scale(1.1); }
   .alm-reveal .tile-inner, .posts-container .tile-inner {
     padding: 2rem;
-    position: relative; }
+    position: absolute;
+    top: 2rem; }
     .alm-reveal .tile-inner h5, .alm-reveal .tile-inner h4, .alm-reveal .tile-inner p, .alm-reveal .tile-inner a, .posts-container .tile-inner h5, .posts-container .tile-inner h4, .posts-container .tile-inner p, .posts-container .tile-inner a {
       color: white; }
     .alm-reveal .tile-inner .tile-link, .posts-container .tile-inner .tile-link {
@@ -3017,6 +3038,8 @@ footer {
     width: auto !important; }
   .page-work .featured-img, .page-news .featured-img {
     height: 18rem !important; }
+    .page-work .featured-img:hover, .page-news .featured-img:hover {
+      transform: scale(1); }
 
   .single-work .post-overview span {
     padding: 0 1rem 0 0; }
@@ -3124,6 +3147,8 @@ footer {
 
   .alm-reveal .blog-item, .posts-container .blog-item {
     margin-bottom: 2rem; }
+    .alm-reveal .blog-item:hover .blog-item-img, .posts-container .blog-item:hover .blog-item-img {
+      transform: scale(1); }
 
   .hero-container {
     display: block; }

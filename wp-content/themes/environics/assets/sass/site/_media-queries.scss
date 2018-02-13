@@ -314,6 +314,10 @@
 
 		.featured-img {
 			height: 18rem !important;
+
+			&:hover {
+				transform: scale(1);
+			}
 		}
 	}
 
@@ -504,6 +508,12 @@
 
 	.alm-reveal .blog-item, .posts-container .blog-item {
 		margin-bottom: 2rem;
+
+		&:hover {
+			.blog-item-img {
+				transform: scale(1);
+			}
+		}
 	}
 
 	.hero-container {

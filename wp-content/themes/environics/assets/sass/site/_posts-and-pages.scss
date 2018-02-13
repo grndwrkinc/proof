@@ -330,6 +330,7 @@
 	position: relative;
 	background-size: cover;
     background-position: center;
+    @include transition(all 0.3s ease);
 
 	h3 {
 		margin-right: 2rem;
@@ -337,6 +338,14 @@
 		top: 50%;
 		transform: translateY(-50%);
 	}
+}
+
+.featured .img-container {
+	overflow: hidden;
+}
+
+.featured-img:hover {
+	transform: scale(1.1);
 }
 
 .cantrust-img h3 {
@@ -798,6 +807,8 @@
 
 	.blog-item {
 		margin-bottom: 6rem;
+		overflow: hidden;
+		position: relative;
 	}
 
 	.blog-item:nth-child(3n + 3){
@@ -810,11 +821,19 @@
 
 	.blog-item-img {
 		position: relative;
+		@include transition(all 0.3s ease);
+	}
+
+	.blog-item:hover {
+		.blog-item-img {
+			transform: scale(1.1);
+		}
 	}
 
 	.tile-inner {
 		padding: 2rem;
-		position: relative;
+		position: absolute;
+		top: 2rem;
 
 		h5, h4, p, a {
 			color: white;

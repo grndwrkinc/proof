@@ -18,11 +18,11 @@
 <div class="blog-item span_5 square">	
     <a href="<?php echo the_permalink(); ?>">
         <div class="blog-item-img <?php echo $classes; ?>"<?php echo $inlineImg; ?>>
-            <div class="tile-inner">
-                <h5><?php echo $label; ?></h5>
-                <div class="tile-content">
-                    <h3><?php the_title(); ?></h3>
-                </div>
+        </div>
+    	<div class="tile-inner">
+            <h5><?php echo $label; ?></h5>
+            <div class="tile-content">
+                <h3><?php the_title(); ?></h3>
             </div>
         </div>
     </a>

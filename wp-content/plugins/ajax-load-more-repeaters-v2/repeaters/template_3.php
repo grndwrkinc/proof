@@ -33,8 +33,11 @@
 	if(strlen($imgSrc)) $inlineImg = " style=\"background-image:url('" . $imgSrc . "');\"";
 ?>
 	<div class="featured span_5">
-		<div class="featured-img square" <?php echo $inlineImg; ?>>
-		</div>
+    	<div class="img-container">
+    		<a href="<?php echo get_permalink($post->ID); ?>">
+				<div class="featured-img square" <?php echo $inlineImg; ?>></div>
+    		</a>
+    	</div>
 		<div class="featured-text">
 			<h5>Featured Work</h5>
 			<h4><a href="<?php echo get_permalink($post->ID); ?>"><?php echo the_title(); ?></a></h4>
