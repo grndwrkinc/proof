@@ -2060,6 +2060,14 @@ a {
     left: -21rem;
     top: 10rem;
     width: 19rem; }
+  .page-capabilities .sectors-container h5 {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .page-capabilities .sectors-container .active h5 {
+    color: white; }
 
 .sectors-container .dropdown-gallery, .perks-container .dropdown-gallery {
   padding-left: 11.76%; }

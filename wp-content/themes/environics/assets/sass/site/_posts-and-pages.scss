@@ -393,6 +393,14 @@
 			top: 10rem;
 			width: 19rem;
 		}
+
+		h5 {
+			@include transition(all 0.3s ease);
+		}
+
+		.active h5 {
+			color: white;
+		}
 	}
 }
 
