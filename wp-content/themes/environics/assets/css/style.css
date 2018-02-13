@@ -1558,7 +1558,15 @@ a {
       font-size: 3.6rem;
       margin-bottom: 3rem;
       position: relative;
-      padding-right: 4rem; }
+      padding-right: 4rem;
+      opacity: 0;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
+      .nav-container ul li.active {
+        opacity: 1; }
       .nav-container ul li:after {
         content: '';
         position: absolute;

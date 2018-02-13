@@ -181,6 +181,12 @@
 			margin-bottom: 3rem;
 			position: relative;
 			padding-right: 4rem;
+			opacity: 0;
+			@include transition(all 0.2s ease);
+
+			&.active {
+				opacity: 1;
+			}
 
 			&:after {
 				content: '';

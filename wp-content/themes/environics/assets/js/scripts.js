@@ -269,19 +269,31 @@ environics.showMenu = function () {
 		if($(this).hasClass('close')){
 			$(this).removeClass('close');
 			$('.nav-container').removeClass('show').addClass('hide');
-			$('.menu-item').removeClass('active').addClass('passive');
+			var timer = 0;
+			$($('.menu-primary-container .menu-item').get().reverse()).each(function(){
+				var _this = this;
+				setTimeout(function(){ 
+					$(_this).removeClass('active');
+				}, timer);
+				timer = timer + 50;
+			});
 			document.ontouchmove = function(){ return true; };
 			//restore links to normal tabbing order
 			environics.tabModal(1);
-			// $('.site-content a, .site-footer a, button, input, textarea').attr('tabindex', '1');
 		} else {
 			$('.nav-container').addClass('show').removeClass('hide');
 			$('.hamburger-container').addClass('close');
-			$('.menu-item').addClass('active').removeClass('passive');
+			var timer = 0;
+			$('.menu-primary-container .menu-item').each(function(){
+				var _this = this;
+				setTimeout(function(){ 
+					$(_this).addClass('active');
+				}, timer);
+				timer = timer + 50;
+			});
 			document.ontouchmove = function(e){ e.preventDefault(); };
 			//remove links from tabbing index except for nav links
 			environics.tabModal(-1);
-			// $('.site-content a, .site-footer a, button, input, textarea').attr('tabindex', '-1');
 		}
 	});
 
