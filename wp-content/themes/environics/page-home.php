@@ -86,7 +86,11 @@ get_header();
 ?>
 	
 			<div class="featured span_5">
-				<div class="featured-img square" style="background-image: url('<?php echo $featuredImg; ?>')">
+				<div class="img-container">
+					<a href="<?php echo get_permalink($post_object->ID); ?>" class="">
+						<div class="featured-img square" style="background-image: url('<?php echo $featuredImg; ?>')">
+						</div>
+					</a>
 				</div>
 				<div class="featured-text">
 					<h4><a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo $post_object->post_title; ?></a></h4>
