@@ -815,9 +815,6 @@
 	.tile-inner {
 		padding: 2rem;
 		position: relative;
-		// RA: They wanted this on top
-		// top: 50%;
-		// transform: translateY(-50%); 
 
 		h5, h4, p, a {
 			color: white;
@@ -842,15 +839,6 @@
 		.tile-link {
 			display: block;
 		}
-
-		//RA: They asked for grey boxes, they got grey boxes
-		// .tile-inner {
-		// 	padding: 0;
-
-		// 	h5, h4, h3, p, a {
-		// 		color: $darkgrey;
-		// 	}
-		// }
 
 		h4.barr:after {
 			display: none;
@@ -996,6 +984,11 @@
 		background: none;
 		.tile-link {
 			display: block;
+		}
+
+		img {
+			height: none;
+			margin-top: 0;
 		}
 
 		.tile-inner {

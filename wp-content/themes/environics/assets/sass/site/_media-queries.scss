@@ -28,11 +28,6 @@
 		margin-left: 5.88%;
 	}
 
-	.hamburger-container p {
-		@include line-height(3);
-		display: none;
-	}
-
 	.featured-text {
 		padding: 1rem;
 
@@ -156,6 +151,7 @@
 		h5 {
 			@include font-size(1.6);
 			@include line-height(2.4);
+			padding-right: 2.5rem;
 		}
 
 		h5:before {
@@ -197,6 +193,10 @@
 		}
 
 		.team-container {
+
+			h2 {
+				margin-bottom: 2rem;
+			}
 
 			.text-container {
 				display: block;

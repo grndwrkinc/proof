@@ -28,13 +28,15 @@
 		<div class="site-branding">
 			<?php $site_logo = get_field('site_logo', 'option'); ?>
 			<a class="nav-item" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $site_logo['url']; ?>" alt="<?php echo $site_logo['alt']; ?>"/></a>
-			<div class="hamburger-container" tabindex="0" role="button" aria-label="Site menu">
-				<p>M</p><p class="exit">E</p>
-				<div class="hamburger">
-					<div class="patty"></div>
+			<div class="hamburger-outer-container">
+				<div class="hamburger-container" tabindex="0" role="button" aria-label="Site menu">
+					<p class="enter">M</p><p class="exit">E</p>
+					<div class="hamburger">
+						<div class="patty"></div>
+					</div>
+					<p class="enter">N</p><p class="exit">I</p>
+					<p class="enter">U</p><p class="exit">T</p>
 				</div>
-				<p>N</p><p class="exit">I</p>
-				<p>U</p><p class="exit">T</p>
 			</div>
 		</div><!-- .site-branding -->
 		
