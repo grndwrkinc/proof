@@ -2907,7 +2907,7 @@ footer {
       margin-left: 2rem !important; }
 
   .dropdown-item {
-    padding-top: 3rem; }
+    padding-top: 2rem; }
     .dropdown-item h5 {
       font-size: 16px;
       font-size: 1.6rem;
@@ -3081,23 +3081,33 @@ footer {
     .page-capabilities .sectors-container .dropdown {
       padding-bottom: 4rem; }
     .page-capabilities .sectors-container .dropdown-gallery {
-      padding-left: 3rem;
       border-bottom: none; }
       .page-capabilities .sectors-container .dropdown-gallery .span_5 {
         width: 100%;
         padding-left: 5.88%;
         margin-left: 0; }
+    .page-capabilities .sectors-container .dropdown-item:nth-of-type(even) {
+      margin-left: 0; }
     .page-capabilities .sectors-container img {
       width: 60%; }
     .page-capabilities .sectors-container .deets {
       position: static;
       width: 100%; }
       .page-capabilities .sectors-container .deets p {
-        border-bottom: none !important; }
+        border-bottom: none !important;
+        padding-bottom: 1rem; }
     .page-capabilities .sectors-container .span_7 {
       margin-left: 50%;
       margin-top: 0;
       width: 50%; }
+    .page-capabilities .sectors-container .span_6.odd, .page-capabilities .sectors-container .odd.frm_form_field, .page-capabilities .sectors-container .odd.uploads, .page-capabilities .sectors-container .span_6.even, .page-capabilities .sectors-container .even.frm_form_field, .page-capabilities .sectors-container .even.uploads {
+      margin-left: 0; }
+      .page-capabilities .sectors-container .span_6.odd p, .page-capabilities .sectors-container .odd.frm_form_field p, .page-capabilities .sectors-container .odd.uploads p, .page-capabilities .sectors-container .span_6.even p, .page-capabilities .sectors-container .even.frm_form_field p, .page-capabilities .sectors-container .even.uploads p {
+        text-align: left;
+        padding-bottom: 0;
+        border-bottom: none; }
+      .page-capabilities .sectors-container .span_6.odd img, .page-capabilities .sectors-container .odd.frm_form_field img, .page-capabilities .sectors-container .odd.uploads img, .page-capabilities .sectors-container .span_6.odd .deets, .page-capabilities .sectors-container .odd.frm_form_field .deets, .page-capabilities .sectors-container .odd.uploads .deets, .page-capabilities .sectors-container .span_6.even img, .page-capabilities .sectors-container .even.frm_form_field img, .page-capabilities .sectors-container .even.uploads img, .page-capabilities .sectors-container .span_6.even .deets, .page-capabilities .sectors-container .even.frm_form_field .deets, .page-capabilities .sectors-container .even.uploads .deets {
+        padding: 0 0 0 6rem; }
   .page-capabilities .capabilities-container {
     padding: 4rem 0;
     border-bottom: none; }
