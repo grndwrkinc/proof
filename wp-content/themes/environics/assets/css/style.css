@@ -2016,37 +2016,55 @@ a {
   .sectors-container h3:hover:after {
     height: 5.5rem; }
 
-.perks-container .dropdown-gallery {
-  padding-left: 11.76%; }
-.perks-container .dropdown .span_3, .perks-container .dropdown .span_4 {
-  margin-left: 5.88%;
-  margin-right: 0;
-  padding-right: 1.5rem; }
-.perks-container .dropdown .span_5 p {
-  margin-top: 0; }
-.perks-container .dropdown .span_5 p:last-of-type {
-  border-bottom: 1px solid #979087;
-  padding-bottom: 2rem; }
-.perks-container .dropdown h2 {
-  margin-bottom: 0;
-  transform: translateY(4rem);
-  position: relative;
-  z-index: 1; }
-.perks-container .dropdown img {
-  margin-bottom: 2rem; }
-.perks-container h4 {
-  text-transform: uppercase;
-  font-size: 18px;
-  font-size: 1.8rem;
-  line-height: 24px;
-  line-height: 2.4rem; }
-.perks-container h5 {
+.perks-container {
+  border-bottom: 1px solid #979087; }
+  .perks-container .dropdown .span_3, .perks-container .dropdown .span_4 {
+    margin-left: 11.76%;
+    margin-right: 0;
+    padding-right: 1.5rem; }
+  .perks-container .dropdown .span_5 p {
+    margin-top: 0; }
+  .perks-container .dropdown .span_5 p:last-of-type {
+    border-bottom: 1px solid #979087;
+    padding-bottom: 2rem; }
+  .perks-container .dropdown h2 {
+    margin-bottom: 0;
+    transform: translateY(4rem);
+    position: relative;
+    z-index: 1; }
+  .perks-container .dropdown img {
+    margin-bottom: 2rem; }
+  .perks-container h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 24px;
+    line-height: 2.4rem; }
+
+.perks-container .dropdown-gallery, .csr-container .dropdown-gallery {
+  padding-left: 5.88%; }
+.perks-container .dropdown h2, .csr-container .dropdown h2 {
+  transform: translateY(0);
+  margin: 4rem 0 2rem 35.28%; }
+.perks-container .dropdown .one h2, .csr-container .dropdown .one h2 {
+  margin-left: 5.88%; }
+.perks-container .dropdown .one .span_4, .perks-container .dropdown .one .span_6, .perks-container .dropdown .one .frm_form_field, .perks-container .dropdown .one .uploads, .csr-container .dropdown .one .span_4, .csr-container .dropdown .one .span_6, .csr-container .dropdown .one .frm_form_field, .csr-container .dropdown .one .uploads {
+  margin-left: 0; }
+.perks-container .dropdown .two .span_6, .perks-container .dropdown .two .frm_form_field, .perks-container .dropdown .two .uploads, .csr-container .dropdown .two .span_6, .csr-container .dropdown .two .frm_form_field, .csr-container .dropdown .two .uploads {
+  margin-left: 29.4%; }
+.perks-container .dropdown .three h2, .csr-container .dropdown .three h2 {
+  margin-left: 64.68%; }
+.perks-container .dropdown .three .span_6, .perks-container .dropdown .three .frm_form_field, .perks-container .dropdown .three .uploads, .csr-container .dropdown .three .span_6, .csr-container .dropdown .three .frm_form_field, .csr-container .dropdown .three .uploads {
+  margin-left: 58.8%; }
+.perks-container .dropdown .three .span_4, .csr-container .dropdown .three .span_4 {
+  margin-left: 41.16%; }
+.perks-container h5, .csr-container h5 {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-.perks-container .active h5 {
+.perks-container .active h5, .csr-container .active h5 {
   color: white; }
 
 .dropdown-flex {
@@ -2154,18 +2172,6 @@ a {
       margin: 0; }
 .page-about .csr-container .text-container .span_6, .page-about .csr-container .text-container .frm_form_field, .page-about .csr-container .text-container .uploads {
   margin: 0 0 0 35.28%; }
-.page-about .csr-container .dropdown-gallery {
-  padding-left: 5.88%; }
-  .page-about .csr-container .dropdown-gallery .span_6, .page-about .csr-container .dropdown-gallery .frm_form_field, .page-about .csr-container .dropdown-gallery .uploads {
-    margin-left: 35.28%; }
-  .page-about .csr-container .dropdown-gallery h5 {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  .page-about .csr-container .dropdown-gallery .active h5 {
-    color: white; }
 
 .team-gallery {
   display: -webkit-box;
@@ -2463,11 +2469,6 @@ a {
   transform: translateY(-6rem); }
   .page-work-with-us .text-container.span_7 p {
     margin: 0; }
-.page-work-with-us .perks-container {
-  border-bottom: 1px solid #979087; }
-  .page-work-with-us .perks-container .dropdown h2 {
-    transform: translateY(0);
-    margin: 4rem 0 2rem 23.52%; }
 .page-work-with-us .dropdown-item p:last-of-type {
   padding-bottom: 4rem;
   border-bottom: 1px solid #979087; }
@@ -2902,6 +2903,8 @@ footer {
       width: 50%;
       padding-left: 5.88%;
       margin-right: 0; }
+    .dropdown-gallery h2 {
+      margin-left: 2rem !important; }
 
   .dropdown-item {
     padding-top: 3rem; }
