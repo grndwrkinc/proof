@@ -491,6 +491,10 @@ environics.activateDropdown = function(){
 			if($(this).parents('.team-container').length) {
 				itemsPerRow = 3;
 			} 
+
+			if($(this).parents('.sectors-container').length) {
+				itemsPerRow = 2;
+			} 
 			
 			//Find placement of bio insert
 			placement = Math.ceil(position / itemsPerRow) * itemsPerRow -1;

@@ -22,17 +22,26 @@ get_header();
 		<div class="dropdown-gallery">
 			<?php
 				if( have_rows('sector_dropdowns') ):
+					$count = 0;
 			    	while ( have_rows('sector_dropdowns') ) : the_row();
 			    		$director = get_sub_field('director');
+			    		$bgImage = get_sub_field('image');
 						$directorTitle = get_the_title($director->ID);
 						$directorPos = get_field('team_member_role', $director->ID);
 						$directorImg = get_field('photo_professional', $director->ID);
+						$countclass = '';
+						if ($count % 2 == 0) {
+							$countclass = 'even';
+						} else {
+							$countclass = 'odd';
+						};
 			?>
-			<div class="dropdown-item span_4">
-				<h5><?php the_sub_field('title'); ?></h5>
+			<div class="dropdown-item span_8">
+				<div class="sectors-img" style="background-image: url('<?php echo $bgImage['url']; ?>');">	
+					<h3 class="barr"><?php the_sub_field('title'); ?></h3>
+				</div>
 				<div class="dropdown-content">
-					<h2 class="span_7"><?php the_sub_field('title'); ?></h2>
-					<div class="span_5">
+					<div class="span_6 <?php echo $countclass; ?>">
 						<img src="<?php echo $directorImg['url']; ?>">
 						<div class="deets">
 							<h4><?php echo $directorTitle; ?></h4>
@@ -43,6 +52,7 @@ get_header();
 				</div>
 			</div>
 			<?php 
+				$count ++;
 				endwhile; // End of sector_dropdowns loop
 				endif; 
 			?>

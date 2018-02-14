@@ -13,99 +13,6 @@
 	}
 }
 
-.video-container, .infographic-block, .download-modal {
-	.modal {
-	    display: none;
-	    position: fixed;
-	    z-index: 2000; 
-	    left: 0;
-	    top: 0;
-	    width: 100%; 
-	    height: 100%;
-	    overflow: auto; 
-	    background-color: $darkpurple;
-	}
-
-	.video-image {
-		position: relative;
-
-		a {
-			color: $white;
-			@include font-size(5);
-			@include line-height(5);
-			@include transform-center();
-
-			&:hover {
-				cursor: pointer; 
-			}
-		}
-	}
-}
-
-//Embed modal
-.copy-box {
-	background-color: #5d2d83;
-	height: 120px;
-	width: 350px;
-	// margin-top: 15px;
-	position: absolute;
-
-	&.center {
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	textarea.embed-link	{
-		position: absolute;
-		width: 250px;
-		height: 40px;
-		background-color: white;
-		top: 50px;
-		left: 10px;
-		font-family: 'AvenirNextLTW02-Medium';
-	    font-size: 14px;
-	    padding: 0 4px;
-	    overflow: scroll;
-	    border-radius: 0;
-	    color: #000000;
-	    white-space: nowrap;
-	}
-
-	button.embed-success {
-		padding: 0;
-		height: 40px;
-		width: 70px;
-		border: 2px solid white;
-		position: absolute;
-		top: 50px;
-		right: 10px;
-		text-align: center;
-		transition: ease color .3s;
-		text-transform: uppercase;
-		font-family: "Avenir Next LT W02 Bold";
-		color: goldenrod;
-		background-color: white;
-		margin: 0;
-		p{
-			margin: 0 auto;
-			font-size: 14px;
-		}
-		&:hover {
-			cursor: pointer;
-			background-color: white;
-		}
-		i {
-			color: goldenrod;
-			font-size: 25px;
-			position: absolute;
-			left: 20px;
-			top: 5px;
-			opacity: 0;
-		}
-	}
-}
-
-
 //Error 404 Page
 
 .error404 .site-content {
@@ -118,7 +25,7 @@
 
 	h4 {
 		font-family: $font__heading;
-		color: $teal;
+		color: $darkgrey;
 		text-transform: none;
 		text-align: center;
 		margin-bottom: 0;
@@ -134,26 +41,12 @@
 		@include font-size(1.5);
 		@include line-height(2.5);
 		font-family: $font__subheading;
-		color: $darkpurple;
 
 		&:hover {
-			color: $gold;
+			color: $lightpurple;
 		}
 	}
 }
-
-
-//Base theme stuff -- probably don't need it
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
 
 
 
@@ -377,10 +270,40 @@
 			padding-top: 6rem;
 		}
 
-		.span_5 {
+		.span_6 {
 			position: relative;
-			margin-left: 29.4%;
+			margin-left: 52.92%;
 			margin-right: 0;
+			padding: 2rem 0;
+
+			&.even {
+				margin-left: 11.7%;
+
+				img {
+					padding: 0 0 0 6rem;
+				}
+
+				p {
+					text-align: right;
+				}
+
+				.deets {
+					right: -26rem;
+					left: auto;
+					p {
+						text-align: left;
+					}
+				}
+			}
+
+			p {
+				@include border-bottom;
+				padding-bottom: 4rem;
+			}
+
+			img {
+				padding-right: 6rem;
+			}
 		}
 
 		.span_7 {
@@ -389,22 +312,54 @@
 
 		.deets {
 			position: absolute;
-			left: -21rem;
+			left: -26rem;
 			top: 10rem;
-			width: 19rem;
-		}
+			width: 24rem;
 
-		h5 {
-			@include transition(all 0.3s ease);
-		}
+			p {
+				border-bottom: none;
+			}
 
-		.active h5 {
-			color: white;
+			h4 {
+				text-transform: uppercase;
+				@include font-size(1.8);
+				@include line-height(2.4);
+			}
 		}
 	}
 }
 
-.sectors-container, .perks-container {
+.sectors-container {
+
+	.dropdown-item:nth-of-type(even) {
+		margin-left: 5.88%;
+	}
+
+	.sectors-img {
+		height: 18rem;
+		position: relative;
+		padding: 0 4rem;
+	}
+
+	h3 {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: calc(100% - 8rem);
+
+		&:after {
+			bottom: -0.2rem;
+		}
+
+		&:hover {
+			&:after {
+				height: 5.5rem;
+			}
+		}
+	}
+}
+
+.perks-container {
 
 	.dropdown-gallery {
 		padding-left: 11.76%;
@@ -445,6 +400,14 @@
 		text-transform: uppercase;
 		@include font-size(1.8);
 		@include line-height(2.4);
+	}
+
+	h5 {
+		@include transition(all 0.3s ease);
+	}
+
+	.active h5 {
+		color: white;
 	}
 }
 
@@ -1018,7 +981,7 @@
 		}
 
 		img {
-			height: none;
+			height: 0;
 			margin-top: 0;
 		}
 
@@ -1035,6 +998,21 @@
 		}
 	}
 
+	.alm-reveal {
+		.tile-inner {
+			position: relative;
+
+			p, h5 {
+				color: $darkgrey;
+			}
+		}
+
+		.tile-inner p {
+			@include font-size(2.4);
+			@include line-height(3.6);
+		}
+	}
+
 	.text-container.span_7 {
 		background-color: $extralightpurple;
 		padding: 4rem 6rem;
@@ -1044,11 +1022,6 @@
 		p {
 			margin: 0;
 		}
-	}
-
-	.tile-inner p {
-		@include font-size(2.4);
-		@include line-height(3.6);
 	}
 
 	.perks-container {
