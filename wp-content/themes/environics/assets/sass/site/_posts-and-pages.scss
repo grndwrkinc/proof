@@ -552,6 +552,14 @@
 		.span_6 {
 			margin-left: 35.28%;
 		}
+
+		h5 {
+			@include transition(all 0.3s ease);
+		}
+
+		.active h5 {
+			color: white;
+		}
 	}
 }
 

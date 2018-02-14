@@ -2158,6 +2158,14 @@ a {
   padding-left: 5.88%; }
   .page-about .csr-container .dropdown-gallery .span_6, .page-about .csr-container .dropdown-gallery .frm_form_field, .page-about .csr-container .dropdown-gallery .uploads {
     margin-left: 35.28%; }
+  .page-about .csr-container .dropdown-gallery h5 {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .page-about .csr-container .dropdown-gallery .active h5 {
+    color: white; }
 
 .team-gallery {
   display: -webkit-box;
