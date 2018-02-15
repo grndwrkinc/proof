@@ -339,7 +339,7 @@ function environics_scripts() {
 	wp_enqueue_script( 'fluidvids', 'http://' . $_SERVER['SERVER_NAME'] . '/wp-content/themes/environics/assets/js/fluidvids/dist/fluidvids.min.js', array(), '2.4.1', true);
 
 	//Flickity
-	wp_enqueue_script( 'flickity-js', 'https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js', array('jquery'), null, true);
+	wp_enqueue_script( 'flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array('jquery'), null, true);
 
 	//Masonry
 	wp_deregister_script('masonry');
