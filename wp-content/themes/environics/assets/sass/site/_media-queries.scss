@@ -461,7 +461,7 @@
 				padding-bottom: 0;
 
 				p {
-					padding: 0 1rem;
+					padding: 0;
 				}
 			}
 
@@ -491,6 +491,10 @@
 					border-bottom: none !important;
 					padding-bottom: 1rem;
 				}
+
+				h4 {
+					margin-bottom: 0;
+				}
 			}
 
 			.span_7 {
@@ -509,7 +513,7 @@
 				}
 
 				img, .deets {
-					padding: 0 1rem;
+					padding: 0;
 
 					p {
 						padding: 0;
