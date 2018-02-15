@@ -1313,6 +1313,19 @@ body.no-overflow {
 .filler-span-none {
   display: none; }
 
+.flickity-enabled button {
+  display: none; }
+.flickity-enabled .image {
+  display: inline-block;
+  width: 100%;
+  padding: 0 40px;
+  min-width: 320px;
+  text-align: center;
+  margin: 0; }
+  .flickity-enabled .image img {
+    max-height: 85vh;
+    width: auto; }
+
 @media (max-width: 768px) {
   .filler-span-two {
     width: calc(66.6% - 0.5rem);
@@ -1320,7 +1333,10 @@ body.no-overflow {
 
   .filler-span-one {
     width: calc(33.3% - 0.5rem);
-    margin-left: 0.5rem; } }
+    margin-left: 0.5rem; }
+
+  .single-work .image-container {
+    display: block !important; } }
 @keyframes animatetop {
   from {
     top: -300px;
@@ -1759,35 +1775,6 @@ a {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.images {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center; }
-  .images .image {
-    padding: 0 1rem; }
-
 .site-content {
   max-width: 1366px;
   width: 100%;
@@ -2667,7 +2654,7 @@ a {
     right: -4rem; }
   .single-work .quote-container .source {
     text-transform: uppercase; }
-.single-work .img-container {
+.single-work .image-container {
   padding-top: 9rem;
   display: -webkit-box;
   display: -moz-box;
@@ -2676,9 +2663,9 @@ a {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
-  .single-work .img-container .image {
+  .single-work .image-container .image {
     margin-right: 5.88%; }
-  .single-work .img-container .image:last-child {
+  .single-work .image-container .image:last-child {
     margin-right: 0; }
 .single-work .video-container {
   padding-top: 9rem; }

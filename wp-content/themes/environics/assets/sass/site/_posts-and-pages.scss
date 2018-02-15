@@ -1,24 +1,3 @@
-
-
-
-//OLD STYLES, STILL GETTING RID OF THEM
-
-.images {
-	@include display(flex);
-	@include justify-content(space-around);
-	@include align-items(center);
-	
-	.image {
-		padding: 0 1rem;
-	}
-}
-
-
-
-
-//STARTING FRESH FOR SITE 2.0, CAN ERASE STYLES ABOVE AS WE GO
-
-
 //Section padding is as follows:
 //padding-top always 90px/9rem/$section-padding-top
 //padding-bottom of a flex-item 60px/6rem
@@ -1338,7 +1317,7 @@
 		}
 	}
 
-	.img-container {
+	.image-container {
 		padding-top: $section-padding-top; //RA
 		@include display(flex);
 

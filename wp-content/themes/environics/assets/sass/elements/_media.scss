@@ -194,6 +194,25 @@ body.no-overflow {
 	display: none;
 }
 
+//FLICKITY
+.flickity-enabled {
+	button {
+		display: none;
+	}
+	.image {
+		display: inline-block;
+	    width: 100%;
+	    padding: 0 40px;
+	    min-width: 320px;
+	    text-align: center;
+	    margin: 0;
+
+	    img {
+	    	max-height: 85vh;
+	    	width: auto;
+	    }
+	}
+}
 
 @media (max-width: 768px) {
 
@@ -205,6 +224,10 @@ body.no-overflow {
 	.filler-span-one {
 		width: calc(33.3% - 0.5rem);
 		margin-left: 0.5rem;
+	}
+
+	.single-work .image-container {
+		display: block !important;
 	}
 
 }

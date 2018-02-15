@@ -98,10 +98,6 @@ environics.init = function() {
 		environics.infographicModal();
 	}
 
-	if($('.images').length){
-		environics.flickity();
-	}
-
 	if($('.copy-box').length){
 		environics.embedModal();
 	}
@@ -143,6 +139,12 @@ environics.init = function() {
 
 		if($('.team-gallery').length){
 			environics.makeTeamSquare();
+		}
+
+		if($(window).width() < 768) {
+			if($('.images').length) {
+				environics.flickity();
+			}
 		}
 	});
 
@@ -806,9 +808,8 @@ environics.caseSlideIn = function() {
 };
 
 environics.flickity = function() {
-	$('.img-container.images').flickity({
-		cellAlign: 'left',
-		watchCSS: true
+	$('.image-container.images').flickity({
+		cellAlign: 'left'
 	});
 };
 
