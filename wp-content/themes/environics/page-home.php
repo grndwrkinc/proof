@@ -113,8 +113,8 @@ get_header();
 		$featuredImg = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 	    <div class="cantrust-container">
 	    	<div class="cantrust-text">
-	    		<h2 class="span_6"><?php echo the_title(); ?></h2>
-	    		<p class="span_5"><?php the_field('post_subheader'); ?></p>
+	    		<h2 class="span_5"><?php echo the_title(); ?></h2>
+	    		<p class="span_6"><?php the_field('post_subheader'); ?></p>
 	    	</div>
 	    	<div class="cantrust-img" style="background-image: url('<?php echo $featuredImg; ?>');">
 	    		<h3><a class="barr" src="<?php echo get_permalink($post->ID); ?>">Cantrust Report <?php echo get_the_date('Y', $post); ?></a></h3>

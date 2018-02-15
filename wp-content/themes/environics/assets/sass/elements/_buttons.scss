@@ -79,6 +79,7 @@ h1 .btn.barr {
 
 .read-more.barr {
 	padding-left: 0.5rem;
+	margin-top: 3rem;
 	width: 50%;
 
 	&:after {
@@ -123,6 +124,20 @@ h1 .btn.barr {
 
 .tile-inner h4.barr:after {
 	bottom: 0.5rem;
+}
+
+.jobs-container h4.barr {
+
+	&:after {
+		height: 1.75rem;
+		bottom: 0;
+	}
+
+	&:hover {
+		&:after {
+			height: 3.5rem;
+		}
+	}
 }
 
 .divider button {
@@ -188,15 +203,15 @@ h1 .btn.barr {
 	li {
 		background: $extralightpurple;
 		border-radius: 50%;
-		width: 25px;
-		height: 25px;
-		margin: 0 0.5rem;
+		width: 36px;
+		height: 36px;
+		margin: 0 0.667rem;
 		@include display(flex);
 		@include justify-content(center);
 		@include align-items(center);
 		cursor: pointer;
 		padding-left: 1px;
-		@include font-size(1.2);
+		@include font-size(1.8);
 	}
 }
 
