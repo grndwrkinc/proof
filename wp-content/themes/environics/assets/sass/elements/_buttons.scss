@@ -203,15 +203,15 @@ h1 .btn.barr {
 	li {
 		background: $extralightpurple;
 		border-radius: 50%;
-		width: 36px;
-		height: 36px;
+		width: 26px;
+		height: 26px;
 		margin: 0 0.667rem;
 		@include display(flex);
 		@include justify-content(center);
 		@include align-items(center);
 		cursor: pointer;
 		padding-left: 1px;
-		@include font-size(1.8);
+		@include font-size(1.2);
 	}
 }
 
