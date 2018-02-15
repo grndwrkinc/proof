@@ -781,7 +781,8 @@ fieldset {
 
 .frm_submit {
   float: left;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  margin-top: 6rem; }
 
 .frm_form_field, .uploads {
   float: left;
@@ -825,6 +826,17 @@ fieldset {
   font-size: 1.4rem;
   color: #d92a51;
   transform: translateY(6rem); }
+
+.dz-preview {
+  position: absolute;
+  top: 23px; }
+
+.dz-remove {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: #d92a51; }
+  .dz-remove:before {
+    content: "x "; }
 
 .frm_error {
   position: absolute;
@@ -892,17 +904,6 @@ fieldset {
   z-index: -1; }
 .upload-resume .dz-message, .upload-cv .dz-message {
   display: none; }
-
-.dz-remove {
-  text-transform: lowercase;
-  font-size: 8px;
-  font-size: 0.8rem;
-  font-family: "adobe-caslon-pro", serif;
-  color: #f2bd37; }
-  .dz-remove:hover {
-    text-decoration: underline; }
-  .dz-remove:before {
-    content: "x "; }
 
 .download-container {
   margin-left: 5.88%;

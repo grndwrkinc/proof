@@ -279,6 +279,7 @@ fieldset {
 .frm_submit {
 	float: left;
 	padding-right: 2rem;
+	margin-top: 6rem;
 }
 
 .frm_form_field, .uploads {
@@ -332,6 +333,20 @@ fieldset {
 	@include font-size(1.4);
 	color: #d92a51;
 	transform: translateY(6rem);
+}
+
+.dz-preview {
+	position: absolute;
+	top: 23px;
+}
+
+.dz-remove {
+	@include font-size(1.4);
+	color: #d92a51;
+
+	&:before {
+		content: "x ";
+	}
 }
 
 .frm_error {
@@ -413,21 +428,6 @@ fieldset {
 
 	.dz-message {
 		display: none;
-	}
-}
-
-.dz-remove {
-	text-transform: lowercase;
-	@include font-size(0.8);
-	font-family: $font__subheading;
-	color: $gold;
-
-	&:hover {
-		text-decoration: underline;
-	}
-
-	&:before {
-		content: "x ";
 	}
 }
 
