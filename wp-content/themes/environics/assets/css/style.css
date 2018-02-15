@@ -779,6 +779,9 @@ fieldset {
   margin: 0;
   padding: 0; }
 
+.frm_hidden {
+  display: none; }
+
 .frm_submit {
   float: left;
   padding-right: 2rem;
@@ -861,11 +864,9 @@ fieldset {
   display: none; }
 
 .frm_message p {
-  text-transform: uppercase;
   color: #524a3f;
   font-size: 20px;
   font-size: 2rem;
-  font-family: "adobe-caslon-pro", serif;
   text-align: center;
   line-height: 3rem;
   width: 70%;
@@ -1986,7 +1987,8 @@ a {
 .sectors-container .sectors-img {
   height: 18rem;
   position: relative;
-  padding: 0 4rem; }
+  padding: 0 4rem;
+  background-size: cover; }
 .sectors-container h3 {
   position: absolute;
   top: 50%;

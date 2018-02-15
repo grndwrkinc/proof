@@ -276,6 +276,10 @@ fieldset {
 	padding: 0;
 }
 
+.frm_hidden {
+	display: none;
+}
+
 .frm_submit {
 	float: left;
 	padding-right: 2rem;
@@ -377,10 +381,8 @@ fieldset {
 }
 
 .frm_message p {
-	text-transform: uppercase;
 	color: $darkgrey;
 	@include font-size(2);
-	font-family: $font__heading;
 	text-align: center;
 	line-height: 3rem;
 	width: 70%;
