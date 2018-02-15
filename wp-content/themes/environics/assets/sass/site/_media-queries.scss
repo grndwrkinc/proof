@@ -458,7 +458,11 @@
 			}
 
 			.dropdown {
-				padding-bottom: 4rem;
+				padding-bottom: 0;
+
+				p {
+					padding: 0 1rem;
+				}
 			}
 
 			.dropdown-gallery {
@@ -505,7 +509,11 @@
 				}
 
 				img, .deets {
-					padding: 0 0 0 6rem;
+					padding: 0 1rem;
+
+					p {
+						padding: 0;
+					}
 				}
 			}
 		}
