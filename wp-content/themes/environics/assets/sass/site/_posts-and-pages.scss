@@ -243,16 +243,18 @@
 				margin-left: 11.7%;
 
 				img {
-					padding: 0 0 0 6rem;
+					// padding: 0 0 0 6rem;
+					padding: 0;
 				}
 
-				p {
-					text-align: right;
-				}
+				// p {
+				// 	text-align: right;
+				// }
 
 				.deets {
-					right: -26rem;
-					left: auto;
+					// right: -26rem;
+					// left: auto;
+					left: calc(70% + 2rem);
 					p {
 						text-align: left;
 					}
@@ -266,6 +268,7 @@
 
 			img {
 				padding-right: 6rem;
+				width: 70%;
 			}
 		}
 
