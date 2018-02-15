@@ -13,41 +13,6 @@
 	}
 }
 
-//Error 404 Page
-
-.error404 .site-content {
-	.menu {
-		text-align: center;
-	}
-	h1 {
-		color: $black_transparent;
-	}
-
-	h4 {
-		font-family: $font__heading;
-		color: $darkgrey;
-		text-transform: none;
-		text-align: center;
-		margin-bottom: 0;
-	}
-
-	ul {
-		margin: 0 auto;
-		display: inline-block;
-		padding: 0;
-	}
-
-	li a {
-		@include font-size(1.5);
-		@include line-height(2.5);
-		font-family: $font__subheading;
-
-		&:hover {
-			color: $lightpurple;
-		}
-	}
-}
-
 
 
 
@@ -180,6 +145,14 @@
 
 		p {
 			margin-bottom: 0;
+
+			&.one {
+				margin-right: 29.4%;
+			}
+
+			&.two, &.three {
+				margin-left: 29.4%;
+			}
 		}
 
 		.span_11 {
@@ -1459,6 +1432,34 @@
 	h1 {
 		margin: $section-padding-top 0; //RA
 		color: $darkgrey;
+	}
+}
+
+//404
+
+.error404 {
+	&.text-container {
+		@include border-bottom;
+		padding: 6rem 0;
+	}
+
+	h1 {
+		color: $darkgrey;
+		margin-bottom: 4rem;
+	}
+
+	li a {
+		position: relative;
+	}
+
+	li a:after {
+		content: '';
+	    position: absolute;
+	    height: 2px;
+	    width: 100%;
+	    bottom: 0;
+	    left: 0;
+	    background-color: #F2EAF9;
 	}
 }
 

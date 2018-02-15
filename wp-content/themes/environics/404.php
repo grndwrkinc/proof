@@ -9,12 +9,10 @@
 
 include "redirect.php";
 
-get_header();
+get_header('author');
 ?>
-	<div class="block hero bg-pattern-teal-inverted">
-		<div class="container">
+		<div class="text-container error404">
 			<h1>Page not found</h1>
-
 			<h4>Please try one of the following pages</h4>
 <?php 
 			$args = array(
@@ -30,7 +28,6 @@ get_header();
 
 			wp_page_menu( $args ); 
 ?> 
-		</div>
 	</div>
 <?php
 get_footer();

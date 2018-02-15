@@ -83,16 +83,29 @@ get_header();
 		
 		<div class="dropdown-gallery">
 	<?php if( have_rows('capability_category') ):
-	    	while ( have_rows('capability_category') ) : the_row(); ?>
+			$count = 0;
+	    	while ( have_rows('capability_category') ) : the_row(); 
+	    		$countclass = '';
+				if ($count % 3 == 2) {
+					$countclass = 'three';
+				} elseif ($count % 3 == 1) {
+					$countclass = 'two';
+				} else {
+					$countclass = 'one';
+				};
+	?>
 
 			<div class="dropdown-item span_4">
 				<h5><?php if( get_sub_field('title') ){ the_sub_field('title'); } ?></h5>
 				<div class="dropdown-content">	
-					<p><?php if( get_sub_field('description') ){ the_sub_field('description'); } ?></p>
+					<p class="<?php 
+					echo $countclass; ?>"><?php if( get_sub_field('description') ){ the_sub_field('description'); } ?></p>
 				</div>
 			</div>
-	<?php endwhile; //End of capability category loop
-		endif; ?>
+	<?php 
+		$count ++;
+		endwhile; //End of capability category loop
+	endif; ?>
 		</div>
 		<p class="linkout"><?php the_sub_field('external_link'); ?></p>
 	</div>
