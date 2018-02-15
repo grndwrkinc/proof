@@ -76,7 +76,7 @@ get_header();
 			// layout: Image
 			elseif(get_row_layout() == "image_block"): 
 ?>				
-				<div class="img-container images">
+				<div class="image-container images">
 					<?php while(the_repeater_field('images')): $image_block_img = get_sub_field("image"); ?>
 						<div class="image"><img src="<?php echo $image_block_img['url']; ?>" alt=""/></div>
 					<?php endwhile; ?>
@@ -145,7 +145,11 @@ endwhile; // End of the loop.
 				$label = get_field('client');?>
 	
 			<div class="featured span_5">
-				<div class="featured-img square" style="background-image: url('<?php echo $feat_image; ?>')">
+				<div class="img-container">
+					<a href="<?php echo get_permalink($post->ID); ?>" class="">
+						<div class="featured-img square" style="background-image: url('<?php echo $feat_image; ?>')">
+						</div>
+					</a>
 				</div>
 				<div class="featured-text">
 					<h5>Featured Work</h5>
