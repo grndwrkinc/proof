@@ -494,6 +494,10 @@ environics.activateDropdown = function(){
 
 			if($(this).parents('.sectors-container').length) {
 				itemsPerRow = 2;
+
+				if($(window).width() < 768) {
+					itemsPerRow = 1;
+				} 
 			} 
 			
 			//Find placement of bio insert

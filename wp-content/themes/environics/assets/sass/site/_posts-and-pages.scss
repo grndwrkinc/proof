@@ -371,14 +371,11 @@
 }
 
 .perks-container {
-
-	.dropdown-gallery {
-		padding-left: 11.76%;
-	}
+	@include border-bottom;
 
 	.dropdown {
 		.span_3, .span_4 {
-			margin-left: 5.88%;
+			margin-left: 11.76%;
 			margin-right: 0;
 			padding-right: 1.5rem;
 		}
@@ -411,6 +408,46 @@
 		text-transform: uppercase;
 		@include font-size(1.8);
 		@include line-height(2.4);
+	}
+}
+
+.perks-container, .csr-container {
+
+	.dropdown-gallery {
+		padding-left: 5.88%;
+	}
+
+	.dropdown {
+
+		h2 {
+			transform: translateY(0);
+			margin: 4rem 0 2rem 35.28%;
+		}
+
+		.one h2 {
+			margin-left: 5.88%;
+		}
+
+		.one .span_4, .one .span_6 {
+			margin-left: 0;
+		}
+
+		.two .span_6 {
+			margin-left: 29.4%;
+		}
+
+		.three h2 {
+			margin-left: 64.68%;
+		}
+
+		.three .span_6 {
+			margin-left: 58.8%;
+		}
+
+		.three .span_4 {
+			margin-left: 41.16%;
+		}
+		
 	}
 
 	h5 {
@@ -554,22 +591,6 @@
 	.csr-container .text-container {
 		.span_6 {
 			margin: 0 0 0 35.28%;
-		}
-	}
-
-	.csr-container .dropdown-gallery {
-		padding-left: 5.88%;
-
-		.span_6 {
-			margin-left: 35.28%;
-		}
-
-		h5 {
-			@include transition(all 0.3s ease);
-		}
-
-		.active h5 {
-			color: white;
 		}
 	}
 }
@@ -1044,15 +1065,6 @@
 
 		p {
 			margin: 0;
-		}
-	}
-
-	.perks-container {
-		@include border-bottom;
-
-		.dropdown h2 {
-			transform: translateY(0);
-			margin: 4rem 0 2rem 23.52%;
 		}
 	}
 

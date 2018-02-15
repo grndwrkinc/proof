@@ -110,6 +110,7 @@ get_header();
 		</div><!-- // .team-gallery  -->
 	</div><!-- // .team-wrapper  -->
 
+	
 
 	<!-- Corporate Social Responsibility -->
 	<div class="csr-container">
@@ -120,24 +121,12 @@ get_header();
 		<div class="text-container">
 			<p class="span_6"><?php the_field('section_blurb'); ?></p>
 		</div>
-		<div class="dropdown-gallery">
-			<?php
-				if( have_rows('section_accordion') ):
-			    	while ( have_rows('section_accordion') ) : the_row();
-			?>
-			<div class="dropdown-item span_4">
-				<h5><?php the_sub_field('accordion_title'); ?></h5>
-				<div class="dropdown-content">
-					<h2 class="span_7"><?php the_sub_field('accordion_title'); ?></h2>
-					<div class="span_6"><?php the_sub_field('accordion_content'); ?></div>
-					<div class="purple-block"></div>
-				</div>
-			</div>
-			<?php 
-				endwhile; // End of sector_dropdowns loop
-				endif; 
-			?>
-		</div>
+		<?php 			
+			//DROPDOWN GALLERY
+			if( have_rows('section_accordion') ):
+				get_template_part('template-parts/component', 'dropdown');
+			endif;
+		?>	
 		<div class="text-container">
 			<div class="span_7"><?php the_field('latest_report_text'); ?></p>
 		</div>
