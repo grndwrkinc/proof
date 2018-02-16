@@ -37,7 +37,7 @@
 			if(have_rows('related_links')):
 				while ( have_rows('related_links') ) : the_row(); 
 ?>
-					<p><a class="barr" href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?></a></p>
+					<p><a class="barr" href="<?php the_sub_field('link_url'); ?>" download><?php the_sub_field('link_text'); ?></a></p>
 <?php endwhile;
 	endif; ?>	
 				</div>	
