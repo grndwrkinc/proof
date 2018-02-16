@@ -113,7 +113,7 @@ get_header();
 		$featuredImg = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 	    <div class="cantrust-container">
 	    	<div class="cantrust-text">
-	    		<h2 class="span_5"><?php echo the_title(); ?></h2>
+	    		<h2 class="span_6"><?php echo the_title(); ?></h2>
 	    		<p class="span_6"><?php the_field('post_subheader'); ?></p>
 	    	</div>
 	    	<div class="cantrust-img" style="background-image: url('<?php echo $featuredImg; ?>');">

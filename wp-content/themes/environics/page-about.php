@@ -29,7 +29,7 @@ get_header();
 	<!-- LEADERSHIP TEAM -->
 	<div class="team-container">
 		<div class="text-container">
-			<h2 class="span_5"><?php the_field('ceo_header'); ?></h2>
+			<h2 class="span_6"><?php the_field('ceo_header'); ?></h2>
 			<div class="span_10"><?php the_field('ceo_message'); ?></div>
 		</div>
 		<div class="dropdown-gallery">
