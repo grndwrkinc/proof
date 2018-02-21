@@ -1508,7 +1508,7 @@ a {
     top: 16px; }
 
 .close .patty, .close:hover .patty, .close:focus .patty {
-  right: -60rem; }
+  opacity: 0; }
 .modal .close {
   top: 2rem;
   right: 2rem;

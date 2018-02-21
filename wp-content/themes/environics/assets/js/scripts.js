@@ -73,6 +73,8 @@ $.fn.almFilterComplete = function(){
 
 environics.init = function() {
 
+	environics.hashMsg();
+
 	environics.showMenu();
 	if($('.single-work').length) {
 		environics.fullStory();
@@ -216,6 +218,17 @@ environics.init = function() {
 
 };
 
+//Check if user is being redirected from old environicspr.com site and add a message if yes
+
+environics.hashMsg = function() {
+	var hash = window.location.hash;
+	if(hash == '#welcome') {
+		$('.skip-link').after('<p class="welcome">Environics Communications is now Proof. Read more here.</p>');
+	} else {
+		//do nothing
+	}
+};
+
 //Insert filename into upload form button when file is selected
 
 environics.displayFilename = function(){
@@ -342,110 +355,7 @@ environics.fullStory = function () {
 };
 
 environics.activateTeam = function(){
-	// var totalmembers = $('.team-member').length;
 
-	// $('.team-member').on('click', function(event){
-	// 	event.stopPropagation();
-	// 	if($(this).hasClass('jobs-item')) {
-	// 		return;
-	// 	}
-
-	// 	//Find the position of the current element
-	// 	var current = this;
-	// 	var position = 0;
-	// 	$('.team-member').each(function(){
-	// 		if($(this).is(current)) {
-	// 			position++;
-	// 			return false;
-	// 		} position++;
-	// 	});
-
-	// 	// Remove class active
-	// 	if($(this).hasClass('active')) {
-	// 		$(this).removeClass('active');
-	// 		$('.dropdown').remove();
-	// 	}
-
-	// 	// Set class to active
-	// 	else {
-	// 		$('.team-member').removeClass('active');
-	// 		$(current).addClass('active');
-
-	// 		var membersPerRow;
-
-	// 		//Get the amount of tiles per row based on window width
-	// 		//Gallery never spans to 1 per row, so keep at 3
-	// 		// if($(window).width() > 480) {
-	// 			membersPerRow = 3;
-	// 		// } else {
-	// 		// 	membersPerRow = 1;
-	// 		// }
-			
-	// 		//Find placement of bio insert
-	// 		var placement = Math.ceil(position / membersPerRow) * membersPerRow -1;
-
-	// 		//If the jobs square is the next square
-	// 		var nextsquare = $(this).next();
-	// 		//If the jobs link is 2 columns wide, 
-	// 		//minus one from placement so team member on last row has correct placement
-	// 		if (nextsquare.hasClass('filler-span-two')){
-	// 			placement = placement - 1;
-	// 		}
-			
-	// 		// Get the html inside the dropdown
-	// 		var bio = '<article class="dropdown span_10" style="display: block">';
-	// 		bio += $(this).children('.dropdown-content').html();
-	// 		bio += '</article>';
-
-	// 		// If a bio exists on the stage, remove it first, 
-	// 		// then insert the new one...
-	// 		if($('.dropdown').length) {
-	// 			$('.dropdown').fadeOut("fast", function() {
-	// 				$(this).remove();
-	// 				$($('.team-member')[placement]).after(bio);
-	// 				// Initiate close function
-	// 				environics.closeDropdown();
-	// 			});
-	// 		}
-
-	// 		// // ...otherwise just insert the bio
-	// 		else {
-	// 			$($('.team-member')[placement]).after(bio);
-	// 			// Initiate close function
-	// 			environics.closeDropdown();
-	// 		}	
-	// 	}
-
-	// 		// Scroll window to member photo offset minus height of margin
-
-	// 		var memberOffset = $(this).offset();
-	// 		var memberMargin = parseInt($(this).children().css('marginBottom')) - 2;
-	// 		var scrollPos = memberOffset.top - memberMargin;
-
-	// 		// If team member details is above member, add height of team member details to scrollPos
-	// 		var teamDetailOffset = $('.dropdown').offset();
-
-	// 		if (teamDetailOffset.top < memberOffset.top) {
-	// 			scrollPos = memberOffset.top - $('.dropdown').outerHeight() - (memberMargin * 2);
-	// 			$('body, html').animate({
-	//                 scrollTop: scrollPos
-	//         	}, 800);
-			
-	// 		// ...otherwise do not add height of team memeber details to scrollPos
-	// 		} else {
-	// 			// var scrollPos = memberOffset.top - 19.2;
-	// 			$('body, html').animate({
-	//                 scrollTop: scrollPos
-	//         	}, 800);
-	// 		}
-	// });
-
-	// $('.team-member').keypress(function (e) {
-	// 	 var key = e.which;
-	// 	 if(key === 13) {
-	// 	 	$(this).click();
-	// 	 }
-	//  });	
 };
 
 environics.activateDropdown = function(){
