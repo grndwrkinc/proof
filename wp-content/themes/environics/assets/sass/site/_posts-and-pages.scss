@@ -78,6 +78,7 @@
 
 		p {
 			margin-bottom: 2rem;
+			margin-top: 2.666rem;
 		}
 	}
 
@@ -97,7 +98,7 @@
 		border-bottom: 1px solid $grey;
 		padding-bottom: 4.5rem;
 
-		.span_6 {
+		p.span_6 {
 			margin-top: 2.666rem;
 		}
 	}
@@ -194,6 +195,7 @@
 
 .cantrust-img, .featured-img {
 	position: relative;
+	background-color: $mediumpurple;
 	background-size: cover;
     background-position: center;
     @include transition(all 0.3s ease);
@@ -1006,6 +1008,7 @@
 
 	.alm-reveal {
 		.tile-inner {
+			padding: 0 0 4rem 0;
 			position: relative;
 
 			p, h5 {
