@@ -39,9 +39,9 @@ get_header();
 		<div class="span_11"><?php the_content(); ?></div>
 	</div>
 	<div class="capabilities-container">
-		<div class="span_11">
-			<h2><?php the_field('capabilities_subheading'); ?></h2>
-			<p><?php the_field('capabilities_text'); ?></p>
+		<div class="capabilities-text">
+			<h2 class="span_5"><?php the_field('capabilities_subheading'); ?></h2>
+			<p class="span_11"><?php the_field('capabilities_text'); ?></p>
 		</div>
 		<div class="capabilities-wrapper">
 	<?php

@@ -1828,6 +1828,16 @@ a {
 .home .capabilities-container {
   border-bottom: none;
   padding-bottom: 0; }
+.home .capabilities-text {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .home .capabilities-text p {
+    margin-bottom: 2rem; }
 .home .text-container .span_11 {
   column-count: 2;
   margin-right: 0;
@@ -1859,16 +1869,14 @@ a {
   background-size: cover; }
   .home .capabilities-container .featured-img:hover, .page-capabilities .capabilities-container .featured-img:hover {
     transform: scale(1); }
-.home .capabilities-container p, .page-capabilities .capabilities-container p {
+.home .capabilities-container .item-text, .page-capabilities .capabilities-container .item-text {
   margin-bottom: 0; }
-  .home .capabilities-container p.one, .page-capabilities .capabilities-container p.one {
+  .home .capabilities-container .item-text.one, .page-capabilities .capabilities-container .item-text.one {
     margin-right: 29.4%; }
-  .home .capabilities-container p.two, .home .capabilities-container p.three, .page-capabilities .capabilities-container p.two, .page-capabilities .capabilities-container p.three {
+  .home .capabilities-container .item-text.two, .home .capabilities-container .item-text.three, .page-capabilities .capabilities-container .item-text.two, .page-capabilities .capabilities-container .item-text.three {
     margin-left: 29.4%; }
 .home .capabilities-container .span_11, .page-capabilities .capabilities-container .span_11 {
-  margin-left: auto;
-  margin-right: 0;
-  margin-bottom: 6rem; }
+  margin-right: 0; }
 .home .capabilities-container .featured, .page-capabilities .capabilities-container .featured {
   border-bottom: 1px solid #979087; }
 .home .capabilities-container .featured:last-child, .page-capabilities .capabilities-container .featured:last-child {

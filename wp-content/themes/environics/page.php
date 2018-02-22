@@ -92,19 +92,22 @@ get_header();
 		<ul class="sub-nav"><li class="all active"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerms; ?>"<?php endif; ?> <?php if (is_page('work')) : ?>data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>>All</a><span class="divider">|</span></li><?php 
 				if ( ! empty( $termsArray ) && ! is_wp_error( $termsArray ) ){
 				    foreach ( $termsArray as $term ) {
+				    	//Check if there are any posts that have this category. If yes, continue.
+				    	if($term->count > 0){
 	
-				    	$name = str_replace(" ", "&nbsp;", $term->name);
+					    	$name = str_replace(" ", "&nbsp;", $term->name);
 
-				    	if (is_page('work')) {
-				    		$taxonomyTerm = $term->slug.":".$term->slug;
-				    	}
-				    	if (is_page('thinking') || is_page('news')) {
-				    		$taxonomyTerm = $term->slug;
+					    	if (is_page('work')) {
+					    		$taxonomyTerm = $term->slug.":".$term->slug;
+					    	}
+					    	if (is_page('thinking') || is_page('news')) {
+					    		$taxonomyTerm = $term->slug;
 
-							if($term->slug != "new-work") {
-								$name .= "s";
-							}
-				    	} ?><li class="<?php echo $term->slug; ?>"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerm; ?>"<?php endif; if (is_page('work')) : ?> data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>><?php echo $name; ?></a><span class="divider">|</span></li><?php
+								if($term->slug != "new-work") {
+									$name .= "s";
+								}
+					    	} ?><li class="<?php echo $term->slug; ?>"><a href="#" data-repeater="<?php echo $repeater; ?>" data-post-type="<?php echo $postType; ?>" data-posts-per-page="<?php echo $postsPerPage; ?>" data-scroll="<?php echo $scroll; ?>" data-destroy-after="<?php echo $destroyAfter; ?>" data-button-label="<?php echo $buttonLabel; ?>" <?php if (is_page('work') || is_page('thinking') || is_page('news')) : ?>data-taxonomy="<?php echo $taxonomy; ?>" data-taxonomy-terms="<?php echo $taxonomyTerm; ?>"<?php endif; if (is_page('work')) : ?> data-taxonomy-operator="<?php echo $taxonomyOperator; ?>" data-taxonomy-relation="<?php echo $taxonomyRelation; ?>"<?php endif; ?>><?php echo $name; ?></a><span class="divider">|</span></li><?php
+					    }
 				    }
 				}
 		?></ul>
