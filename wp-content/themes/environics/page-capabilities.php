@@ -13,11 +13,11 @@ get_header();
 	
 	<div class="sectors-container">
 		<?php $image = get_field('sector_hero'); ?>
-		<div class="sub-hero" style="background-image: url('<?php echo $image['url']; ?>');">
-			<h2>Sectors</h2>
-		</div>
-		<div class="span_10">
-			<?php the_field('sector_blurb'); ?>
+		<div class="text-container">
+			<h2 class="span_6">Sectors</h2>
+			<div class="span_10">
+				<?php the_field('sector_blurb'); ?>
+			</div>
 		</div>
 		<div class="dropdown-gallery">
 			<?php

@@ -19,6 +19,10 @@
 	@include display(flex);
 	z-index: 9;
 
+	&.welcome-msg {
+		top: 83px;
+	}
+
 	p {
 		font-family: $font__heading;
 		color: $lightpurple;

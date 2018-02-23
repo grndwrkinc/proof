@@ -73,7 +73,7 @@ $.fn.almFilterComplete = function(){
 
 environics.init = function() {
 
-	environics.hashMsg();
+	environics.cookieTime();
 
 	environics.showMenu();
 	if($('.single-work').length) {
@@ -218,14 +218,17 @@ environics.init = function() {
 
 };
 
-//Check if user is being redirected from old environicspr.com site and add a message if yes
-
-environics.hashMsg = function() {
-	var hash = window.location.hash;
-	if(hash == '#welcome') {
-		$('.skip-link').after('<p class="welcome">Environics Communications is now Proof. Read more here.</p>');
+//When a user first visits the site, show a banner message
+environics.cookieTime = function() {
+	var firstTime = '';
+	if (sessionStorage.getItem("firstTime") === null) {
+		//Show the welcome message
+		$('.welcome').show();
+		$('.hamburger-container').addClass('welcome-msg');
+		//Set up sessionStorage variables
+		sessionStorage.setItem("firstTime", firstTime);
 	} else {
-		//do nothing
+		//do nothing, they have already visited the site
 	}
 };
 

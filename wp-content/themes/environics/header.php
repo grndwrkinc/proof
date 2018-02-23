@@ -23,7 +23,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'environics' ); ?></a>
-
+	<!-- If the user is new to the site and welcome msg is turned on in options, display a welcome msg -->
+	<?php $msg = get_field('show_welcome_message', 'option');
+	if( $msg && in_array('Yes', $msg) ): ?>
+		<p class="welcome"><?php the_field('welcome_message', 'option'); ?></p>
+	<?php endif; ?>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php $site_logo = get_field('site_logo', 'option'); ?>

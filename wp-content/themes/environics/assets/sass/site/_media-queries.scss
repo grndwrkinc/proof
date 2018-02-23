@@ -633,14 +633,15 @@
 		margin-left: 0;
 	}
 
-	.single-thinking {
+	.single-thinking, .single-news {
 
 		.hero-container {
 			margin: 0;
 
 			h2 {
-				transform: none;
+				padding: 0;
 				margin-bottom: 0;
+				text-align: center;
 			}
 		}
 

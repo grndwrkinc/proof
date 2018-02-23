@@ -16,9 +16,7 @@ get_header();
 		$classes .= " text-" . strtolower(get_field('title_colour_picker'));
 ?>
 		<div class="hero-container">
-			<div class="span_11">
-				<h2 id="content"><?php the_title(); ?></h2>
-			</div>
+			<h2 id="content"><?php the_title(); ?></h2>
 			<div class="sub-hero single-page<?php echo $classes; ?>" style="background-image:url(<?php echo $hero; ?>)"></div>
 			<?php //get_template_part( 'template-parts/content', 'socialbuttons' ); ?>
 		</div>
