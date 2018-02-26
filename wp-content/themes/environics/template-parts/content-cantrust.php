@@ -60,14 +60,13 @@
 ?>
 			<div class="blog-item span_5 square">
 				<a href="<?php echo get_permalink($relatedPost->ID); ?>">
-					<div class="blog-item-img <?php echo $classes; ?>" style="background-image:url(<?php echo $imgSrc; ?>)">
-						<div class="tile-inner">
-							<h5><?php echo $label; ?></h5>
-							<h4 class="barr"><?php echo get_the_title($relatedPost->ID); ?></h4>
-							<a href="<?php echo get_permalink($relatedPost->ID); ?>" class="tile-link barr">See More</a>
-						</div>
-					</div>
+					<div class="blog-item-img <?php echo $classes; ?>" style="background-image:url(<?php echo $imgSrc; ?>)"></div>
 				</a>
+				<div class="tile-inner">
+					<h5><?php echo $label; ?></h5>
+					<h4 class="barr"><?php echo get_the_title($relatedPost->ID); ?></h4>
+					<a href="<?php echo get_permalink($relatedPost->ID); ?>" class="tile-link barr">See More</a>
+				</div>
 			</div>
 			
 <?php
