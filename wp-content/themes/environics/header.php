@@ -16,6 +16,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="icon" href="/wp-content/themes/environics/assets/images/Proof_Social_Avatar_YouTube.jpg" sizes="32x32">
+<link rel="icon" href="/wp-content/themes/environics/assets/images/Proof_Social_Avatar_YouTube.jpg" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="/wp-content/themes/environics/assets/images/Proof_Social_Avatar_YouTube.jpg">
 
 <?php wp_head(); ?>
 </head>

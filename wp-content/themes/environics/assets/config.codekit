@@ -847,6 +847,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/Proof_Social_Avatar_YouTube.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 93185,
+		"inputAbbreviatedPath": "\/images\/Proof_Social_Avatar_YouTube.jpg",
+		"outputAbbreviatedPath": "\/images\/Proof_Social_Avatar_YouTube.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/wwu_square.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

@@ -15,7 +15,7 @@
 ?>
 	<div class="hero" style="background-image: url('<?php echo $hero; ?>')">
 		<!-- svg content goes here -->
-		<img src="/wp-content/themes/environics/assets/images/Environics_Communications_logo_white.svg" alt="">
+		<!-- <img src="/wp-content/themes/environics/assets/images/Environics_Communications_logo_white.svg" alt=""> -->
 	</div>
 <?php 
 
