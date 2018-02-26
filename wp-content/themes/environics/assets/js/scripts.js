@@ -740,57 +740,12 @@ environics.socialShare = function() {
 // Show and hide the video modal
 environics.videoModal = function () {
 
-	var videoWrapper = $('.video-wrapper');
-	$(videoWrapper).html($(videoWrapper).data('iframe'));
+	// var videoWrapper = $('.video-wrapper');
+	// console.log(videoWrapper);
+	// $('.video-wrapper').each(function(){
+	// 	$(this).html($(videoWrapper).data('iframe'));
+	// });
 	environics.fluidVids();
-
-	// Click play button to show video modal
-	$('.videoPlay').on('click', function(e){
-		e.preventDefault();
-		var videoBlock = $(this).parents('.video-container');
-		var videoWrapper = $(videoBlock).find('.video-wrapper');
-		$(videoWrapper).html($(videoWrapper).data('iframe'));
-		var modal = $(videoBlock).find('.modal');
-		$(modal).fadeIn();
-		document.ontouchmove = function(e){ e.preventDefault(); };
-		$('body').addClass('no-overflow');
-		environics.fluidVids();
-		environics.tabModal(-1);
-	});
-	var videoClose = function() {
-		$('.video-wrapper').find("iframe").remove();
-		$('.video-container .modal').fadeOut('fast');
-		document.ontouchmove = function(){ return true; };
-		$('body').removeClass('no-overflow');
-		environics.tabModal(1);
-	};
-	// Click close button to close video modal
-	$('.modal .close').on('click', function(){
-		videoClose();
-		
-	});
-	// Click outside video to close modal
-	$('.video-container .modal').on('click', function(){
-		videoClose();
-	});
-	// Hit enter on close div to close modal
-	$('.modal .close').keypress(function (e) {
-		var key = e.which;
-		if(key === 13) {
-			videoClose();
-		}
-	});
-	$(document).keyup(function(e) {
-		if (e.keyCode === 27) { // escape key maps to keycode `27`
-			e.stopPropagation();
-			videoClose();
-		}
-	});
-	// Stop propagation of the click event if user clicks on the video.
-	// In other words, don't close the modal, let them play the video.
-	$('.video-wrapper').click(function(e){
-	    e.stopPropagation();
-	});
 	
 };
 
