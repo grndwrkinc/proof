@@ -30,7 +30,7 @@
 .sub-hero {
 	background-size: cover;
 	background-position: center;
-	height: 58rem;
+	height: 32rem;
 	position: relative;
 	padding-left: 5.88%;
 	margin-top: 6rem;
@@ -93,7 +93,6 @@
 
 	.text-container {
 		.span_11 {
-			column-count: 2;
 			margin-right: 0;
 			margin-top: 2.666rem;
 
@@ -245,6 +244,10 @@
 			margin-top: 0;
 		}
 
+		.dropdown-item:nth-child(1), .dropdown-item:nth-child(2) {
+			padding-top: 0;
+		}
+
 		.span_10 {
 			margin-left: auto;
 			padding-top: 6rem;
@@ -258,6 +261,7 @@
 		.span_6 {
 			position: relative;
 			padding: 2rem 0;
+			margin-left: auto;
 
 			&.even {
 				margin-left: 11.7%;
@@ -287,7 +291,6 @@
 			}
 
 			img {
-				padding-right: 6rem;
 				width: 70%;
 			}
 		}
@@ -520,8 +523,8 @@
 }
 
 .linkout {
-	margin-left: 29.4%;
 	text-transform: uppercase;
+	text-align: center;
 
 	a {
 		padding: 0 6rem 0 1rem;
@@ -990,7 +993,8 @@
 	}
 
 	.jobs-container, .socialfeed-container {
-		padding-top: $section-padding-top; //RA
+		padding: $section-padding-top 0; //RA
+		@include border-bottom;
 	}
 
 	.no-image {
@@ -1096,6 +1100,10 @@
 		margin-left: 5.88%;
 	}
 
+	.form-container {
+		border-top: 1px solid $grey;
+	}
+
 	.hero-container {
 		padding: $section-padding-top 0; //RA
 
@@ -1145,11 +1153,6 @@
 		ul {
 			margin-left: 30.77%;
 			padding-left: 0;
-
-			&:last-of-type {
-				padding-bottom: $section-padding-top; //RA
-				@include border-bottom;
-			}
 		}
 
 		li {
@@ -1231,6 +1234,7 @@
 
 	.sub-hero {
 		background-position: top;
+		height: 58rem;
 	}
 
 	.hero-container	{

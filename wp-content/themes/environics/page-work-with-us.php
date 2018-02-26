@@ -69,20 +69,20 @@ get_header();
 			</div>
 		</div>
 
-		<div class="socialfeed-container">
+		<!-- <div class="socialfeed-container">
 			<div class="text-container">
-				<h2 class="span_8"><?php the_field('culture_title'); ?></h2>
+				<h2 class="span_8"><?php //the_field('culture_title'); ?></h2>
 			</div>
-		</div>
+		</div> -->
 		<!-- MASONRY GALLERY -->
-		<div class="block masonry">
+		<!-- <div class="block masonry">
 			<div class="grid">
 				<div class="grid-sizer"></div>
 				<div class="gutter-sizer"></div>
-				<?php echo do_shortcode('[ajax_load_more repeater="template_1" post_type="socialpost,micropost" scroll="false" posts_per_page="12" orderby="meta_value_num" meta_key="created_time" order="DESC" destroy_after="99" button_label="Load More"]'); ?>
-				<?php wp_reset_postdata(); ?>
+				<?php //echo do_shortcode('[ajax_load_more repeater="template_1" post_type="socialpost,micropost" scroll="false" posts_per_page="12" orderby="meta_value_num" meta_key="created_time" order="DESC" destroy_after="99" button_label="Load More"]'); ?>
+				<?php //wp_reset_postdata(); ?>
 			</div>
-		</div>
+		</div> -->
 	</div>
 
 	<!-- <div class="gradient"></div> -->

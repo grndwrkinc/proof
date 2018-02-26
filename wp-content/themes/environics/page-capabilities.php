@@ -12,12 +12,8 @@ get_header();
 	</div>
 	
 	<div class="sectors-container">
-		<?php $image = get_field('sector_hero'); ?>
 		<div class="text-container">
-			<h2 class="span_6">Sectors</h2>
-			<div class="span_10">
-				<?php the_field('sector_blurb'); ?>
-			</div>
+			<h2>Sectors</h2>
 		</div>
 		<div class="dropdown-gallery">
 			<?php
