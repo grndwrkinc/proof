@@ -16,7 +16,6 @@ get_header();
 	$socialposts = new WP_Query( $args2 );
 ?>
 
-	<div id="content" class="content-area">
 
 <?php 
 	if(have_posts()) : while (have_posts()) : the_post();
@@ -83,7 +82,6 @@ get_header();
 				<?php //wp_reset_postdata(); ?>
 			</div>
 		</div> -->
-	</div>
 
 	<!-- <div class="gradient"></div> -->
 

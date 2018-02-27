@@ -35,7 +35,7 @@ get_header();
 				</div>
 				<div class="dropdown-content">
 					<div class="span_6 <?php echo $countclass; ?>">
-						<img src="<?php echo $directorImg['url']; ?>">
+						<img src="<?php echo $directorImg['url']; ?>" alt="<?php echo $directorImg['url']; ?>">
 						<div class="deets">
 							<h4><?php echo $directorTitle; ?></h4>
 							<p><?php echo $directorPos; ?></p>

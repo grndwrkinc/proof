@@ -15,7 +15,9 @@ get_header();
 					<?php get_template_part( 'template-parts/content', 'socialbuttons' ); ?>
 				</div>
 				<div class="span_10">
-					<h5><?php the_field('post_subheader'); ?></h5>
+					<?php if(get_field('post_subheader')): ?>
+						<h5><?php the_field('post_subheader'); ?></h5>
+					<?php endif; ?>
 					<p><?php the_field('job_location'); ?> / <?php echo the_date(); ?></p>
 				</div>
 			</div>

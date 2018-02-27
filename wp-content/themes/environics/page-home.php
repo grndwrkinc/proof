@@ -83,11 +83,12 @@ get_header();
     		$post_object = get_sub_field('featured_project');
 			$subtitle = get_field('post_subheader', $post_object->ID);
 			$featuredImg = wp_get_attachment_url( get_post_thumbnail_id($post_object->ID) );
+			$title = get_post(get_post_thumbnail_id($post_object->ID))->post_title;
 ?>
 	
 			<div class="featured span_5">
 				<div class="img-container">
-					<a href="<?php echo get_permalink($post_object->ID); ?>" class="">
+					<a href="<?php echo get_permalink($post_object->ID); ?>" class="" title="<?php echo $title; ?>">
 						<div class="featured-img square" style="background-image: url('<?php echo $featuredImg; ?>')">
 						</div>
 					</a>

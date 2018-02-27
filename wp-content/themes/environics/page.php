@@ -2,7 +2,6 @@
 /* The template for all pages that feature a gallery of links (Thinking, News, Work) */
 get_header(); 
 ?>
-	<div id="content" class="content-area">
 		
 <?php
 	
@@ -49,7 +48,6 @@ get_header();
 	endif; 
 ?>
 		</div>
-	</div>
 
 <?php
 	//Set up the variables for the data attributes to attached to the filter buttons

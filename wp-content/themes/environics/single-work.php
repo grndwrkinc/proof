@@ -16,7 +16,7 @@ get_header();
 		$classes .= " text-" . strtolower(get_field('title_colour_picker'));
 ?>
 		<div class="hero-container">
-			<h2 id="content"><?php the_title(); ?></h2>
+			<h2><?php the_title(); ?></h2>
 			<div class="sub-hero single-page<?php echo $classes; ?>" style="background-image:url(<?php echo $hero; ?>)"></div>
 			<?php //get_template_part( 'template-parts/content', 'socialbuttons' ); ?>
 		</div>
@@ -130,6 +130,7 @@ endwhile; // End of the loop.
 <?php while ( $related_posts->have_posts() ) : $related_posts->the_post();
 				global $post; 
 				$feat_image_array = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' );
+				$title = get_post(get_post_thumbnail_id($post_object->ID))->post_title;
 				$feat_image = $feat_image_array[0];
 				if(strlen($feat_image)) {
 					$classes = "";
@@ -144,7 +145,7 @@ endwhile; // End of the loop.
 	
 			<div class="featured span_5">
 				<div class="img-container">
-					<a href="<?php echo get_permalink($post->ID); ?>" class="">
+					<a href="<?php echo get_permalink($post->ID); ?>" class="" title="<?php echo $title; ?>">
 						<div class="featured-img square" style="background-image: url('<?php echo $feat_image; ?>')">
 						</div>
 					</a>
