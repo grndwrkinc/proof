@@ -6,6 +6,14 @@
 
 @media (max-width: 768px) {
 
+	.hero-mobile {
+		display: block;
+	}
+
+	.hero-desktop {
+		display: none;
+	}
+
 	.span_5, .span_11, .span_4, .span_6, .span_7, .span_8, .span_10, .span_13 {
 		width: 100%;
 		margin: 0;

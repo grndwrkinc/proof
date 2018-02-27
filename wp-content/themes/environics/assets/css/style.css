@@ -1829,6 +1829,9 @@ a {
   margin: 0;
   display: none; }
 
+.hero-mobile {
+  display: none; }
+
 .home .hero {
   height: 60rem;
   width: 100%;
@@ -2844,6 +2847,12 @@ footer {
 ## Media Queries
 --------------------------------------------------------------*/
 @media (max-width: 768px) {
+  .hero-mobile {
+    display: block; }
+
+  .hero-desktop {
+    display: none; }
+
   .span_5, .span_11, .span_4, .span_6, .frm_form_field, .uploads, .span_7, .span_8, .span_10, .span_13, #comments {
     width: 100%;
     margin: 0; }
