@@ -12,9 +12,6 @@ get_header();
 	</div>
 	
 	<div class="sectors-container">
-		<div class="text-container">
-			<h2>Sectors</h2>
-		</div>
 		<div class="dropdown-gallery">
 			<?php
 				if( have_rows('sector_dropdowns') ):
@@ -57,6 +54,7 @@ get_header();
 	
 	<?php
 		if( have_rows('capability_repeater_content') ):
+			$capcount = 0;
 	    	while ( have_rows('capability_repeater_content') ) : the_row();
 	    		$title = get_sub_field('capability_title');
 				$directorTitle = get_the_title($director->ID);
@@ -68,6 +66,9 @@ get_header();
 		  $hash = strtolower($hash);
 	 ?>
 	<div id="<?php echo $hash; ?>" class="capabilities-container">
+		<?php if($capcount == 0): ?>
+			<h2><?php the_field('capabilities_header'); ?></h2>
+		<?php endif; ?>
 		<div class="hero-container">
 			<div class="sub-hero span_10" style="background-image: url('<?php echo $image['url']; ?>');">
 				<h3><?php the_sub_field('capability_title'); ?></h3>
@@ -106,6 +107,7 @@ get_header();
 		<p class="linkout"><?php the_sub_field('external_link'); ?></p>
 	</div>
 	<?php 
+	$capcount ++;
 		endwhile; // End of capabilities repeater loop
 		endif; 
 	?>

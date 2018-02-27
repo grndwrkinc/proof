@@ -238,7 +238,6 @@
 .page-capabilities {
 	.text-container {
 		padding-bottom: 6rem;
-		@include border-bottom;
 	}
 
 	.sectors-container {
@@ -466,6 +465,10 @@
 
 	.sub-hero {
 		margin-top: 0;
+	}
+
+	h2 {
+		margin-top: -2rem;
 	}
 }
 
@@ -823,6 +826,7 @@
 
 	.blog-item-img {
 		position: relative;
+		background-position: center;
 		@include transition(all 0.3s ease);
 	}
 

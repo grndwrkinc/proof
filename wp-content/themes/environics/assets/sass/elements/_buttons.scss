@@ -257,7 +257,8 @@ h1 .btn.barr {
 		padding-right: 2rem;
 	}
 
-	.read-more.barr:after {
+	.read-more.barr:after,
+	.capabilities-container .barr:after {
 		bottom: -0.5rem;
 	}
 

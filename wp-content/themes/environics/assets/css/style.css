@@ -1142,7 +1142,8 @@ h1 .btn.barr {
   .capabilities-wrapper h3.barr {
     padding-right: 2rem; }
 
-  .read-more.barr:after, .barr.btn:after {
+  .read-more.barr:after, .barr.btn:after,
+  .capabilities-container .barr:after {
     bottom: -0.5rem; }
 
   .jobs-container h4.barr:after {
@@ -1967,8 +1968,7 @@ a {
   text-align: center; }
 
 .page-capabilities .text-container {
-  padding-bottom: 6rem;
-  border-bottom: 1px solid #979087; }
+  padding-bottom: 6rem; }
 .page-capabilities .sectors-container {
   border-bottom: 1px solid #979087; }
   .page-capabilities .sectors-container p {
@@ -2110,6 +2110,8 @@ a {
     padding-left: 5.88%; }
   .capabilities-container .sub-hero {
     margin-top: 0; }
+  .capabilities-container h2 {
+    margin-top: -2rem; }
 
 .dropdown-gallery {
   padding-bottom: 9rem; }
@@ -2361,6 +2363,7 @@ a {
     height: 100%; }
   .alm-reveal .blog-item-img, .posts-container .blog-item-img {
     position: relative;
+    background-position: center;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
@@ -3146,6 +3149,8 @@ footer {
         margin-left: 0; }
     .page-capabilities .sectors-container .dropdown-item:nth-of-type(even) {
       margin-left: 0; }
+    .page-capabilities .sectors-container .dropdown-item:nth-child(2) {
+      padding-top: 2rem; }
     .page-capabilities .sectors-container img {
       width: 60%; }
     .page-capabilities .sectors-container .deets {
