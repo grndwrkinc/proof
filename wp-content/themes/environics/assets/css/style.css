@@ -1448,7 +1448,8 @@ a {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
-  z-index: 9; }
+  z-index: 9;
+  background-color: white; }
 
 .hamburger-container {
   position: absolute;
@@ -1791,7 +1792,7 @@ a {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 6rem 6rem; }
+  padding: 76px 6rem 6rem; }
 
 .hero {
   height: 44rem;
@@ -1858,22 +1859,26 @@ a {
   display: flex; }
   .home .capabilities-text p {
     margin-bottom: 2rem;
-    margin-top: 2.666rem; }
+    margin-top: 0; }
+.home .text-container h1 {
+  color: #524a3f;
+  margin-bottom: 2rem; }
 .home .text-container .span_11 {
-  margin-right: 0;
-  margin-top: 2.666rem; }
+  margin-right: 0; }
   .home .text-container .span_11 p {
     margin-top: 0; }
 .home .cantrust-container {
   border-bottom: 1px solid #979087;
   padding-bottom: 4.5rem; }
   .home .cantrust-container p.span_6, .home .cantrust-container p.frm_form_field, .home .cantrust-container p.uploads {
-    margin-top: 2.666rem; }
+    margin-top: 0; }
 
 .home .text-container, .home .capabilities-container,
 .home .featured-container, .home .cantrust-container, .page-capabilities .text-container, .page-capabilities .capabilities-container,
 .page-capabilities .featured-container, .page-capabilities .cantrust-container {
   padding-top: 9rem; }
+.home h2.span_6, .home h2.frm_form_field, .home h2.uploads, .page-capabilities h2.span_6, .page-capabilities h2.frm_form_field, .page-capabilities h2.uploads {
+  margin-bottom: 2rem; }
 .home .text-container, .page-capabilities .text-container {
   padding-top: 6rem; }
 .home .text-container, .home .capabilities-wrapper, .page-capabilities .text-container, .page-capabilities .capabilities-wrapper {
@@ -1968,6 +1973,10 @@ a {
 
 .page-capabilities .text-container {
   padding-bottom: 6rem; }
+  .page-capabilities .text-container p {
+    margin-top: 0; }
+.page-capabilities .capabilities-container h2 {
+  margin-top: -2rem; }
 .page-capabilities .sectors-container {
   border-bottom: 1px solid #979087; }
   .page-capabilities .sectors-container p {
@@ -2109,8 +2118,6 @@ a {
     padding-left: 5.88%; }
   .capabilities-container .sub-hero {
     margin-top: 0; }
-  .capabilities-container h2 {
-    margin-top: -2rem; }
 
 .dropdown-gallery {
   padding-bottom: 9rem; }
@@ -2202,7 +2209,7 @@ a {
 .team-container .text-container {
   padding-bottom: 4.5rem; }
   .team-container .text-container .span_10 {
-    margin-top: 2.666rem; }
+    margin-top: 0; }
 .team-container .dropdown-gallery {
   margin-left: 0;
   padding-top: 0; }
@@ -2328,8 +2335,8 @@ a {
   width: 62.5%;
   margin-top: 4rem; }
 .page-thinking .hero-container.double-featured .span_5, .page-work .hero-container.double-featured .span_5 {
-  width: 62.5%;
-  margin-left: auto;
+  width: 87.5%;
+  margin-left: 12.5%;
   margin-bottom: 2rem; }
 .page-thinking .hero-container.double-featured a, .page-work .hero-container.double-featured a {
   display: inline-block;
@@ -2395,7 +2402,7 @@ a {
   .single-thinking .hero-container h2, .single-news .hero-container h2, .page-author .hero-container h2 {
     padding-left: 2rem; }
 .single-thinking .span_8, .single-news .span_8, .page-author .span_8 {
-  margin-top: 4rem; }
+  margin-top: 6rem; }
 .single-thinking .sub-hero.span_8, .single-news .sub-hero.span_8, .page-author .sub-hero.span_8 {
   margin-top: 6rem; }
 .single-thinking .text-container, .single-news .text-container, .page-author .text-container {
@@ -2420,7 +2427,8 @@ a {
       padding-left: 0; }
   .post-overview .divider {
     position: relative;
-    top: -2px; }
+    top: -2px;
+    padding: 0; }
 
 .page-text h4, .page-text h5 {
   margin-top: 3rem; }
@@ -2863,13 +2871,13 @@ footer {
     height: 32rem; }
 
   .site-content {
-    padding: 0 1rem 1rem; }
+    padding: 76px 1rem 1rem; }
 
   header {
     padding: 0 1rem 0; }
 
   .site-branding img {
-    width: 235px;
+    width: 210px;
     margin-top: 1rem; }
 
   .read-more, .btn {

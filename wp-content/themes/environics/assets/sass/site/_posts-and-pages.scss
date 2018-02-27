@@ -7,7 +7,7 @@
 	max-width: 1366px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 6rem 6rem;
+	padding: 76px 6rem 6rem;
 }
 
 .hero {
@@ -90,14 +90,19 @@
 
 		p {
 			margin-bottom: 2rem;
-			margin-top: 2.666rem;
+			margin-top: 0;
 		}
 	}
 
 	.text-container {
+
+		h1 {
+			color: $darkgrey;
+			margin-bottom: 2rem;
+		}
+
 		.span_11 {
 			margin-right: 0;
-			margin-top: 2.666rem;
 
 			p {
 				margin-top: 0;
@@ -110,7 +115,7 @@
 		padding-bottom: 4.5rem;
 
 		p.span_6 {
-			margin-top: 2.666rem;
+			margin-top: 0;
 		}
 	}
 }
@@ -119,6 +124,10 @@
 	.text-container, .capabilities-container, 
 	.featured-container, .cantrust-container {
 		padding-top: $section-padding-top; //RA
+	}
+
+	h2.span_6 {
+		margin-bottom: 2rem;
 	}
 
 	// RA begin
@@ -237,6 +246,16 @@
 .page-capabilities {
 	.text-container {
 		padding-bottom: 6rem;
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	.capabilities-container {
+		h2 {
+			margin-top: -2rem;
+		}
 	}
 
 	.sectors-container {
@@ -465,10 +484,6 @@
 	.sub-hero {
 		margin-top: 0;
 	}
-
-	h2 {
-		margin-top: -2rem;
-	}
 }
 
 .dropdown-gallery {
@@ -591,7 +606,7 @@
 		padding-bottom: 4.5rem;
 
 		.span_10 {
-			margin-top: 2.666rem;
+			margin-top: 0;
 		}
 	}
 
@@ -782,8 +797,8 @@
 
 		//special calculated width for sub-span item
 		.span_5 {
-			width: 62.5%;
-			margin-left: auto;
+			width: 87.5%;
+			margin-left: 12.5%;
 			margin-bottom: 2rem;
 		}
 
@@ -883,7 +898,7 @@
 	}
 
 	.span_8 {
-		margin-top: 4rem;
+		margin-top: 6rem;
 	}
 
 	.sub-hero.span_8 {
@@ -929,6 +944,7 @@
 	.divider {
 		position: relative;
     	top: -2px;
+    	padding: 0;
 	}
 }
 

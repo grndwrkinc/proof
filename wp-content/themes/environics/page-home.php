@@ -35,7 +35,7 @@ get_header();
 		}
 ?>
 	<div class="text-container">
-		<h2 class="span_5"><?php the_title(); ?></h2>
+		<h1 class="span_5"><?php the_title(); ?></h1>
 		<div class="span_11"><?php the_content(); ?></div>
 	</div>
 	<div class="capabilities-container">

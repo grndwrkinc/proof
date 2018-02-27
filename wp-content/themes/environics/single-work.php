@@ -22,7 +22,7 @@ get_header();
 		</div>
 		<div class="post-overview">
 			<p>
-				<span><?php the_field('client'); ?></span>
+				<?php if(get_field('client')): ?><span><?php the_field('client'); ?></span><span class="divider">|</span><?php endif; ?>
 				<span><?php 
 					$case_category = get_the_terms($post->ID, 'case_categories');
 					$out = array();
@@ -30,9 +30,9 @@ get_header();
 						array_push($out, $category->name);
 				}
 				echo implode(', ', $out);
-				?></span>
-				<span><?php the_field('team')?></span>
-				<span><?php the_field('year')?></span>
+				?></span><span class="divider">|</span>
+				<?php if(get_field('team')): ?><span><?php the_field('team'); ?></span><span class="divider">|</span><?php endif; ?>
+				<?php if(get_field('year')): ?><span><?php the_field('year'); ?></span><?php endif; ?>
 			</p>
 		</div>
 
