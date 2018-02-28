@@ -1436,6 +1436,32 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+.page-text a, .cantrust-text a, .item-text a,
+.text-container a:not(.barr), .text-item a,
+.team-container p a, .location-text p a {
+  color: #582C83;
+  position: relative; }
+  .page-text a:after, .cantrust-text a:after, .item-text a:after,
+  .text-container a:not(.barr):after, .text-item a:after,
+  .team-container p a:after, .location-text p a:after {
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    -ms-transition: all 0.1s ease;
+    -o-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #582C83;
+    opacity: 0; }
+  .page-text a:hover:after, .cantrust-text a:hover:after, .item-text a:hover:after,
+  .text-container a:not(.barr):hover:after, .text-item a:hover:after,
+  .team-container p a:hover:after, .location-text p a:hover:after {
+    opacity: 1; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
