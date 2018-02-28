@@ -2,6 +2,20 @@
 	overflow: hidden;
 }
 
+.welcome-msg {
+	.hamburger-outer-container {
+		top: 30px;
+	}
+
+	.site-content {
+		padding-top: 106px;
+	}
+
+	.menu-primary-container.outer {
+		padding-top: 13rem;
+	}
+}
+
 .hamburger-outer-container {
 	position: fixed;
 	top: 0;
@@ -20,10 +34,6 @@
 	padding-right: 12rem;
 	@include display(flex);
 	z-index: 9;
-
-	&.welcome-msg {
-		top: 70px;
-	}
 
 	p {
 		font-family: $font__heading;
@@ -331,6 +341,16 @@
 
 //Tablet + mobile breakpoint
 @media (max-width: 768px) {
+
+	.welcome-msg {
+		.menu-primary-container.outer {
+			padding: 14rem 6rem 3rem 6rem;
+		}
+
+		.hamburger-outer-container {
+			padding-top: 1.5rem;
+		}
+	}
 
 	.menu-primary-container.outer {
 		padding: 9rem 6rem 6rem 6rem;

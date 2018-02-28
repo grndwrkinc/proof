@@ -53,6 +53,10 @@
     text-align: center;
     margin: 0;
     display: none;
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    left: 0;
 }
 
 .hero-mobile {

@@ -224,7 +224,7 @@ environics.cookieTime = function() {
 	if (sessionStorage.getItem("firstTime") === null) {
 		//Show the welcome message
 		$('.welcome').show();
-		$('.hamburger-container').addClass('welcome-msg');
+		$('.site').addClass('welcome-msg');
 		//Set up sessionStorage variables
 		sessionStorage.setItem("firstTime", firstTime);
 	} else {
