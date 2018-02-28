@@ -221,12 +221,12 @@ environics.init = function() {
 //When a user first visits the site, show a banner message
 environics.cookieTime = function() {
 	var firstTime = '';
-	if (sessionStorage.getItem("firstTime") === null) {
+	if (localStorage.getItem("firstTime") === null) {
 		//Show the welcome message
 		$('.welcome').show();
 		$('.site').addClass('welcome-msg');
 		//Set up sessionStorage variables
-		sessionStorage.setItem("firstTime", firstTime);
+		localStorage.setItem("firstTime", firstTime);
 	} else {
 		//do nothing, they have already visited the site
 	}
