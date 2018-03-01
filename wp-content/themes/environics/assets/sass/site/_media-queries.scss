@@ -862,6 +862,10 @@
 			.dropdown {
 				padding-bottom: 4rem;
 
+				.one .span_6, .two .span_6, .three .span_6 {
+					margin-left: 0;
+				}
+
 				.span_7 {
 					width: auto;
 				}
