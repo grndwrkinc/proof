@@ -101,7 +101,7 @@ get_header();
 					<div class="items-container">
 						<?php if(have_rows('press')): while(have_rows('press')): the_row(); ?>
 						<div class="span_5">
-							<h5 class="barr"><?php the_sub_field('press_name'); ?></h5>
+							<h5 class="barr"><a href="<?php the_sub_field('press_link'); ?>" target="_blank"><?php the_sub_field('press_name'); ?></a></h5>
 							<p class="press-title"><a href="<?php the_sub_field('press_link'); ?>" target="_blank"><?php the_sub_field('press_text'); ?></a></p>
 						</div>
 					<?php endwhile; endif; ?>
@@ -111,7 +111,7 @@ get_header();
 					<h4>Awards</h4>
 					<?php if(have_rows('awards')): while(have_rows('awards')): the_row(); ?>
 					<div class="span_5">
-						<h5 class="barr"><?php the_sub_field('award_name'); ?></h5>
+						<h5 class="barr"><a href="<?php the_sub_field('award_link'); ?>" target="_blank"><?php the_sub_field('award_name'); ?></a></h5>
 						<p class="press-title"><a href="<?php the_sub_field('award_link'); ?>" target="_blank"><?php the_sub_field('award_text'); ?></a></p>
 					</div>
 					<?php endwhile; endif; ?>
