@@ -22,7 +22,7 @@
 			<div class="span_11">
 				<div class="media">
 				<?php if($media == 'Video'): ?>
-					<div class="video-wrapper" data-iframe='<?php the_sub_field('video_url'); ?>'></div>
+					<div class="video-wrapper"><?php the_sub_field('video_url'); ?></div>
 				<?php endif; ?>
 				<?php if($media == 'Slides'): ?>
 					<?php the_sub_field('slides_deck'); ?>
