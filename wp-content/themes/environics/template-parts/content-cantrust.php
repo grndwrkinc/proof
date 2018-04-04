@@ -25,7 +25,7 @@
 					<div class="video-wrapper"><?php the_sub_field('video_url'); ?></div>
 				<?php endif; ?>
 				<?php if($media == 'Slides'): ?>
-					<?php the_sub_field('slides_deck'); ?>
+					<div class="slides-wrapper"><?php the_sub_field('slides_deck'); ?></div>
 				<?php endif; ?>
 				<?php if($media == 'Image'): ?>
 					<?php $image = get_sub_field('image'); ?>
